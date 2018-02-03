@@ -29,14 +29,18 @@ margin-top: 20px;
 .header-button{
 	text-decoration: none;
 	display: inline-block;
-box-shadow: 10px 17px 34px 6px rgba(18, 61, 145, 0.83);
-border-radius: 50px;
-background-color: #ffffff;
-color: #072b6f;
-font-size: 18px;
-font-weight: 700;
-padding: 17px 55px;
-margin-top: 33px;
+	box-shadow: 10px 17px 34px 6px rgba(18, 61, 145, 0.83);
+	border-radius: 50px;
+	background-color: #ffffff;
+	color: #072b6f;
+	font-size: 18px;
+	font-weight: 700;
+	padding: 17px 55px;
+	margin-top: 33px;
+}
+.header-button:hover{
+	box-shadow:none;
+	transition: 0.2s;
 }
 header small{
 	font-size: 12px;
@@ -139,6 +143,11 @@ text-align: center;
 	cursor: pointer;
 	font-size: 18px;
 	padding: 12px 40px;
+}
+.footer-btn:hover{
+	background-color: #fff;
+	color: #3a7dfd;
+	transition:0.2s;
 }
 @media(max-width: 1200px){
 	.header-pretitle{
