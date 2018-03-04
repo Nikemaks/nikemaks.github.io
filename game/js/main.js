@@ -33,15 +33,15 @@ var winx = 1;
 var winy = 1;
 function checkwiner() {
 		var allblock=document.getElementsByClassName('block');
-		if (allblock[0].innerHTML=='X' && allblock[1].innerHTML=='X' && allblock[2].innerHTML=='X') {document.getElementById('winx').innerHTML=winx++; alert('Перемога хрестами');}
-		if (allblock[3].innerHTML=='X' && allblock[4].innerHTML=='X' && allblock[5].innerHTML=='X') {document.getElementById('winx').innerHTML=winx++;	alert('Перемога хрестами');}
-		if (allblock[6].innerHTML=='X' && allblock[7].innerHTML=='X' && allblock[8].innerHTML=='X') {document.getElementById('winx').innerHTML=winx++;	alert('Перемога хрестами');}
-		if (allblock[0].innerHTML=='X' && allblock[3].innerHTML=='X' && allblock[6].innerHTML=='X') {document.getElementById('winx').innerHTML=winx++;	alert('Перемога хрестами');}
-		if (allblock[1].innerHTML=='X' && allblock[4].innerHTML=='X' && allblock[7].innerHTML=='X') {document.getElementById('winx').innerHTML=winx++;	alert('Перемога хрестами');}
-		if (allblock[2].innerHTML=='X' && allblock[5].innerHTML=='X' && allblock[8].innerHTML=='X') {document.getElementById('winx').innerHTML=winx++;	alert('Перемога хрестами');}
-		if (allblock[0].innerHTML=='X' && allblock[4].innerHTML=='X' && allblock[8].innerHTML=='X') {document.getElementById('winx').innerHTML=winx++;	alert('Перемога хрестами');}
-		if (allblock[6].innerHTML=='X' && allblock[4].innerHTML=='X' && allblock[2].innerHTML=='X') {document.getElementById('winx').innerHTML=winx++;	alert('Перемога хрестами');}
-		if (allblock[2].innerHTML=='X' && allblock[4].innerHTML=='X' && allblock[6].innerHTML=='X') {document.getElementById('winx').innerHTML=winx++;	alert('Перемога хрестами');}
+		if (allblock[0].innerHTML=='X' && allblock[1].innerHTML=='X' && allblock[2].innerHTML=='X') {document.getElementById('winx').innerHTML=winx++; alert('Перемога за	 хрестами');}
+		if (allblock[3].innerHTML=='X' && allblock[4].innerHTML=='X' && allblock[5].innerHTML=='X') {document.getElementById('winx').innerHTML=winx++;	alert('Перемога за	 хрестами');}
+		if (allblock[6].innerHTML=='X' && allblock[7].innerHTML=='X' && allblock[8].innerHTML=='X') {document.getElementById('winx').innerHTML=winx++;	alert('Перемога за	 хрестами');}
+		if (allblock[0].innerHTML=='X' && allblock[3].innerHTML=='X' && allblock[6].innerHTML=='X') {document.getElementById('winx').innerHTML=winx++;	alert('Перемога за	 хрестами');}
+		if (allblock[1].innerHTML=='X' && allblock[4].innerHTML=='X' && allblock[7].innerHTML=='X') {document.getElementById('winx').innerHTML=winx++;	alert('Перемога за	 хрестами');}
+		if (allblock[2].innerHTML=='X' && allblock[5].innerHTML=='X' && allblock[8].innerHTML=='X') {document.getElementById('winx').innerHTML=winx++;	alert('Перемога за	 хрестами');}
+		if (allblock[0].innerHTML=='X' && allblock[4].innerHTML=='X' && allblock[8].innerHTML=='X') {document.getElementById('winx').innerHTML=winx++;	alert('Перемога за	 хрестами');}
+		if (allblock[6].innerHTML=='X' && allblock[4].innerHTML=='X' && allblock[2].innerHTML=='X') {document.getElementById('winx').innerHTML=winx++;	alert('Перемога за	 хрестами');}
+		if (allblock[2].innerHTML=='X' && allblock[4].innerHTML=='X' && allblock[6].innerHTML=='X') {document.getElementById('winx').innerHTML=winx++;	alert('Перемога за	 хрестами');}
 
 
 		/*Ноль*/
