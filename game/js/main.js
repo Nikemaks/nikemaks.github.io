@@ -33,27 +33,27 @@ var winx = 1;
 var winy = 1;
 function checkwiner() {
 		var allblock=document.getElementsByClassName('block');
-		if (allblock[0].innerHTML=='X' && allblock[1].innerHTML=='X' && allblock[2].innerHTML=='X') {document.getElementById('winx').innerHTML=winx++; alert('Выграли крестики');}
-		if (allblock[3].innerHTML=='X' && allblock[4].innerHTML=='X' && allblock[5].innerHTML=='X') {document.getElementById('winx').innerHTML=winx++;	alert('Выграли крестики');}
-		if (allblock[6].innerHTML=='X' && allblock[7].innerHTML=='X' && allblock[8].innerHTML=='X') {document.getElementById('winx').innerHTML=winx++;	alert('Выграли крестики');}
-		if (allblock[0].innerHTML=='X' && allblock[3].innerHTML=='X' && allblock[6].innerHTML=='X') {document.getElementById('winx').innerHTML=winx++;	alert('Выграли крестики');}
-		if (allblock[1].innerHTML=='X' && allblock[4].innerHTML=='X' && allblock[7].innerHTML=='X') {document.getElementById('winx').innerHTML=winx++;	alert('Выграли крестики');}
-		if (allblock[2].innerHTML=='X' && allblock[5].innerHTML=='X' && allblock[8].innerHTML=='X') {document.getElementById('winx').innerHTML=winx++;	alert('Выграли крестики');}
-		if (allblock[0].innerHTML=='X' && allblock[4].innerHTML=='X' && allblock[8].innerHTML=='X') {document.getElementById('winx').innerHTML=winx++;	alert('Выграли крестики');}
-		if (allblock[6].innerHTML=='X' && allblock[4].innerHTML=='X' && allblock[2].innerHTML=='X') {document.getElementById('winx').innerHTML=winx++;	alert('Выграли крестики');}
-		if (allblock[2].innerHTML=='X' && allblock[4].innerHTML=='X' && allblock[6].innerHTML=='X') {document.getElementById('winx').innerHTML=winx++;	alert('Выграли крестики');}
+		if (allblock[0].innerHTML=='X' && allblock[1].innerHTML=='X' && allblock[2].innerHTML=='X') {document.getElementById('winx').innerHTML=winx++; alert('Перемога хрестами');}
+		if (allblock[3].innerHTML=='X' && allblock[4].innerHTML=='X' && allblock[5].innerHTML=='X') {document.getElementById('winx').innerHTML=winx++;	alert('Перемога хрестами');}
+		if (allblock[6].innerHTML=='X' && allblock[7].innerHTML=='X' && allblock[8].innerHTML=='X') {document.getElementById('winx').innerHTML=winx++;	alert('Перемога хрестами');}
+		if (allblock[0].innerHTML=='X' && allblock[3].innerHTML=='X' && allblock[6].innerHTML=='X') {document.getElementById('winx').innerHTML=winx++;	alert('Перемога хрестами');}
+		if (allblock[1].innerHTML=='X' && allblock[4].innerHTML=='X' && allblock[7].innerHTML=='X') {document.getElementById('winx').innerHTML=winx++;	alert('Перемога хрестами');}
+		if (allblock[2].innerHTML=='X' && allblock[5].innerHTML=='X' && allblock[8].innerHTML=='X') {document.getElementById('winx').innerHTML=winx++;	alert('Перемога хрестами');}
+		if (allblock[0].innerHTML=='X' && allblock[4].innerHTML=='X' && allblock[8].innerHTML=='X') {document.getElementById('winx').innerHTML=winx++;	alert('Перемога хрестами');}
+		if (allblock[6].innerHTML=='X' && allblock[4].innerHTML=='X' && allblock[2].innerHTML=='X') {document.getElementById('winx').innerHTML=winx++;	alert('Перемога хрестами');}
+		if (allblock[2].innerHTML=='X' && allblock[4].innerHTML=='X' && allblock[6].innerHTML=='X') {document.getElementById('winx').innerHTML=winx++;	alert('Перемога хрестами');}
 
 
 		/*Ноль*/
-		if (allblock[0].innerHTML=='0' && allblock[1].innerHTML=='0' && allblock[2].innerHTML=='0') {document.getElementById('winy').innerHTML=winy++; alert('Выграли нолики');}
-		if (allblock[3].innerHTML=='0' && allblock[4].innerHTML=='0' && allblock[5].innerHTML=='0') {document.getElementById('winy').innerHTML=winy++;	alert('Выграли нолики');}
-		if (allblock[6].innerHTML=='0' && allblock[7].innerHTML=='0' && allblock[8].innerHTML=='0') {document.getElementById('winy').innerHTML=winy++;	alert('Выграли нолики');}
-		if (allblock[0].innerHTML=='0' && allblock[3].innerHTML=='0' && allblock[6].innerHTML=='0') {document.getElementById('winy').innerHTML=winy++;	alert('Выграли нолики');}
-		if (allblock[1].innerHTML=='0' && allblock[4].innerHTML=='0' && allblock[7].innerHTML=='0') {document.getElementById('winy').innerHTML=winy++;	alert('Выграли нолики');}
-		if (allblock[2].innerHTML=='0' && allblock[5].innerHTML=='0' && allblock[8].innerHTML=='0') {document.getElementById('winy').innerHTML=winy++;	alert('Выграли нолики');}
-		if (allblock[0].innerHTML=='0' && allblock[4].innerHTML=='0' && allblock[8].innerHTML=='0') {document.getElementById('winy').innerHTML=winy++;	alert('Выграли нолики');}
-		if (allblock[6].innerHTML=='0' && allblock[4].innerHTML=='0' && allblock[3].innerHTML=='0') {document.getElementById('winy').innerHTML=winy++;	alert('Выграли нолики');}
-		if (allblock[2].innerHTML=='0' && allblock[4].innerHTML=='0' && allblock[6].innerHTML=='0') {document.getElementById('winy').innerHTML=winy++;	alert('Выграли нолики');}
+		if (allblock[0].innerHTML=='0' && allblock[1].innerHTML=='0' && allblock[2].innerHTML=='0') {document.getElementById('winy').innerHTML=winy++; alert('Перемога за  нуликами');}
+		if (allblock[3].innerHTML=='0' && allblock[4].innerHTML=='0' && allblock[5].innerHTML=='0') {document.getElementById('winy').innerHTML=winy++;	alert('Перемога за  нуликами');}
+		if (allblock[6].innerHTML=='0' && allblock[7].innerHTML=='0' && allblock[8].innerHTML=='0') {document.getElementById('winy').innerHTML=winy++;	alert('Перемога за  нуликами');}
+		if (allblock[0].innerHTML=='0' && allblock[3].innerHTML=='0' && allblock[6].innerHTML=='0') {document.getElementById('winy').innerHTML=winy++;	alert('Перемога за  нуликами');}
+		if (allblock[1].innerHTML=='0' && allblock[4].innerHTML=='0' && allblock[7].innerHTML=='0') {document.getElementById('winy').innerHTML=winy++;	alert('Перемога за  нуликами');}
+		if (allblock[2].innerHTML=='0' && allblock[5].innerHTML=='0' && allblock[8].innerHTML=='0') {document.getElementById('winy').innerHTML=winy++;	alert('Перемога за  нуликами');}
+		if (allblock[0].innerHTML=='0' && allblock[4].innerHTML=='0' && allblock[8].innerHTML=='0') {document.getElementById('winy').innerHTML=winy++;	alert('Перемога за  нуликами');}
+		if (allblock[6].innerHTML=='0' && allblock[4].innerHTML=='0' && allblock[3].innerHTML=='0') {document.getElementById('winy').innerHTML=winy++;	alert('Перемога за  нуликами');}
+		if (allblock[2].innerHTML=='0' && allblock[4].innerHTML=='0' && allblock[6].innerHTML=='0') {document.getElementById('winy').innerHTML=winy++;	alert('Перемога за  нуликами');}
 			
 	}
 
