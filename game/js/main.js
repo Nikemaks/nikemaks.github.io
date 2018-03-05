@@ -44,7 +44,7 @@ function checkwiner() {
 		if (allblock[2].innerHTML=='X' && allblock[4].innerHTML=='X' && allblock[6].innerHTML=='X') {document.getElementById('winx').innerHTML=winx++;	alert('Перемога за	 хрестами');}
 
 
-		/*Ноль*/
+		/*Нyль*/
 		if (allblock[0].innerHTML=='0' && allblock[1].innerHTML=='0' && allblock[2].innerHTML=='0') {document.getElementById('winy').innerHTML=winy++; alert('Перемога за  нуликами');}
 		if (allblock[3].innerHTML=='0' && allblock[4].innerHTML=='0' && allblock[5].innerHTML=='0') {document.getElementById('winy').innerHTML=winy++;	alert('Перемога за  нуликами');}
 		if (allblock[6].innerHTML=='0' && allblock[7].innerHTML=='0' && allblock[8].innerHTML=='0') {document.getElementById('winy').innerHTML=winy++;	alert('Перемога за  нуликами');}
@@ -57,3 +57,35 @@ function checkwiner() {
 			
 	}
 
+
+/*релог*/
+document.getElementById('btnrelog').onclick=function () {
+	location.reload();
+}
+/* Теми	*/
+$('#tema1').on('click', function() {
+	$('body').css({background: "url(img/ucraine.jpg)center no-repeat"})
+		$('#btn-game').css({background: "url(img/btn-1.jpg)center no-repeat"})
+		$('#btnrelog').css({background: "url(img/btn-11.jpg)center repeat"})
+			$('.block').css('color', '#2D2DFF')
+
+}
+);
+/*тема 2*/
+/* Теми	*/
+$('#tema2').on('click', function() {
+	$('body').css({background: "url(img/winter.jpg)center no-repeat"})
+	$('#btn-game').css('background', '#54B1DC')
+	$('.block').css('color', '#54B1DC')
+	$('#btnrelog').css('background', '#54B1DC')
+}
+);
+/* Тема3*/
+$('#tema3').on('click', function() {
+	$('body').css({background: "url(img/Spring.jpg)center no-repeat"})
+		$('#btn-game').css('background', '#CDD63F')
+		$('.block').css('color', '#CDD63F')
+		$('#btnrelog').css('background', '#9BD63F')
+}
+
+);
