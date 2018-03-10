@@ -3748,6 +3748,7 @@ blockquote span i {
 /* Верхний блок*/
 .main-page-title{
     background: #fff;
+
 }
 .main_title{
     font-weight: 100;
@@ -3755,6 +3756,10 @@ blockquote span i {
     font-size: 60px;
     line-height: 70px;
     color:#585D75;
+    
+}
+.main_title h1{
+margin-bottom: 20px;
 }
 .dialog{
     color: #BBBCC4;
@@ -3862,6 +3867,24 @@ color: grey;
             }
             /* Проф фото*/
 
-.prof-photo{
-  
+.prof-photo {
+    width: 130px;
+    height: 170px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    margin-right: 20px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    box-shadow: inset 0 0 8px rgba(0,0,0,.15);
+}
+.prof-coment{
+    width: 450px;
+    
+}
+.prof-btn{
+  margin-left: 200px;
+  margin-top: -5px;
+   
 }
