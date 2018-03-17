@@ -107,7 +107,7 @@
 .header-menu-2 li {
   list-style: none;
   display: inline-block;
-  padding: 5px 45px;
+  padding: 5px 55px;
   border-right: 2px solid #2f6b92;
   border: 2px solid transparent;
 }
@@ -176,8 +176,8 @@
   border: 10px solid #fff;
   position: relative;
   bottom: 15px;
-  left: 234px;
-  width: 210px;
+  left: 254px;
+  width: 230px;
 }
 .header-stick::after {
   content: " ";
@@ -540,4 +540,52 @@
 }
 .footer .grey {
   color: grey;
+}
+@media (max-width: 1000px) {
+  .header-menu-2 li {
+    padding: 5px 20px;
+  }
+  .header-menu-2 li img {
+    margin-left: -55px;
+  }
+  .header-phone {
+    font-size: 12px;
+  }
+  .header-phone sup {
+    font-size: 14px;
+  }
+  .header-phone a {
+    font-size: 10px;
+  }
+  .header-link-menu {
+    font-size: 10px;
+    padding: 0;
+  }
+  .header-stick {
+    left: 183px;
+    width: 148px;
+  }
+  .content-1-shares {
+    margin-left: 15px;
+  }
+  .content-1-shares img,
+  .content-1-shares h2 {
+    margin-left: 25px;
+  }
+  .articles-content {
+    width: 25%;
+    display: block;
+  }
+  .header-entrance a {
+    font-size: 8px;
+  }
+  .btn-group {
+    margin-left: -70px;
+  }
+  .tabs__content {
+    width: 100%;
+  }
+  .content-1-shares-content {
+    margin-left: 20px;
+  }
 }
