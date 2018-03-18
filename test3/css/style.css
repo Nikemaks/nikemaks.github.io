@@ -562,7 +562,7 @@
   cursor: pointer;
 }
 /*Медиа запросы*/
-@media (min-width: 1200px) and (max-width: 1400px) {
+@media (min-width: 1200px) and (max-width: 1600px) {
   .menu-600 {
     display: none;
   }
