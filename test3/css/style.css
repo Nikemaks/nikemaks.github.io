@@ -541,7 +541,69 @@
 .footer .grey {
   color: grey;
 }
-@media (min-width: 1000px) {
+/*меню 600 px*/
+.menu-600 {
+  margin-top: 20px;
+  margin-bottom: -100px;
+  border: 1px solid #246188;
+  background: #246188;
+}
+.menu-600 button {
+  margin-top: 2.5px;
+  margin-left: 45px;
+  margin-right: 180px;
+  padding: 1px;
+  border-radius: 0;
+}
+.menu-600 img {
+  margin-top: 2px;
+  margin-left: 100px;
+  margin-right: -70px;
+  cursor: pointer;
+}
+/*Медиа запросы*/
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .menu-600 {
+    display: none;
+  }
+  .header-phone sup {
+    font-size: 18px;
+  }
+  .header-phone a {
+    font-size: 12px;
+  }
+  .content-1 {
+    margin-top: 50px;
+  }
+  .header-menu-2 li {
+    padding: 5px 32px;
+    font-size: 10px;
+  }
+  .header-menu-2 li img {
+    margin-right: 5px;
+  }
+  .header-link-menu li {
+    font-size: 12px;
+  }
+  .header-stick {
+    left: 208px;
+    width: 188px;
+  }
+  .content-1-shares img,
+  h2 {
+    margin-left: 25px;
+  }
+  .articles-content {
+    width: 25%;
+  }
+  .tabs__content {
+    width: 100%;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .menu-600 {
+    display: none;
+  }
   .header-menu-2 li {
     padding: 5px 20px;
   }
@@ -549,10 +611,10 @@
     margin-left: -55px;
   }
   .header-phone {
-    font-size: 12px;
+    font-size: 16px;
   }
   .header-phone sup {
-    font-size: 14px;
+    font-size: 20px;
   }
   .header-phone a {
     font-size: 10px;
@@ -562,8 +624,8 @@
     padding: 0;
   }
   .header-stick {
-    left: 183px;
-    width: 148px;
+    left: 185px;
+    width: 145px;
   }
   .content-1-shares {
     margin-left: 15px;
@@ -577,59 +639,8 @@
     display: block;
   }
   .header-entrance a {
-    font-size: 8px;
-  }
-  .btn-group {
-    margin-left: -70px;
-  }
-  .tabs__content {
-    width: 100%;
-  }
-  .content-1-shares-content {
-    margin-left: 20px;
-  }
-}
-@media (max-width: 1000px) {
-  .header-menu-2 li {
-    padding: 5px 20px;
-  }
-  .header-menu-2 li img {
-    margin-left: -55px;
-  }
-  .header-phone {
-    font-size: 12px;
-  }
-  .header-phone sup {
     font-size: 14px;
   }
-  .header-phone a {
-    font-size: 10px;
-  }
-  .header-link-menu {
-    font-size: 10px;
-    padding: 0;
-  }
-  .header-stick {
-    left: 183px;
-    width: 148px;
-  }
-  .content-1-shares {
-    margin-left: 15px;
-  }
-  .content-1-shares img,
-  .content-1-shares h2 {
-    margin-left: 25px;
-  }
-  .articles-content {
-    width: 25%;
-    display: block;
-  }
-  .header-entrance a {
-    font-size: 8px;
-  }
-  .btn-group {
-    margin-left: -70px;
-  }
   .tabs__content {
     width: 100%;
   }
@@ -637,18 +648,49 @@
     margin-left: 20px;
   }
 }
-@media (max-width: 600px) {
+@media (min-width: 600px) and (max-width: 999px) {
+  .tabs__content {
+    width: 100%;
+  }
+  .header-phone {
+    font-size: 10px;
+  }
+  .header-phone sup {
+    font-size: 12px;
+  }
+  .header-phone a {
+    font-size: 8px;
+  }
+  .header-entrance {
+    font-size: 5px;
+  }
+  .header-entrance a,
+  .header-entrance img {
+    display: inline-block;
+    font-size: 8px;
+  }
+  .header-entrance img {
+    width: 25%;
+  }
   .header-btn {
     display: none;
   }
   .header-drop-link {
-    font-size: 12px;
+    font-size: 10px;
   }
   .btn-group {
     margin-right: 70px;
   }
   .header-drop {
-    width: 160px;
+    width: 135px;
+    height: 45px;
+  }
+  .header-drop img {
+    width: 25%;
+  }
+  .header-drop-link {
+    font-size: 10px;
+    margin-right: 10px;
   }
   .ivisible {
     display: none;
@@ -658,5 +700,184 @@
   }
   .articles-content {
     display: block;
+  }
+  .content-1-shares-content {
+    margin-left: 25px;
+  }
+  .shares-btn {
+    margin-bottom: 25px;
+  }
+  .product-cost-content {
+    width: 100%;
+    margin-left: 65px;
+  }
+  .product-btn-right {
+    position: relative;
+    left: 560px;
+    top: -278px;
+  }
+  .manufacturers {
+    margin-left: 80px;
+  }
+  .articles-content {
+    margin-left: 180px;
+    text-align: center;
+  }
+  .footer-menu {
+    font-size: 13px;
+  }
+  .footer-logo {
+    border-top: 1px solid grey;
+    margin-top: 20px;
+    text-align: center;
+  }
+  .footer-logo img,
+  .footer-logo p {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .footer-logo .grey {
+    display: block;
+  }
+  .footer-sotial {
+    text-align: center;
+  }
+  .footer-sotial img,
+  .footer-sotial a {
+    display: inline-block;
+    padding: 0px 0px;
+  }
+  .tabs__content {
+    width: 98%;
+    margin-top: -10px;
+    margin-left: 10px;
+  }
+}
+@media (min-width: 400px) and (max-width: 599px) {
+  .tabs__content {
+    width: 100%;
+  }
+  .header-phone {
+    margin-left: 20px;
+    font-size: 9px;
+  }
+  .header-phone sup {
+    font-size: 10px;
+  }
+  .header-phone a {
+    display: none;
+  }
+  .header-entrance {
+    font-size: 8px;
+  }
+  .header-entrance a,
+  .header-entrance img {
+    display: inline-block;
+    font-size: 8px;
+  }
+  .header-entrance img {
+    width: 25%;
+  }
+  .btn-invisible {
+    display: none;
+  }
+  .header-btn {
+    display: none;
+  }
+  .header-drop-link {
+    font-size: 10px;
+  }
+  .btn-group {
+    margin-right: 70px;
+  }
+  .header-drop {
+    width: 135px;
+    height: 45px;
+  }
+  .header-drop img {
+    width: 25%;
+  }
+  .header-drop-link {
+    font-size: 10px;
+    margin-right: 10px;
+  }
+  .ivisible {
+    display: none;
+  }
+  .header-menu-2 {
+    display: none;
+  }
+  .articles-content {
+    display: block;
+  }
+  .content-1-shares-content {
+    margin-left: 25px;
+  }
+  .shares-btn {
+    margin-bottom: 25px;
+  }
+  .product-cost-content {
+    width: 100%;
+    margin-left: 65px;
+  }
+  .product-btn-right {
+    position: relative;
+    left: 560px;
+    top: -278px;
+  }
+  .manufacturers {
+    margin-left: 80px;
+  }
+  .articles-content {
+    margin-left: 100px;
+    text-align: center;
+  }
+  .footer-menu {
+    font-size: 13px;
+  }
+  .footer-logo {
+    border-top: 1px solid grey;
+    margin-top: 20px;
+    text-align: center;
+  }
+  .footer-logo img,
+  .footer-logo p {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .footer-logo .grey {
+    display: block;
+  }
+  .footer-sotial {
+    text-align: center;
+    display: inline-block;
+  }
+  .footer-sotial img,
+  .footer-sotial a {
+    display: inline-block;
+    padding: 0px 0px;
+  }
+  .tabs__content {
+    display: none;
+  }
+  .menu-600 {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: -110px;
+    border: 1px solid #246188;
+    background: #246188;
+  }
+  .menu-600 button {
+    margin-top: 2.5px;
+    margin-left: 45px;
+    margin-right: 50px;
+    padding: 1px;
+    border-radius: 0;
+  }
+  .menu-600 img {
+    margin-top: 2px;
+    margin-left: 50px;
+    margin-right: -70px;
+    cursor: pointer;
   }
 }
