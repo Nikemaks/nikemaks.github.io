@@ -17,10 +17,10 @@ let total = 2500,// финальная цена
 
 				
 
-const land = 2500, // ландинг
+const land = 2500, // лeндинг
       corp = 6000,// корпаративный сайт
-      cms = 2000,
-      changes = 500;
+      cms = 2000, // cms
+      changes = 500; // редактирование текста
       blocks = 250,// цена за блок
       pages = 1000;//цена за страницу
 
@@ -84,4 +84,57 @@ window.addEventListener('DOMContentLoaded',function () {
 
 
 	});
+
+	counterBlock.addEventListener('change', ()=> {
+		counterHours.value = '';
+		counterRate.value = '';
+		total = counterBlock.value *  blocks;
+		totalValue.value = total;
+
+	});
+		counterPages.addEventListener('change', ()=> {
+		counterHours.value = '';
+		counterRate.value = '';
+		total = counterPages.value *  pages;
+		totalValue.value = total;
+				});
+
+counterHours.addEventListener('change', ()=>{
+			counterBlock.value = '';
+			counterPages.value = '';
+			total = 0;
+			time = counterHours.value;
+			hourRate = time * counterRate.value;
+			totalValue.value = hourRate;
+			total =  hourRate;
+
 });
+counterRate.addEventListener('change', ()=>{
+			counterBlock.value = '';
+			counterPages.value = '';
+			total = 0;
+			hourRate = time * counterRate.value;
+			totalValue.value = hourRate;
+			total =  hourRate;
+  });
+
+changesCheck.addEventListener('change',()=>{
+				if (changesCheck.checked) {
+						  total += changes;
+						  totalValue.value = total; 
+						 }else{
+						 	total -= changes;
+						  totalValue.value = total; 
+						 }
+				});
+
+cmsCheck.addEventListener('change',()=>{
+				if (cmsCheck.checked) {
+						  total += cms;
+						  totalValue.value = total; 
+						 }else{
+						 	total -= cms;
+						  totalValue.value = total; 
+						 }
+				});
+   });
