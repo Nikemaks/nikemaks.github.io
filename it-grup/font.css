@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'GothamPro';
+    src: url('./font/GothamPro.eot');
+    src: url('./font/GothamPro.eot?#iefix') format('embedded-opentype'),
+         url('./font/GothamPro.woff') format('woff'),
+         url('./font/GothamPro.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GothamProBold';
+    src: url('./font/GothamProBold.eot');
+    src: url('./font/GothamProBold.eot?#iefix') format('embedded-opentype'),
+         url('./font/GothamProBold.woff') format('woff'),
+         url('./font/GothamProBold.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GothamProBlack';
+    src: url('./font/GothamProBlack.eot');
+    src: url('./font/GothamProBlack.eot?#iefix') format('embedded-opentype'),
+         url('./font/GothamProBlack.woff') format('woff'),
+         url('./font/GothamProBlack.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GothamProLight';
+    src: url('./font/GothamProLight.woff') format('woff'),
+         url('./font/GothamProLight.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'GothamProRegular';
+    src: url('./font/GothamProRegular.woff') format('woff'),
+         url('./font/GothamProRegular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'GothamProBlack';
+    src: url('./font/GothamProBlack.woff') format('woff'),
+         url('./font/GothamProBlack.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'ProximaNovaRegular';
+    src: url('./font/ProximaNovaRegular.woff') format('woff'),
+         url('./font/ProximaNovaRegular.ttf') format('truetype');
+}
