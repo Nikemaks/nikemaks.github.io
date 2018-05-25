@@ -1,0 +1,1050 @@
+/* CSS Document */
+
+* {
+	margin:0; padding:0;
+	font-size:13px;
+}
+
+body{
+	background:#e1e0d2;
+}
+
+img {vertical-align:top;}
+a img { border:0;}
+
+ul { list-style:none;}
+
+.left { float:left;}
+.right {float:right;}
+.clear  { clear:both;}
+
+
+html, input, textarea
+	{
+		font-family:Arial, Helvetica, sans-serif;
+		font-size:0.75em;
+		line-height:1.667em;
+		color:#848484;
+	}
+
+input, select { vertical-align:middle; font-weight:normal;}
+
+a {color:#50a70e;}
+a:hover{text-decoration:none;}
+p {padding-top:15px;}
+
+/* ============================= main layout ====================== */
+
+.link {font-size:1.5em; display:inline-block; margin-top:26px;}
+.site-content .link {font-size:1.385em; line-height:1em;}
+.box2 .link {font-size:1.125em; line-height:1em; margin-top:17px;}
+.link3 {color:#0e7c99;}
+.link4 {color:#a8a285;}
+
+li {background:url(images/list-bg.gif) no-repeat 0 10px; padding-left:8px; line-height:2em;}
+li a {color:#848484;}
+
+.site-content li {font-size:0.923em; line-height:2em;}
+
+.box2 li {font-size:0.75em; line-height:2em;}
+
+h2 {color:#000000; font-size:2em; line-height:1em; font-weight:normal; margin-bottom:15px;}
+.site-content h2 {font-size:1.846em; line-height:1em;}
+h3 {color:#373737; font-size:14px; line-height:1em; font-weight:normal; margin-bottom:5px;}
+
+.imgindent {margin:0 9px 0 0; float:left;}
+.imgindent2 {margin:0 20px 0 0; float:left;}
+
+.title1 {color:#ffffff; background:url(images/title1-tail.gif) top repeat-x; margin:0 0 0px -20px; position:relative; width:215px;}
+.title1 span {display:block; background:url(images/title1-right-bg.gif) top right no-repeat; padding:11px 15px 11px 16px;}
+.title2 {color:#ffffff; background:url(images/title2-tail.gif) top repeat-x; margin:0 0 10px -14px; position:relative; width:215px;}
+.title2 span {display:block; background:url(images/title2-right-bg.gif) top right no-repeat; padding:10px 15px 13px 13px;}
+.title3 {color:#ffffff; background:url(images/title3-tail.gif) top repeat-x; margin:0 0 10px -14px; position:relative; width:215px;}
+.title3 span {display:block; background:url(images/title3-right-bg.gif) top right no-repeat; padding:10px 15px 13px 16px;}
+
+/* ============================= header ====================== */
+
+#header h3 {display:inline;}
+.logo {margin-top:35px;}
+#header .right {text-align:right;}
+
+#header .menu {width:500px; overflow:hidden; padding-top:27px; height:44px;}
+#header .menu ul {float:right;}
+#header .menu li {margin-left:2px; float:left; width:102px; text-align:center; background:none; padding:0; font-size:1.083em; line-height:1em;}
+#header .menu li a {display:block; background:url(images/menu-tail-bg.gif) top repeat-x; color:#ffffff; text-decoration:none; margin-top:3px;}
+#header .menu li a span {background:url(images/menu-right-bg.gif) top right no-repeat; display:block;}
+#header .menu li a span span {background:url(images/menu-left-bg.gif) top left no-repeat; padding:15px 0 13px 0;}
+#header .menu li a:hover {background:url(images/menu-tail-bg-act.gif) top repeat-x; color:#373737; font-weight:bold; margin:0;}
+#header .menu li a:hover span {background:url(images/menu-right-bg-act.gif) top right no-repeat;}
+#header .menu li a:hover span span {background:url(images/menu-left-bg-act.gif) top left no-repeat; padding-top:18px;}
+
+#header .menu .active a {background:#f5f5eb; color:#373737; font-weight:bold; margin:0;}
+#header .menu .active a span {background:url(images/menu-right-bg-act.gif) top right no-repeat;}
+#header .menu .active a span span {background:url(images/menu-left-bg-act.gif) top left no-repeat; padding-top:18px;}
+
+/* ============================= content ====================== */
+
+#content {padding:22px 16px 27px 15px; background:#f5f5eb;}
+.site-content {font-size:1.083em; line-height:1.231em;}
+.col-pad {margin-right:1px;}
+.col-pad2 {padding-right:20px;}
+
+.box {background:#eeece0 url(images/box-corner-bottom-right.gif) bottom right no-repeat; width:100%;}
+.box .corner-bottom-left {background:url(images/box-corner-bottom-left.gif) bottom left no-repeat; width:100%;}
+.box .corner-top-right {background:url(images/box-corner-top-right.gif) top right no-repeat; width:100%;}
+.box .corner-top-left {background:url(images/box-corner-top-left.gif) top left no-repeat; width:100%;}
+.box .indent {padding:14px 25px 27px 20px;}
+
+.box2 {background:#f7f7f7 url(images/box2-tail-bottom.gif) bottom repeat-x;}
+.box2 .tail-right {background:url(images/box2-tail-right.gif) right repeat-y;}
+.box2 .tail-left {background:url(images/box2-tail.gif) left repeat-y;}
+.box2 .tail-top {background:url(images/box2-top-tail.gif) top repeat-x;}
+.box2 .corner-bottom-right {background:url(images/box2-corner-bottom-right.gif) bottom right no-repeat;}
+.box2 .corner-bottom-left {background:url(images/box2-corner-bottom-left.gif) bottom left no-repeat;}
+.box2 .corner-top-right {background:url(images/box2-corner-top-right.gif) top right no-repeat;}
+.box2 .corner-top-left {background:url(images/box2-corner-top-left.gif) top left no-repeat; width:100%;}
+.box2 .box-indent {padding:10px 5px 5px 5px;}
+
+
+.box3 {background:#f6f6f2 url(images/box3-tail-bottom.gif) bottom repeat-x;}
+.box3 .tail-right {background:url(images/box3-tail-right.gif) right repeat-y;}
+.box3 .tail-left {background:url(images/box3-tail.gif) left repeat-y;}
+.box3 .tail-top {background:url(images/box3-top-tail.gif) top repeat-x;}
+.box3 .corner-bottom-right {background:url(images/box3-corner-bottom-right.gif) bottom right no-repeat;}
+.box3 .corner-bottom-left {background:url(images/box3-corner-bottom-left.gif) bottom left no-repeat;}
+.box3 .corner-top-right {background:url(images/box3-corner-top-right.gif) top right no-repeat;}
+.box3 .corner-top-left {background:url(images/box3-corner-top-left.gif) top left no-repeat; width:100%;}
+.box3 .box-indent {padding:8px 30px 29px 14px;}
+.box3 .link {margin-top:20px;}
+
+.padding1 {padding-top:17px;}
+.padding2 {padding-top:7px;}
+.padding3 {padding-top:0px;}
+.indent1 {padding:22px 20px 20px 14px;}
+.box2 {font-size:1.231em; color:#666666; line-height:1.188em;}
+.box2 h2 {font-size:1.5em; line-height:1em;}
+.box2 .link2 {font-size:0.875em;}
+.color2 {color:#000;}
+.color3 {color:#50a70e;}
+
+/* ============================= footer ====================== */
+
+#footer {font-size:1.083em; padding:32px 21px 0 25px;}
+#footer a {color:#8a877b;}
+#footer .menu {float:right;}
+#footer .menu li {display:inline; background:url(images/footer-menu-devider.gif) top left no-repeat; padding:0 12px 0 13px; line-height:1.667em;}
+#footer .menu li a {color:#8a877b;}
+#footer .menu .first {background:none;}
+
+/* ============================= forms ============================= */
+
+#SearchForm .rowi {height:24px;}
+#SearchForm {background:url(images/form-tail.gif) top repeat-x; font-weight:bold; color:#ffffff; font-size:1.083em; width:470px; float:right;}
+#SearchForm .right-bg {background:url(images/form-right-bg.gif) top right no-repeat;}
+#SearchForm .left-bg {background:url(images/form-left-bg.gif) top left no-repeat; padding:18px 20px 16px 13px;}
+#SearchForm .input {width:300px; height:20px; border:1px solid #b7871e; background:#ffffff; padding:0 0 0 5px; font-size:1em; margin:0 5px 0 0;}
+#SearchForm .select {width:88px; border:1px solid #b7871e; background:#ffffff; color:#848484; font-size:0.923em; margin:0 5px 0 10px;}
+
+
+
+#ContactForm {padding:20px 0 0 0;}
+#ContactForm .rowi {height:42px;}
+#ContactForm .link {float:right; margin-left:20px;}
+.input {width:252px; height:19px; border:1px solid #cdcdc7; background:#fff; padding:0 0 0 5px; font-size:1em;}
+textarea {width:252px; height:252px; border:1px solid #cdcdc7; background:#fff; padding:0 0 0 5px; overflow:auto; font-size:1em; resize: none}
+
+
+.box-indent ul {font-size:13px; line-height:1.231em;margin: 5px;}
+.box-indent ul li {font-size:13px; line-height:1.231em; list-style-position: inside; background:url(images/list-bg.gif) no-repeat 0 10px; padding-top:4px;}
+
+
+/* Базовые стили модального окна  */
+.overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    bottom: 0;
+    cursor: default;
+    left: 0;
+    opacity: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    visibility: hidden;
+    z-index: 1;
+    -webkit-transition: opacity .5s;
+    -moz-transition: opacity .5s;
+    -ms-transition: opacity .5s;
+    -o-transition: opacity .5s;
+    transition: opacity .5s;
+}
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+.popup {
+    background-color: #fff;
+    border: 3px solid #fff;
+    display: inline-block;
+    width: 350px;
+    left: 50%; 
+    margin-left: -175px;         
+    
+    opacity: 0;
+    padding: 15px;
+    position: fixed;
+    text-align: justify;
+    font: 14px Helvetica, Arial, Sans-Serif;
+    top: 25%;
+    visibility: hidden;
+    z-index: 10;
+	
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+
+    -webkit-box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.4) inset;
+    -moz-box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.4) inset;
+    -ms-box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.4) inset;
+    -o-box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.4) inset;
+    box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.4) inset;
+
+    -webkit-transition: opacity .5s, top .5s;
+    -moz-transition: opacity .5s, top .5s;
+    -ms-transition: opacity .5s, top .5s;
+    -o-transition: opacity .5s, top .5s;
+    transition: opacity .5s, top .5s;
+}
+.overlay:target+.popup {
+    top: 25%;
+    opacity: 1;
+    visibility: visible;
+}
+.close {
+    background-color: rgba(0, 0, 0, 0.8);
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    text-decoration: none;
+    top: -15px;
+    width: 30px;
+
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    border-radius: 15px;
+}
+.close:before {
+    color: rgba(255, 255, 255, 0.9);
+    content: "X";
+    font-size: 24px;
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+}
+.close:hover {
+    background-color: rgba(64, 128, 128, 0.8);
+}
+.popup p, .popup div {
+    padding: 0px 5px 0px 5px;
+}
+#vk_comments,
+#vk_comments iframe {
+    width: 100% !important;
+}
+
+.bordered {
+    font-family: 'trebuchet MS', 'Lucida sans', Arial;
+    font-size: 14px;
+    color: #444;
+    *border-collapse: collapse; /* IE7 and lower */
+    border-spacing: 0;
+
+    border: solid #ccc 1px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 1px 1px #ccc;
+    -moz-box-shadow: 0 1px 1px #ccc;
+    box-shadow: 0 1px 1px #ccc;        
+}
+.bordered tr:hover {
+    background: #fbf8e9;
+    -o-transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;    
+}   
+   
+.bordered td, .bordered th {
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    padding: 5px;
+    text-align: left;   
+}
+.bordered th {
+    background:url(images/title1-tail.gif) top repeat-x;
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;
+    -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset; 
+    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;       
+    border-top: none;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+}
+
+
+.bordered th:first-child {
+    -moz-border-radius: 6px 0 0 0;
+    -webkit-border-radius: 6px 0 0 0;
+    border-radius: 6px 0 0 0;
+}
+.bordered th:last-child {
+    -moz-border-radius: 0 6px 0 0;
+    -webkit-border-radius: 0 6px 0 0;
+    border-radius: 0 6px 0 0;
+}
+.bordered th:only-child{
+    -moz-border-radius: 6px 6px 0 0;
+    -webkit-border-radius: 6px 6px 0 0;
+    border-radius: 6px 6px 0 0;
+}
+.bordered tr:last-child td:first-child {
+    -moz-border-radius: 0 0 0 6px;
+    -webkit-border-radius: 0 0 0 6px;
+    border-radius: 0 0 0 6px;
+}
+.bordered tr:last-child td:last-child {
+    -moz-border-radius: 0 0 6px 0;
+    -webkit-border-radius: 0 0 6px 0;
+    border-radius: 0 0 6px 0;
+}
+.graphs {
+	width: 100%;
+	height: 100%;
+	font-size: 14px;
+	line-height: 1.2em;
+}
+.graphs-container {
+	box-sizing: border-box;
+	width: 100%;
+	height: 450px;
+	border: 1px solid #ddd;
+	background: #fff;
+}
+.sexybutton {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0;
+	padding: 0;
+	font: 13px "Helvetica Neue", Helvetica, Arial, clean, sans-serif !important;
+	text-decoration: none !important;
+	background: none;
+	border: none;
+	white-space: nowrap;
+	cursor: pointer;
+	user-select: none;
+	-moz-user-select: none;
+	
+	/* Fix extra width padding in IE */
+	_width: 0;
+	overflow: visible;
+}
+
+.sexybutton span {
+	display: block;						/* Prevents :active from working in IE--oh well! */
+	height: 24px;
+	padding-right: 12px;
+	background-repeat: no-repeat;
+	background-position: right top;
+}
+
+.sexybutton span span {
+	padding-right: 0;
+	padding-left: 12px;
+	line-height: 24px;
+	background-position: left top;
+}
+
+.sexybutton span span span {
+	padding-left: 21px;
+	background-image: none;
+	background-repeat: no-repeat;
+	background-position: left center;
+	/* IE6 still requires a PNG transparency fix */ 
+	/* _background-image: none;		Or just hide icons from the undeserving IE6 */
+	/* _padding-left: 0;					Or just hide icons from the undeserving IE6 */
+}
+
+.sexybutton span span span.after {
+	padding-left: 0px;
+	padding-right: 21px;
+	background-position: right center;
+	/* IE6 still requires a PNG transparency fix */ 
+	/* _padding-right: 0;					Or just hide icons from the undeserving IE6 */
+}
+
+.sexybutton.sexyicononly span span span {
+	padding-left: 16px;
+}
+
+.sexybutton.sexyicononly span span span.after {
+	padding-left: 0px;
+	padding-right: 16px;
+}
+
+.sexybutton[disabled],
+.sexybutton[disabled]:hover,
+.sexybutton[disabled]:focus,
+.sexybutton[disabled]:active,
+.sexybutton.disabled,
+.sexybutton.disabled:hover,
+.sexybutton.disabled:focus,
+.sexybutton.disabled:active {
+	color: #333 !important;
+	cursor: inherit;
+	text-shadow: none; 
+	opacity: 0.33;
+}
+
+.sexybutton:hover span,
+.sexybutton:focus span {
+	background-position: 100% -24px;
+}
+
+.sexybutton:hover span span,
+.sexybutton:focus span span {
+	background-position: 0% -24px;
+}
+
+.sexybutton:active span {
+	background-position: 100% -48px;
+}
+
+.sexybutton:active span span {
+	background-position: 0% -48px;
+}
+
+.sexybutton[disabled] span,
+.sexybutton.disabled span {
+	background-position: 100% -72px;
+}
+
+.sexybutton[disabled] span span,
+.sexybutton.disabled span span {
+	background-position: 0% -72px;
+}
+
+.sexybutton:hover span span span,
+.sexybutton:focus span span span,
+.sexybutton:active span span span,
+.sexybutton[disabled] span span span,
+.sexybutton.disabled span span span {
+	background-position: left center;
+}
+
+.sexybutton:hover span span span.after,
+.sexybutton:focus span span span.after,
+.sexybutton:active span span span.after,
+.sexybutton[disabled] span span span.after,
+.sexybutton.disabled span span span.after {
+	background-position: right center;
+}
+
+.sexybutton img {
+	margin-right: 5px;
+	vertical-align: text-top;
+	/* IE6 Hack */
+	_margin-top: 4px;
+	_vertical-align: text-bottom;
+	/* IE6 still requires a PNG transparency fix */ 
+	/* _display: none;		Or just hide icons from the undeserving IE6 */
+}
+
+.sexybutton img.after {
+	margin-right: 0;
+	margin-left: 5px;
+	/* IE6 still requires a PNG transparency fix */ 
+	/* _margin-left: 0;		Or just hide icons from the undeserving IE6 */
+}
+
+.sexybutton.sexymedium	{ font-size: 15px !important; }
+.sexybutton.sexylarge	{ font-size: 18px !important; }
+
+
+/*
+ * Button Skins
+ * 
+ * .PNG background images with alpha transparency are also supplied if you'd rather use them instead of the 
+ * default .GIF images. (Just beware of IE6's lack of support.) 
+ * 
+ * Additional skins can be added below. The images/skins/ButtonTemplate.psd can be used to create new skins.
+ * Prefix the skin name with "sexy" to avoid any potential conflicts with other class names. 
+ */
+
+/* Silver Button Skin (the default skin) */
+
+.sexybutton,
+.sexybutton.sexysilver {
+	color: #666 !important;
+}
+	
+.sexybutton:hover,
+.sexybutton:focus,
+.sexybutton.sexysilver:hover,
+.sexybutton.sexysilver:focus {
+	color: #333 !important;
+}
+	
+.sexybutton span,
+.sexybutton.sexysilver span {
+	background-image: url(images/skins/silver/button_right.gif);
+}
+
+.sexybutton span span,
+.sexybutton.sexysilver span span {
+	background-image: url(images/skins/silver/button_left.gif);
+}
+
+/* Orange Button Skin */
+
+.sexybutton.sexyorange,
+.sexybutton.sexyorange:hover,
+.sexybutton.sexyorange:focus {
+	color: white !important;
+}
+	
+.sexybutton.sexyorange[disabled],
+.sexybutton.sexyorange[disabled]:hover,
+.sexybutton.sexyorange[disabled]:active,
+.sexybutton.sexyorange[disabled]:focus,
+.sexybutton.sexyorange.disabled,
+.sexybutton.sexyorange.disabled:hover,
+.sexybutton.sexyorange.disabled:active,
+.sexybutton.sexyorange.disabled:focus {
+	color: #333 !important;
+}
+	
+.sexybutton.sexyorange span {
+	background-image: url(images/skins/orange/button_right.gif);
+}
+
+.sexybutton.sexyorange span span {
+	background-image: url(images/skins/orange/button_left.gif);
+}
+
+/* Yellow Button Skin */
+
+.sexybutton.sexyyellow,
+.sexybutton.sexyyellow:hover,
+.sexybutton.sexyyellow:focus {
+	color: #994800 !important;
+}
+	
+.sexybutton.sexyyellow span {
+	background-image: url(images/skins/yellow/button_right.gif);
+}
+
+.sexybutton.sexyyellow span span {
+	background-image: url(images/skins/yellow/button_left.gif);
+}
+
+
+/* 
+ * Simple Skin Buttons
+ */
+
+.sexybutton.sexysimple { 
+	position: relative; 
+	padding: 5px 10px 5px;
+	font: inherit;
+	font-size: 13px !important;
+	font-style: normal !important; 
+	font-weight: bold !important; 
+	color: #fff !important;
+	line-height: 1; 
+	background-image: url(images/skins/simple/awesome-overlay-sprite.png);
+	background-repeat: repeat-x;
+	background-position: 0 0;
+	
+	/* Special effects */
+	text-shadow: 0 -1px 1px rgba(0,0,0,0.25), -2px 0 1px rgba(0,0,0,0.25); 
+	border-radius: 1px; 
+	-moz-border-radius: 1px; 
+	-webkit-border-radius: 1px; 
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,0.5); 
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.5);
+	
+	/* IE only stuff */
+	border-bottom: 1px solid transparent\9;
+	_background-image: none;
+	
+	/* Cross browser inline block hack - http://blog.mozilla.com/webdev/2009/02/20/cross-browser-inline-block/ */
+	display: -moz-inline-stack;
+	display: inline-block;
+	vertical-align: middle;
+	*display: inline !important;
+	position: relative;
+	
+	/* Force hasLayout in IE */
+	zoom: 1;
+	
+	/* Disable text selection (Firefox only)*/
+	-moz-user-select: none;
+}
+
+.sexybutton.sexysimple::selection {
+	background: transparent;
+}
+
+.sexybutton.sexysimple:hover,
+.sexybutton.sexysimple:focus {
+	background-position: 0 -50px; 
+	color: #fff !important;
+}
+
+.sexybutton.sexysimple:active { 
+	background-position: 0 -100px; 
+	-moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.7); 
+	/* Unfortunately, Safari doesn't support inset yet */
+	-webkit-box-shadow: none;
+	
+	/* IE only stuff */
+	border-bottom: 0\9;
+	border-top: 1px solid #666\9;
+}
+
+.sexybutton.sexysimple[disabled], 
+.sexybutton.sexysimple.disabled { 
+	background-position: 0 -150px; 
+	color: #333 !important;
+	text-shadow: none; 
+}
+
+.sexybutton.sexysimple[disabled]:hover,
+.sexybutton.sexysimple[disabled]:focus,
+.sexybutton.sexysimple[disabled]:active,
+.sexybutton.sexysimple.disabled:hover,
+.sexybutton.sexysimple.disabled:focus,
+.sexybutton.sexysimple.disabled:active {
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,0.5); 
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.5);
+} 
+
+.sexybutton.sexysimple span {
+	height: auto;
+	padding-left: 24px;
+	padding-right: 0;
+	background-position: left center;
+	background-repeat: no-repeat;
+	/* IE6 still requires a PNG transparency fix */ 
+	/* _padding-left: 0;		Or just hide icons from the undeserving IE6 */
+}
+
+.sexybutton.sexysimple span.after {
+	padding-left: 0;
+	padding-right: 24px;
+	background-position: right center;
+	/* IE6 still requires a PNG transparency fix */ 
+	/* _padding-right: 0;		Or just hide icons from the undeserving IE6 */
+}
+
+.sexybutton.sexysimple.sexyicononly span {
+	height: 16px;
+	padding-left: 16px;
+}
+
+.sexybutton.sexysimple.sexyicononly span.after {
+	padding-left: 0px;
+	padding-right: 16px;
+}
+
+/* Simple button colors */
+.sexybutton.sexysimple					{ background-color: #333; }		/* Default */
+.sexybutton.sexysimple.sexyblack		{ background-color: #333; }
+.sexybutton.sexysimple.sexyred		{ background-color: #a90118; }
+.sexybutton.sexysimple.sexyorange	{ background-color: #ff8a00; }
+.sexybutton.sexysimple.sexyyellow	{ background-color: #ffb515; }
+.sexybutton.sexysimple.sexygreen		{ background-color: #59a901; }
+.sexybutton.sexysimple.sexyblue		{ background-color: #015ea9; }
+.sexybutton.sexysimple.sexyteal		{ background-color: #2daebf; }
+.sexybutton.sexysimple.sexymagenta	{ background-color: #a9014b; }
+.sexybutton.sexysimple.sexypurple	{ background-color: #9d01a9; }
+
+/* Simple button sizes */
+.sexybutton.sexysimple.sexysmall          { padding: 4px 7px 5px; font-size: 10px !important; }
+.sexybutton.sexysimple.sexysmall:active   { padding: 5px 7px 4px; }
+.sexybutton.sexysimple                    { /* default */ }
+.sexybutton.sexysimple:active             { padding: 6px 10px 4px; }
+.sexybutton.sexysimple.sexymedium         { /* default */ }
+.sexybutton.sexysimple.sexymedium:active  { padding: 6px 10px 4px; }
+.sexybutton.sexysimple.sexylarge          { padding: 8px 14px 8px; font-size: 14px !important; }
+.sexybutton.sexysimple.sexylarge:active   { padding: 9px 14px 7px; }
+.sexybutton.sexysimple.sexyxl             { padding: 8px 14px 8px; font-size: 16px !important; }
+.sexybutton.sexysimple.sexyxl:active      { padding: 9px 14px 7px; }
+.sexybutton.sexysimple.sexyxxl            { padding: 8px 14px 8px; font-size: 20px !important; }
+.sexybutton.sexysimple.sexyxxl:active     { padding: 9px 14px 7px; }
+.sexybutton.sexysimple.sexyxxxl           { padding: 8px 14px 8px; font-size: 26px !important; }
+.sexybutton.sexysimple.sexyxxxl:active    { padding: 9px 14px 7px; }
+
+.sexybutton.sexysimple.sexysmall[disabled]:active,
+.sexybutton.sexysimple.sexysmall.disabled:active   	{ padding: 4px 7px 5px; }
+.sexybutton.sexysimple[disabled]:active,
+.sexybutton.sexysimple.disabled:active 	            { padding: 5px 10px 5px; }
+.sexybutton.sexysimple.sexymedium[disabled]:active,
+.sexybutton.sexysimple.sexymedium.disabled:active 		{ padding: 6px 10px 4px; }
+.sexybutton.sexysimple.sexylarge[disabled]:active,
+.sexybutton.sexysimple.sexylarge.disabled:active   	{ padding: 8px 14px 8px; }
+.sexybutton.sexysimple.sexyxl[disabled]:active,
+.sexybutton.sexysimple.sexyxl.disabled:active	      { padding: 8px 14px 8px; }
+.sexybutton.sexysimple.sexyxxl[disabled]:active,
+.sexybutton.sexysimple.sexyxxl.disabled:active 		   { padding: 8px 14px 8px; }
+.sexybutton.sexysimple.sexyxxxl[disabled]:active,
+.sexybutton.sexysimple.sexyxxxl.disabled:active    	{ padding: 8px 14px 8px; }
+
+
+/*
+ * Icon Definitions
+ */
+
+/* Silk Icons - http://www.famfamfam.com/lab/icons/silk/ */
+/* (Obviously not all Silk icons are defined here. Feel free to define any other icons that you may need.) */
+
+.sexybutton span.ok				{ background-image: url(images/icons/silk/tick.png) !important; }
+.sexybutton span.cancel			{ background-image: url(images/icons/silk/cross.png) !important; }
+.sexybutton span.add				{ background-image: url(images/icons/silk/add.png) !important; }
+.sexybutton span.delete			{ background-image: url(images/icons/silk/delete.png) !important; }
+.sexybutton span.download		{ background-image: url(images/icons/silk/arrow_down.png) !important; }
+.sexybutton span.download2		{ background-image: url(images/icons/silk/package_down.png) !important; }
+.sexybutton span.upload			{ background-image: url(images/icons/silk/arrow_up.png) !important; }
+.sexybutton span.search			{ background-image: url(images/icons/silk/magnifier.png) !important; }
+.sexybutton span.find			{ background-image: url(images/icons/silk/find.png) !important; }
+.sexybutton span.first			{ background-image: url(images/icons/silk/resultset_first.png) !important; }
+.sexybutton span.prev			{ background-image: url(images/icons/silk/resultset_previous.png) !important; }
+.sexybutton span.next			{ background-image: url(images/icons/silk/resultset_next.png) !important; }
+.sexybutton span.last			{ background-image: url(images/icons/silk/resultset_last.png) !important; }
+.sexybutton span.play			{ background-image: url(images/icons/silk/play_blue.png) !important; }
+.sexybutton span.pause			{ background-image: url(images/icons/silk/pause_blue.png) !important; }
+.sexybutton span.rewind			{ background-image: url(images/icons/silk/rewind_blue.png) !important; }
+.sexybutton span.forward		{ background-image: url(images/icons/silk/forward_blue.png) !important; }
+.sexybutton span.stop			{ background-image: url(images/icons/silk/stop_blue.png) !important; }
+.sexybutton span.reload			{ background-image: url(images/icons/silk/reload.png) !important; }
+.sexybutton span.sync			{ background-image: url(images/icons/silk/arrow_refresh.png) !important; }
+.sexybutton span.save			{ background-image: url(images/icons/silk/disk.png) !important; }
+.sexybutton span.email			{ background-image: url(images/icons/silk/email.png) !important; }
+.sexybutton span.print			{ background-image: url(images/icons/silk/printer.png) !important; }
+.sexybutton span.heart			{ background-image: url(images/icons/silk/heart.png) !important; }
+.sexybutton span.like			{ background-image: url(images/icons/silk/thumb_up.png) !important; }
+.sexybutton span.dislike		{ background-image: url(images/icons/silk/thumb_down.png) !important; }
+.sexybutton span.accept			{ background-image: url(images/icons/silk/accept.png) !important; }
+.sexybutton span.decline		{ background-image: url(images/icons/silk/decline.png) !important; }
+.sexybutton span.help			{ background-image: url(images/icons/silk/help.png) !important; }
+.sexybutton span.home			{ background-image: url(images/icons/silk/house.png) !important; }
+.sexybutton span.info			{ background-image: url(images/icons/silk/information.png) !important; }
+.sexybutton span.cut				{ background-image: url(images/icons/silk/cut.png) !important; }
+.sexybutton span.copy			{ background-image: url(images/icons/silk/page_white_copy.png) !important; }
+.sexybutton span.paste			{ background-image: url(images/icons/silk/paste_plain.png) !important; }
+.sexybutton span.erase			{ background-image: url(images/icons/silk/erase.png) !important; }
+.sexybutton span.undo			{ background-image: url(images/icons/silk/arrow_undo.png) !important; }
+.sexybutton span.redo			{ background-image: url(images/icons/silk/arrow_redo.png) !important; }
+.sexybutton span.edit			{ background-image: url(images/icons/silk/pencil.png) !important; }
+.sexybutton span.calendar		{ background-image: url(images/icons/silk/date.png) !important; }
+.sexybutton span.user			{ background-image: url(images/icons/silk/user.png) !important; }
+.sexybutton span.settings		{ background-image: url(images/icons/silk/cog.png) !important; }
+.sexybutton span.cart			{ background-image: url(images/icons/silk/cart.png) !important; }
+.sexybutton span.wand			{ background-image: url(images/icons/silk/wand.png) !important; }
+.sexybutton span.wrench			{ background-image: url(images/icons/silk/wrench.png) !important; }
+#main { text-align:left; width:expression(((document.documentElement.clientWidth || document.body.clientWidth) < 980)? "980px" : "100%"); min-width:980px;}
+
+#header {height:129px; background:url(images/header-tail.gif) top repeat-x; padding:16px 17px 0 22px;}
+
+#footer { height:46px;}
+
+.col-1, .col-2, .col-3 {float:left;}
+.container {width:100%; overflow:hidden;}
+.container2 {width:100%;}
+
+.sidebar {width:242px; margin-right:-249px; float:left; position:relative;}
+.site-content {width:100%; float:left;}
+.site-content .indent {padding-left:249px;}
+
+/* ============================= page1 ===========================*/
+
+#page1 .col-1 { width:50%;}
+#page1 .col-2 { width:49%;}
+
+/* ============================= page2 ===========================*/
+
+#page2 .col-1 { width:33%;}
+#page2 .col-2 { width:33%;}
+#page2 .col-3 { width:33%;}
+
+/* ============================= page3 ===========================*/
+
+#page3 .col-1 { width:50%;}
+#page3 .col-2 { width:49%;}
+
+/* ============================= page4 ===========================*/
+
+#page4 .col-1 { width:50%;}
+#page4 .col-2 { width:49%;}
+
+/* ============================= page5 ===========================*/
+
+#page5 .col-1 { width:50%;}
+#page5 .col-2 { width:49%;}
+
+/* ============================= page6 ===========================*/
+
+#page6 .col-1 { width:50%;}
+#page6 .col-2 { width:49%;}
+
+#page6 #ContactForm .col-1 {width:351px;}
+#page6 #ContactForm .col-2 {width:309px;}
+.flag {
+	width: 25px;
+	height: 15px;
+	background:url(flags.png) no-repeat
+}
+
+.flag.flag-ad {background-position: -25px 0}
+.flag.flag-ae {background-position: -50px 0}
+.flag.flag-af {background-position: -75px 0}
+.flag.flag-ag {background-position: -100px 0}
+.flag.flag-ai {background-position: -125px 0}
+.flag.flag-al {background-position: -150px 0}
+.flag.flag-am {background-position: -175px 0}
+.flag.flag-an {background-position: -200px 0}
+.flag.flag-ao {background-position: -225px 0}
+.flag.flag-ar {background-position: -250px 0}
+.flag.flag-as {background-position: -275px 0}
+.flag.flag-at {background-position: -300px 0}
+.flag.flag-au {background-position: -325px 0}
+.flag.flag-aw {background-position: -350px 0}
+.flag.flag-az {background-position: -375px 0}
+.flag.flag-ba {background-position: 0 -15px}
+.flag.flag-bb {background-position: -25px -15px}
+.flag.flag-bd {background-position: -50px -15px}
+.flag.flag-be {background-position: -75px -15px}
+.flag.flag-bf {background-position: -100px -15px}
+.flag.flag-bg {background-position: -125px -15px}
+.flag.flag-bh {background-position: -150px -15px}
+.flag.flag-bi {background-position: -175px -15px}
+.flag.flag-bj {background-position: -200px -15px}
+.flag.flag-bm {background-position: -225px -15px}
+.flag.flag-bn {background-position: -250px -15px}
+.flag.flag-bo {background-position: -275px -15px}
+.flag.flag-br {background-position: -300px -15px}
+.flag.flag-bs {background-position: -325px -15px}
+.flag.flag-bt {background-position: -350px -15px}
+.flag.flag-bv {background-position: -375px -15px}
+.flag.flag-bw {background-position: 0 -30px}
+.flag.flag-by {background-position: -25px -30px}
+.flag.flag-bz {background-position: -50px -30px}
+.flag.flag-ca {background-position: -75px -30px}
+.flag.flag-cd {background-position: -100px -30px}
+.flag.flag-cf {background-position: -125px -30px}
+.flag.flag-cg {background-position: -150px -30px}
+.flag.flag-ch {background-position: -175px -30px}
+.flag.flag-ci {background-position: -200px -30px}
+.flag.flag-ck {background-position: -225px -30px}
+.flag.flag-cl {background-position: -250px -30px}
+.flag.flag-cm {background-position: -275px -30px}
+.flag.flag-cn {background-position: -300px -30px}
+.flag.flag-co {background-position: -325px -30px}
+.flag.flag-cr {background-position: -350px -30px}
+.flag.flag-cu {background-position: -375px -30px}
+.flag.flag-cv {background-position: 0 -45px}
+.flag.flag-cy {background-position: -25px -45px}
+.flag.flag-cz {background-position: -50px -45px}
+.flag.flag-de {background-position: -75px -45px}
+.flag.flag-dj {background-position: -100px -45px}
+.flag.flag-dk {background-position: -125px -45px}
+.flag.flag-dm {background-position: -150px -45px}
+.flag.flag-do {background-position: -175px -45px}
+.flag.flag-dz {background-position: -200px -45px}
+.flag.flag-ec {background-position: -225px -45px}
+.flag.flag-ee {background-position: -250px -45px}
+.flag.flag-eg {background-position: -275px -45px}
+.flag.flag-eh {background-position: -300px -45px}
+.flag.flag-er {background-position: -325px -45px}
+.flag.flag-es {background-position: -350px -45px}
+.flag.flag-et {background-position: -375px -45px}
+.flag.flag-eu {background-position: 0 -60px}
+.flag.flag-fi {background-position: -25px -60px}
+.flag.flag-fj {background-position: -50px -60px}
+.flag.flag-fk {background-position: -75px -60px}
+.flag.flag-fm {background-position: -100px -60px}
+.flag.flag-fo {background-position: -125px -60px}
+.flag.flag-fr {background-position: -150px -60px}
+.flag.flag-ga {background-position: -175px -60px}
+.flag.flag-gb {background-position: -200px -60px}
+.flag.flag-gd {background-position: -225px -60px}
+.flag.flag-ge {background-position: -250px -60px}
+.flag.flag-gf {background-position: -275px -60px}
+.flag.flag-gg {background-position: -300px -60px}
+.flag.flag-gh {background-position: -325px -60px}
+.flag.flag-gi {background-position: -350px -60px}
+.flag.flag-gl {background-position: -375px -60px}
+.flag.flag-gm {background-position: 0 -75px}
+.flag.flag-gn {background-position: -25px -75px}
+.flag.flag-gp {background-position: -50px -75px}
+.flag.flag-gq {background-position: -75px -75px}
+.flag.flag-gr {background-position: -100px -75px}
+.flag.flag-gs {background-position: -125px -75px}
+.flag.flag-gt {background-position: -150px -75px}
+.flag.flag-gu {background-position: -175px -75px}
+.flag.flag-gw {background-position: -200px -75px}
+.flag.flag-gy {background-position: -225px -75px}
+.flag.flag-hk {background-position: -250px -75px}
+.flag.flag-hm {background-position: -275px -75px}
+.flag.flag-hn {background-position: -300px -75px}
+.flag.flag-hr {background-position: -325px -75px}
+.flag.flag-ht {background-position: -350px -75px}
+.flag.flag-hu {background-position: -375px -75px}
+.flag.flag-id {background-position: 0 -90px}
+.flag.flag-ie {background-position: -25px -90px}
+.flag.flag-il {background-position: -50px -90px}
+.flag.flag-in {background-position: -75px -90px}
+.flag.flag-io {background-position: -100px -90px}
+.flag.flag-iq {background-position: -125px -90px}
+.flag.flag-ir {background-position: -150px -90px}
+.flag.flag-is {background-position: -175px -90px}
+.flag.flag-it {background-position: -200px -90px}
+.flag.flag-je {background-position: -225px -90px}
+.flag.flag-jm {background-position: -250px -90px}
+.flag.flag-jo {background-position: -275px -90px}
+.flag.flag-jp {background-position: -300px -90px}
+.flag.flag-ke {background-position: -325px -90px}
+.flag.flag-kg {background-position: -350px -90px}
+.flag.flag-kh {background-position: -375px -90px}
+.flag.flag-ki {background-position: 0 -105px}
+.flag.flag-km {background-position: -25px -105px}
+.flag.flag-kn {background-position: -50px -105px}
+.flag.flag-kp {background-position: -75px -105px}
+.flag.flag-kr {background-position: -100px -105px}
+.flag.flag-kw {background-position: -125px -105px}
+.flag.flag-ky {background-position: -150px -105px}
+.flag.flag-kz {background-position: -175px -105px}
+.flag.flag-la {background-position: -200px -105px}
+.flag.flag-lb {background-position: -225px -105px}
+.flag.flag-lc {background-position: -250px -105px}
+.flag.flag-li {background-position: -275px -105px}
+.flag.flag-lk {background-position: -300px -105px}
+.flag.flag-lr {background-position: -325px -105px}
+.flag.flag-ls {background-position: -350px -105px}
+.flag.flag-lt {background-position: -375px -105px}
+.flag.flag-lu {background-position: 0 -120px}
+.flag.flag-lv {background-position: -25px -120px}
+.flag.flag-ly {background-position: -50px -120px}
+.flag.flag-ma {background-position: -75px -120px}
+.flag.flag-mc {background-position: -100px -120px}
+.flag.flag-md {background-position: -125px -120px}
+.flag.flag-me {background-position: -150px -120px}
+.flag.flag-mg {background-position: -175px -120px}
+.flag.flag-mh {background-position: -200px -120px}
+.flag.flag-mk {background-position: -225px -120px}
+.flag.flag-ml {background-position: -250px -120px}
+.flag.flag-mm {background-position: -275px -120px}
+.flag.flag-mn {background-position: -300px -120px}
+.flag.flag-mo {background-position: -325px -120px}
+.flag.flag-mp {background-position: -350px -120px}
+.flag.flag-mq {background-position: -375px -120px}
+.flag.flag-mr {background-position: 0 -135px}
+.flag.flag-ms {background-position: -25px -135px}
+.flag.flag-mt {background-position: -50px -135px}
+.flag.flag-mu {background-position: -75px -135px}
+.flag.flag-mv {background-position: -100px -135px}
+.flag.flag-mw {background-position: -125px -135px}
+.flag.flag-mx {background-position: -150px -135px}
+.flag.flag-my {background-position: -175px -135px}
+.flag.flag-mz {background-position: -200px -135px}
+.flag.flag-na {background-position: -225px -135px}
+.flag.flag-nc {background-position: -250px -135px}
+.flag.flag-ne {background-position: -275px -135px}
+.flag.flag-nf {background-position: -300px -135px}
+.flag.flag-ng {background-position: -325px -135px}
+.flag.flag-ni {background-position: -350px -135px}
+.flag.flag-nl {background-position: -375px -135px}
+.flag.flag-no {background-position: 0 -150px}
+.flag.flag-np {background-position: -25px -150px}
+.flag.flag-nr {background-position: -50px -150px}
+.flag.flag-nu {background-position: -75px -150px}
+.flag.flag-nz {background-position: -100px -150px}
+.flag.flag-om {background-position: -125px -150px}
+.flag.flag-pa {background-position: -150px -150px}
+.flag.flag-pe {background-position: -175px -150px}
+.flag.flag-pf {background-position: -200px -150px}
+.flag.flag-pg {background-position: -225px -150px}
+.flag.flag-ph {background-position: -250px -150px}
+.flag.flag-pk {background-position: -275px -150px}
+.flag.flag-pl {background-position: -300px -150px}
+.flag.flag-pm {background-position: -325px -150px}
+.flag.flag-pn {background-position: -350px -150px}
+.flag.flag-pr {background-position: -375px -150px}
+.flag.flag-ps {background-position: 0 -165px}
+.flag.flag-pt {background-position: -25px -165px}
+.flag.flag-pw {background-position: -50px -165px}
+.flag.flag-py {background-position: -75px -165px}
+.flag.flag-qa {background-position: -100px -165px}
+.flag.flag-re {background-position: -125px -165px}
+.flag.flag-ro {background-position: -150px -165px}
+.flag.flag-rs {background-position: -175px -165px}
+.flag.flag-ru {background-position: -200px -165px}
+.flag.flag-rw {background-position: -225px -165px}
+.flag.flag-sa {background-position: -250px -165px}
+.flag.flag-sb {background-position: -275px -165px}
+.flag.flag-sc {background-position: -300px -165px}
+.flag.flag-sd {background-position: -325px -165px}
+.flag.flag-se {background-position: -350px -165px}
+.flag.flag-sg {background-position: -375px -165px}
+.flag.flag-sh {background-position: 0 -180px}
+.flag.flag-si {background-position: -25px -180px}
+.flag.flag-sk {background-position: -50px -180px}
+.flag.flag-sl {background-position: -75px -180px}
+.flag.flag-sm {background-position: -100px -180px}
+.flag.flag-sn {background-position: -125px -180px}
+.flag.flag-so {background-position: -150px -180px}
+.flag.flag-sr {background-position: -175px -180px}
+.flag.flag-st {background-position: -200px -180px}
+.flag.flag-sv {background-position: -225px -180px}
+.flag.flag-sy {background-position: -250px -180px}
+.flag.flag-sz {background-position: -275px -180px}
+.flag.flag-tc {background-position: -300px -180px}
+.flag.flag-td {background-position: -325px -180px}
+.flag.flag-tf {background-position: -350px -180px}
+.flag.flag-tg {background-position: -375px -180px}
+.flag.flag-th {background-position: 0 -195px}
+.flag.flag-tj {background-position: -25px -195px}
+.flag.flag-tk {background-position: -50px -195px}
+.flag.flag-tl {background-position: -75px -195px}
+.flag.flag-tm {background-position: -100px -195px}
+.flag.flag-tn {background-position: -125px -195px}
+.flag.flag-to {background-position: -150px -195px}
+.flag.flag-tr {background-position: -175px -195px}
+.flag.flag-tt {background-position: -200px -195px}
+.flag.flag-tv {background-position: -225px -195px}
+.flag.flag-tw {background-position: -250px -195px}
+.flag.flag-tz {background-position: -275px -195px}
+.flag.flag-ua {background-position: -300px -195px}
+.flag.flag-ug {background-position: -325px -195px}
+.flag.flag-um {background-position: -350px -195px}
+.flag.flag-us {background-position: -375px -195px}
+.flag.flag-uy {background-position: 0 -210px}
+.flag.flag-uz {background-position: -25px -210px}
+.flag.flag-va {background-position: -50px -210px}
+.flag.flag-vc {background-position: -75px -210px}
+.flag.flag-ve {background-position: -100px -210px}
+.flag.flag-vg {background-position: -125px -210px}
+.flag.flag-vi {background-position: -150px -210px}
+.flag.flag-vn {background-position: -175px -210px}
+.flag.flag-vu {background-position: -200px -210px}
+.flag.flag-wf {background-position: -225px -210px}
+.flag.flag-ws {background-position: -250px -210px}
+.flag.flag-ye {background-position: -275px -210px}
+.flag.flag-yt {background-position: -300px -210px}
+.flag.flag-za {background-position: -325px -210px}
+.flag.flag-zm {background-position: -350px -210px}
+.flag.flag-zw {background-position: -375px -210px}
+
+
