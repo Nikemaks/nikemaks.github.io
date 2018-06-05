@@ -1,0 +1,5 @@
+1) http://www.efo.ru/doc/Atmel/Atmel.pl?2648
+2) http://www.cn-william.com/english/chanpin.asp?sortid=8&id=34
+3) http://ww1.microchip.com/downloads/en/appnotes/atmel-9242-ata6616-ata6617-ek-development-board_application-note.pdf
+4)https://www.ebay.com/itm/Atmel-AVR32-AP7-Series-STK1000-Development-Board-Kit-ATSTK1000-/282798816919?_trksid=p2349526.m4383.l4275.c4#viTabs_0
+5) http://linuxdevices.io/high-efficiency-socs-boast-new-isa-run-linux/
