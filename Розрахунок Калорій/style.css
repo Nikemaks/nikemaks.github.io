@@ -1,0 +1,49 @@
+input, div{
+	padding: 0;
+}
+.dinner, .breakfast, .supper{
+	border: 1px solid grey;
+	padding: 25px;
+}
+.addprod{
+	margin-top: 10px;
+	background: transparent;
+	border: none;
+	color: orange;
+	outline: none;
+	cursor: pointer;
+}
+button:focus{
+	outline:none;
+}
+button:active{
+	outline:none;
+}
+
+.products{
+	width: 100%;
+	padding: 0;
+}
+.gram{
+	width: 80%;
+}
+.kkal{
+	width: 80%;
+}
+.result{
+	width: 100%;
+}
+.res{
+	margin-top: 25px;
+}
+.resultand{
+	width: 40%;
+}
+.result_btn{
+	margin-top: 18px;
+	padding: 7px;
+	margin-left: 40px;
+	border: none;
+	cursor: pointer;
+	box-shadow: 0 0 5px;
+}

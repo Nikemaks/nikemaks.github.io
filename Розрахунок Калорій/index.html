@@ -1,0 +1,798 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    	<!-- Стили -->
+    <link rel="stylesheet" href="style.css"/>
+
+    <title>Розрахунок калорій</title>
+  </head>
+  <body>
+  	<div class="container">	
+  		<div class="row">
+    <h1>Розрахунок калорій</h1>
+    </div>
+    <div class="breakfast">
+    <h2 class="title">Сніданок</h2>
+				<div class="row">
+   	 	<div class="col-md-6">
+    		<label for="">Продукти</label>
+    		<select  name="food" id="products" class="products">
+    			<option value="0"></option>
+    			<option value="0.371">Макарони</option>
+    			<optgroup label="Каші">
+    				<option value="313">Гречка</option>
+    					<option value="316"> Пшенична каша</option>
+    			</optgroup>
+    			<optgroup label="Картопля">
+    				<option value="80">Картопля варена</option>
+    				<option value="192">Картопля смажена</option>
+    			</optgroup>
+    			<optgroup label="М'ясо">
+    				<option value="0.239">Курятина</option>
+    				<option value="0.242">Свинина</option>
+    			</optgroup>
+    				<optgroup label="Напої">
+    			<option value="65">Чай з цукром</option>
+    				<option value="30">Чай без цукру</option>
+    						<option value="0.059">Йогурт</option>
+    			</optgroup>
+							<option value="270">Пельмені</option>
+							<option value="125">Вареники</option>
+							<option value="0.301">Ковбаса</option>
+							<option value="0.265">Хліб</option>
+							<option value="0.112">Кетчуп</option>
+							<option value="0.402">Сир</option>
+							<option value="0.207">Морозиво</option>
+							<option value="0.89">Банан</option>
+    		</select>
+    		</div>
+    		<div class="col-md-2">
+    			<label for="">Грам</label>
+    			<input type="number" value="100" id="gram" class="gram">
+    		</div>
+    		<div class="col-md-2">
+    			<label for="">кКал/100 г.</label>
+    		<input type="number" value="0" id="kkal" class="kkal">
+    		</div>
+    		<div class="col-md-2">
+    			<label for="">Підсумок</label>
+    			<input type="number" disabled value="0" id="result" class="result">
+    		</div>
+				 </div>
+				 	<div class="row">
+				 	<div class="col-md-6">
+    		<label for="">Продукти</label>
+    		<select  name="food" id="products2" class="products">
+    			<option value="0"></option>
+    			<option value="0.371">Макарони</option>
+    			<optgroup label="Каші">
+    				<option value="313">Гречка</option>
+    					<option value="316"> Пшенична каша</option>
+    			</optgroup>
+    			<optgroup label="Картопля">
+    				<option value="80">Картопля варена</option>
+    				<option value="192">Картопля смажена</option>
+    			</optgroup>
+    			<optgroup label="М'ясо">
+    				<option value="0.239">Курятина</option>
+    				<option value="0.242">Свинина</option>
+    			</optgroup>
+    				<optgroup label="Напої">
+    			<option value="65">Чай з цукром</option>
+    				<option value="30">Чай без цукру</option>
+    						<option value="0.059">Йогурт</option>
+    			</optgroup>
+							<option value="270">Пельмені</option>
+							<option value="125">Вареники</option>
+							<option value="0.301">Ковбаса</option>
+							<option value="0.265">Хліб</option>
+							<option value="0.112">Кетчуп</option>
+							<option value="0.402">Сир</option>
+							<option value="0.207">Морозиво</option>
+							<option value="0.89">Банан</option>
+    		</select>
+    		</div>
+    		<div class="col-md-2">
+    			<label for="">Грам</label>
+    			<input type="number" value="100" id="gram2" class="gram">
+    		</div>
+    		<div class="col-md-2">
+    			<label for="">кКал/100 г.</label>
+    		<input type="number" value="0" id="kkal2" class="kkal">
+    		</div>
+    		<div class="col-md-2">
+    			<label for="">Підсумок</label>
+    			<input type="number" disabled value="0" id="result2" class="result">
+    		</div>
+				 		
+				 	</div>
+				 	<div class="row">
+   	 	<div class="col-md-6">
+    		<label for="">Продукти</label>
+    <select  name="food" id="products3" class="products">
+    			<option value="0"></option>
+    			<option value="0.371">Макарони</option>
+    			<optgroup label="Каші">
+    				<option value="313">Гречка</option>
+    					<option value="316"> Пшенична каша</option>
+    			</optgroup>
+    			<optgroup label="Картопля">
+    				<option value="80">Картопля варена</option>
+    				<option value="192">Картопля смажена</option>
+    			</optgroup>
+    			<optgroup label="М'ясо">
+    				<option value="0.239">Курятина</option>
+    				<option value="0.242">Свинина</option>
+    			</optgroup>
+    				<optgroup label="Напої">
+    			<option value="65">Чай з цукром</option>
+    				<option value="30">Чай без цукру</option>
+    						<option value="0.059">Йогурт</option>
+    			</optgroup>
+							<option value="270">Пельмені</option>
+							<option value="125">Вареники</option>
+							<option value="0.301">Ковбаса</option>
+							<option value="0.265">Хліб</option>
+							<option value="0.112">Кетчуп</option>
+							<option value="0.402">Сир</option>
+							<option value="0.207">Морозиво</option>
+							<option value="0.89">Банан</option>
+    		</select>
+    		</div>
+    		<div class="col-md-2">
+    			<label for="">Грам</label>
+    			<input type="number" value="100" id="gram3" class="gram">
+    		</div>
+    		<div class="col-md-2">
+    			<label for="">кКал/100 г.</label>
+    		<input type="number" value="0" id="kkal3" class="kkal">
+    		</div>
+    		<div class="col-md-2">
+    			<label for="">Підсумок</label>
+    			<input type="number" disabled value="0" id="result3" class="result">
+    		</div>
+				 </div>
+				 <div class="row">
+   	 	<div class="col-md-6">
+    		<label for="">Продукти</label>
+    		   <select  name="food" id="products4" class="products">
+    			<option value="0"></option>
+    			<option value="0.371">Макарони</option>
+    			<optgroup label="Каші">
+    				<option value="313">Гречка</option>
+    					<option value="316"> Пшенична каша</option>
+    			</optgroup>
+    			<optgroup label="Картопля">
+    				<option value="80">Картопля варена</option>
+    				<option value="192">Картопля смажена</option>
+    			</optgroup>
+    			<optgroup label="М'ясо">
+    				<option value="0.239">Курятина</option>
+    				<option value="0.242">Свинина</option>
+    			</optgroup>
+    				<optgroup label="Напої">
+    			<option value="65">Чай з цукром</option>
+    				<option value="30">Чай без цукру</option>
+    						<option value="0.059">Йогурт</option>
+    			</optgroup>
+							<option value="270">Пельмені</option>
+							<option value="125">Вареники</option>
+							<option value="0.301">Ковбаса</option>
+							<option value="0.265">Хліб</option>
+							<option value="0.112">Кетчуп</option>
+							<option value="0.402">Сир</option>
+							<option value="0.207">Морозиво</option>
+							<option value="0.89">Банан</option>
+    		</select>
+    		</div>
+    		<div class="col-md-2">
+    			<label for="">Грам</label>
+    			<input type="number" value="100" id="gram4" class="gram">
+    		</div>
+    		<div class="col-md-2">
+    			<label for="">кКал/100 г.</label>
+    		<input type="number" value="0" id="kkal4" class="kkal">
+    		</div>
+    		<div class="col-md-2">
+    			<label for="">Підсумок</label>
+    			<input type="number" disabled value="0" id="result4" class="result">
+    		</div>
+				 </div>
+				 </div>
+<br>
+				 <!-- обід-->
+				 <div class="dinner">
+    <h2 class="title">Обід</h2>
+				<div class="row">
+   	 	<div class="col-md-6">
+    		<label for="">Продукти</label>
+    		  		   <select  name="food" id="products5" class="products">
+    			<option value="0"></option>
+    			<option value="0.371">Макарони</option>
+    			<optgroup label="Каші">
+    				<option value="313">Гречка</option>
+    					<option value="316"> Пшенична каша</option>
+    			</optgroup>
+    			<optgroup label="Картопля">
+    				<option value="80">Картопля варена</option>
+    				<option value="192">Картопля смажена</option>
+    			</optgroup>
+    			<optgroup label="М'ясо">
+    				<option value="0.239">Курятина</option>
+    				<option value="0.242">Свинина</option>
+    			</optgroup>
+    				<optgroup label="Напої">
+    			<option value="65">Чай з цукром</option>
+    				<option value="30">Чай без цукру</option>
+    						<option value="0.059">Йогурт</option>
+    			</optgroup>
+							<option value="270">Пельмені</option>
+							<option value="125">Вареники</option>
+							<option value="0.301">Ковбаса</option>
+							<option value="0.265">Хліб</option>
+							<option value="0.112">Кетчуп</option>
+							<option value="0.402">Сир</option>
+							<option value="0.207">Морозиво</option>
+							<option value="0.89">Банан</option>
+    		</select>
+    		</div>
+    		<div class="col-md-2">
+    			<label for="">Грам</label>
+    			<input type="number" value="100" id="gram5" class="gram">
+    		</div>
+    		<div class="col-md-2">
+    			<label for="">кКал/100 г.</label>
+    		<input type="number" value="0" id="kkal5" class="kkal">
+    		</div>
+    		<div class="col-md-2">
+    			<label for="">Підсумок</label>
+    			<input type="number" disabled value="0" id="result5" class="result">
+    		</div>
+				 </div>
+				 	<div class="row">
+				 	<div class="col-md-6">
+    		<label for="">Продукти</label>
+    			 <select  name="food" id="products6" class="products">
+    			<option value="0"></option>
+    			<option value="0.371">Макарони</option>
+    			<optgroup label="Каші">
+    				<option value="313">Гречка</option>
+    					<option value="316"> Пшенична каша</option>
+    			</optgroup>
+    			<optgroup label="Картопля">
+    				<option value="80">Картопля варена</option>
+    				<option value="192">Картопля смажена</option>
+    			</optgroup>
+    			<optgroup label="М'ясо">
+    				<option value="0.239">Курятина</option>
+    				<option value="0.242">Свинина</option>
+    			</optgroup>
+    				<optgroup label="Напої">
+    			<option value="65">Чай з цукром</option>
+    				<option value="30">Чай без цукру</option>
+    						<option value="0.059">Йогурт</option>
+    			</optgroup>
+							<option value="270">Пельмені</option>
+							<option value="125">Вареники</option>
+							<option value="0.301">Ковбаса</option>
+							<option value="0.265">Хліб</option>
+							<option value="0.112">Кетчуп</option>
+							<option value="0.402">Сир</option>
+							<option value="0.207">Морозиво</option>
+							<option value="0.89">Банан</option>
+    		</select>
+    		</div>
+    		<div class="col-md-2">
+    			<label for="">Грам</label>
+    			<input type="number" value="100" id="gram6" class="gram">
+    		</div>
+    		<div class="col-md-2">
+    			<label for="">кКал/100 г.</label>
+    		<input type="number" value="0" id="kkal6" class="kkal">
+    		</div>
+    		<div class="col-md-2">
+    			<label for="">Підсумок</label>
+    			<input type="number" disabled value="0" id="result6" class="result">
+    		</div>
+				 		
+				 	</div>
+				 	<div class="row">
+   	 	<div class="col-md-6">
+    		<label for="">Продукти</label>
+    			 <select  name="food" id="products7" class="products">
+    			<option value="0"></option>
+    			<option value="0.371">Макарони</option>
+    			<optgroup label="Каші">
+    				<option value="313">Гречка</option>
+    					<option value="316"> Пшенична каша</option>
+    			</optgroup>
+    			<optgroup label="Картопля">
+    				<option value="80">Картопля варена</option>
+    				<option value="192">Картопля смажена</option>
+    			</optgroup>
+    			<optgroup label="М'ясо">
+    				<option value="0.239">Курятина</option>
+    				<option value="0.242">Свинина</option>
+    			</optgroup>
+    				<optgroup label="Напої">
+    			<option value="65">Чай з цукром</option>
+    				<option value="30">Чай без цукру</option>
+    						<option value="0.059">Йогурт</option>
+    			</optgroup>
+							<option value="270">Пельмені</option>
+							<option value="125">Вареники</option>
+							<option value="0.301">Ковбаса</option>
+							<option value="0.265">Хліб</option>
+							<option value="0.112">Кетчуп</option>
+							<option value="0.402">Сир</option>
+							<option value="0.207">Морозиво</option>
+							<option value="0.89">Банан</option>
+    		</select>
+    		</div>
+    		<div class="col-md-2">
+    			<label for="">Грам</label>
+    			<input type="number" value="100" id="gram7" class="gram">
+    		</div>
+    		<div class="col-md-2">
+    			<label for="">кКал/100 г.</label>
+    		<input type="number" value="0" id="kkal7" class="kkal">
+    		</div>
+    		<div class="col-md-2">
+    			<label for="">Підсумок</label>
+    			<input type="number" disabled value="0" id="result7" class="result">
+    		</div>
+				 </div>
+				 <div class="row">
+   	 	<div class="col-md-6">
+    		<label for="">Продукти</label>
+    			 <select  name="food" id="products8" class="products">
+    			<option value="0"></option>
+    			<option value="0.371">Макарони</option>
+    			<optgroup label="Каші">
+    				<option value="313">Гречка</option>
+    					<option value="316"> Пшенична каша</option>
+    			</optgroup>
+    			<optgroup label="Картопля">
+    				<option value="80">Картопля варена</option>
+    				<option value="192">Картопля смажена</option>
+    			</optgroup>
+    			<optgroup label="М'ясо">
+    				<option value="0.239">Курятина</option>
+    				<option value="0.242">Свинина</option>
+    			</optgroup>
+    				<optgroup label="Напої">
+    			<option value="65">Чай з цукром</option>
+    				<option value="30">Чай без цукру</option>
+    						<option value="0.059">Йогурт</option>
+    			</optgroup>
+							<option value="270">Пельмені</option>
+							<option value="125">Вареники</option>
+							<option value="0.301">Ковбаса</option>
+							<option value="0.265">Хліб</option>
+							<option value="0.112">Кетчуп</option>
+							<option value="0.402">Сир</option>
+							<option value="0.207">Морозиво</option>
+							<option value="0.89">Банан</option>
+    		</select>
+    		</div>
+    		<div class="col-md-2">
+    			<label for="">Грам</label>
+    			<input type="number" value="100" id="gram8" class="gram">
+    		</div>
+    		<div class="col-md-2">
+    			<label for="">кКал/100 г.</label>
+    		<input type="number" value="0" id="kkal8" class="kkal">
+    		</div>
+    		<div class="col-md-2">
+    			<label for="">Підсумок</label>
+    			<input type="number" disabled value="0" id="result8" class="result">
+    		</div>
+				 </div>
+				 </div>
+<br>
+<!--Вечеря -->
+				 			 <div class="supper">
+    <h2 class="title">Вечеря</h2>
+				<div class="row">
+   	 	<div class="col-md-6">
+    		<label for="">Продукти</label>
+    	 <select  name="food" id="products9" class="products">
+    			<option value="0"></option>
+    			<option value="0.371">Макарони</option>
+    			<optgroup label="Каші">
+    				<option value="313">Гречка</option>
+    					<option value="316"> Пшенична каша</option>
+    			</optgroup>
+    			<optgroup label="Картопля">
+    				<option value="80">Картопля варена</option>
+    				<option value="192">Картопля смажена</option>
+    			</optgroup>
+    			<optgroup label="М'ясо">
+    				<option value="0.239">Курятина</option>
+    				<option value="0.242">Свинина</option>
+    			</optgroup>
+    				<optgroup label="Напої">
+    			<option value="65">Чай з цукром</option>
+    				<option value="30">Чай без цукру</option>
+    						<option value="0.059">Йогурт</option>
+    			</optgroup>
+							<option value="270">Пельмені</option>
+							<option value="125">Вареники</option>
+							<option value="0.301">Ковбаса</option>
+							<option value="0.265">Хліб</option>
+							<option value="0.112">Кетчуп</option>
+							<option value="0.402">Сир</option>
+							<option value="0.207">Морозиво</option>
+							<option value="0.89">Банан</option>
+    		</select>
+    		</div>
+    		<div class="col-md-2">
+    			<label for="">Грам</label>
+    			<input type="number" value="100" id="gram9" class="gram">
+    		</div>
+    		<div class="col-md-2">
+    			<label for="">кКал/100 г.</label>
+    		<input type="number" value="0" id="kkal9" class="kkal">
+    		</div>
+    		<div class="col-md-2">
+    			<label for="">Підсумок</label>
+    			<input type="number" disabled value="0" id="result9" class="result">
+    		</div>
+				 </div>
+				 	<div class="row">
+				 	<div class="col-md-6">
+    		<label for="">Продукти</label>
+    			 <select  name="food" id="products10" class="products">
+    			<option value="0"></option>
+    			<option value="0.371">Макарони</option>
+    			<optgroup label="Каші">
+    				<option value="313">Гречка</option>
+    					<option value="316"> Пшенична каша</option>
+    			</optgroup>
+    			<optgroup label="Картопля">
+    				<option value="80">Картопля варена</option>
+    				<option value="192">Картопля смажена</option>
+    			</optgroup>
+    			<optgroup label="М'ясо">
+    				<option value="0.239">Курятина</option>
+    				<option value="0.242">Свинина</option>
+    			</optgroup>
+    				<optgroup label="Напої">
+    			<option value="65">Чай з цукром</option>
+    				<option value="30">Чай без цукру</option>
+    						<option value="0.059">Йогурт</option>
+    			</optgroup>
+							<option value="270">Пельмені</option>
+							<option value="125">Вареники</option>
+							<option value="0.301">Ковбаса</option>
+							<option value="0.265">Хліб</option>
+							<option value="0.112">Кетчуп</option>
+							<option value="0.402">Сир</option>
+							<option value="0.207">Морозиво</option>
+							<option value="0.89">Банан</option>
+    		</select>
+    		</div>
+    		<div class="col-md-2">
+    			<label for="">Грам</label>
+    			<input type="number" value="100" id="gram10" class="gram">
+    		</div>
+    		<div class="col-md-2">
+    			<label for="">кКал/100 г.</label>
+    		<input type="number" value="0" id="kkal10" class="kkal">
+    		</div>
+    		<div class="col-md-2">
+    			<label for="">Підсумок</label>
+    			<input type="number" disabled value="0" id="result10" class="result">
+    		</div>
+				 		
+				 	</div>
+				 	<div class="row">
+   	 	<div class="col-md-6">
+    		<label for="">Продукти</label>
+    			 <select  name="food" id="products11" class="products">
+    			<option value="0"></option>
+    			<option value="0.371">Макарони</option>
+    			<optgroup label="Каші">
+    				<option value="313">Гречка</option>
+    					<option value="316"> Пшенична каша</option>
+    			</optgroup>
+    			<optgroup label="Картопля">
+    				<option value="80">Картопля варена</option>
+    				<option value="192">Картопля смажена</option>
+    			</optgroup>
+    			<optgroup label="М'ясо">
+    				<option value="0.239">Курятина</option>
+    				<option value="0.242">Свинина</option>
+    			</optgroup>
+    				<optgroup label="Напої">
+    			<option value="65">Чай з цукром</option>
+    				<option value="30">Чай без цукру</option>
+    						<option value="0.059">Йогурт</option>
+    			</optgroup>
+							<option value="270">Пельмені</option>
+							<option value="125">Вареники</option>
+							<option value="0.301">Ковбаса</option>
+							<option value="0.265">Хліб</option>
+							<option value="0.112">Кетчуп</option>
+							<option value="0.402">Сир</option>
+							<option value="0.207">Морозиво</option>
+							<option value="0.89">Банан</option>
+    		</select> 
+    		</div>
+    		<div class="col-md-2">
+    			<label for="">Грам</label>
+    			<input type="number" value="100" id="gram11" class="gram">
+    		</div>
+    		<div class="col-md-2">
+    			<label for="">кКал/100 г.</label>
+    		<input type="number" value="0" id="kkal11" class="kkal">
+    		</div>
+    		<div class="col-md-2">
+    			<label for="">Підсумок</label>
+    			<input type="number" disabled value="0" id="result11" class="result">
+    		</div>
+				 </div>
+				 <div class="row">
+   	 	<div class="col-md-6">
+    		<label for="">Продукти</label>
+    			 <select  name="food" id="products12" class="products">
+    			<option value="0"></option>
+    			<option value="0.371">Макарони</option>
+    			<optgroup label="Каші">
+    				<option value="313">Гречка</option>
+    					<option value="316"> Пшенична каша</option>
+    			</optgroup>
+    			<optgroup label="Картопля">
+    				<option value="80">Картопля варена</option>
+    				<option value="192">Картопля смажена</option>
+    			</optgroup>
+    			<optgroup label="М'ясо">
+    				<option value="0.239">Курятина</option>
+    				<option value="0.242">Свинина</option>
+    			</optgroup>
+    				<optgroup label="Напої">
+    			<option value="65">Чай з цукром</option>
+    				<option value="30">Чай без цукру</option>
+    						<option value="0.059">Йогурт</option>
+    			</optgroup>
+							<option value="270">Пельмені</option>
+							<option value="125">Вареники</option>
+							<option value="0.301">Ковбаса</option>
+							<option value="0.265">Хліб</option>
+							<option value="0.112">Кетчуп</option>
+							<option value="0.402">Сир</option>
+							<option value="0.207">Морозиво</option>
+							<option value="0.89">Банан</option>
+    		</select>
+    		</div>
+    		<div class="col-md-2">
+    			<label for="">Грам</label>
+    			<input type="number" value="100" id="gram12" class="gram">
+    		</div>
+    		<div class="col-md-2">
+    			<label for="">кКал/100 г.</label>
+    		<input type="number" value="0" id="kkal12" class="kkal">
+    		</div>
+    		<div class="col-md-2">
+    			<label for="">Підсумок</label>
+    			<input type="number" disabled value="0" id="result12" class="result">
+    		</div>
+				 </div>
+				 </div>
+<br>
+				 <!--Перекуси-->
+			 			 <div class="supper">
+    <h2 class="title">Перекуси</h2>
+				<div class="row">
+   	 	<div class="col-md-6">
+    		<label for="">Продукти</label>
+    		 <select  name="food" id="products13" class="products">
+    			<option value="0"></option>
+    			<option value="0.371">Макарони</option>
+    			<optgroup label="Каші">
+    				<option value="313">Гречка</option>
+    					<option value="316"> Пшенична каша</option>
+    			</optgroup>
+    			<optgroup label="Картопля">
+    				<option value="80">Картопля варена</option>
+    				<option value="192">Картопля смажена</option>
+    			</optgroup>
+    			<optgroup label="М'ясо">
+    				<option value="0.239">Курятина</option>
+    				<option value="0.242">Свинина</option>
+    			</optgroup>
+    				<optgroup label="Напої">
+    			<option value="65">Чай з цукром</option>
+    				<option value="30">Чай без цукру</option>
+    						<option value="0.059">Йогурт</option>
+    			</optgroup>
+							<option value="270">Пельмені</option>
+							<option value="125">Вареники</option>
+							<option value="0.301">Ковбаса</option>
+							<option value="0.265">Хліб</option>
+							<option value="0.112">Кетчуп</option>
+							<option value="0.402">Сир</option>
+							<option value="0.207">Морозиво</option>
+							<option value="0.89">Банан</option>
+    		</select>
+    		</div>
+    		<div class="col-md-2">
+    			<label for="">Грам</label>
+    			<input type="number" value="100" id="gram13" class="gram">
+    		</div>
+    		<div class="col-md-2">
+    			<label for="">кКал/100 г.</label>
+    		<input type="number" value="0" id="kkal13" class="kkal">
+    		</div>
+    		<div class="col-md-2">
+    			<label for="">Підсумок</label>
+    			<input type="number" disabled value="0" id="result13" class="result">
+    		</div>
+				 </div>
+				 	<div class="row">
+				 	<div class="col-md-6">
+    		<label for="">Продукти</label>
+    			 <select  name="food" id="products14" class="products">
+    			<option value="0"></option>
+    			<option value="0.371">Макарони</option>
+    			<optgroup label="Каші">
+    				<option value="313">Гречка</option>
+    					<option value="316"> Пшенична каша</option>
+    			</optgroup>
+    			<optgroup label="Картопля">
+    				<option value="80">Картопля варена</option>
+    				<option value="192">Картопля смажена</option>
+    			</optgroup>
+    			<optgroup label="М'ясо">
+    				<option value="0.239">Курятина</option>
+    				<option value="0.242">Свинина</option>
+    			</optgroup>
+    				<optgroup label="Напої">
+    			<option value="65">Чай з цукром</option>
+    				<option value="30">Чай без цукру</option>
+    						<option value="0.059">Йогурт</option>
+    			</optgroup>
+							<option value="270">Пельмені</option>
+							<option value="125">Вареники</option>
+							<option value="0.301">Ковбаса</option>
+							<option value="0.265">Хліб</option>
+							<option value="0.112">Кетчуп</option>
+							<option value="0.402">Сир</option>
+							<option value="0.207">Морозиво</option>
+							<option value="0.89">Банан</option>
+    		</select>
+    		</div>
+    		<div class="col-md-2">
+    			<label for="">Грам</label>
+    			<input type="number" value="100" id="gram14" class="gram">
+    		</div>
+    		<div class="col-md-2">
+    			<label for="">кКал/100 г.</label>
+    		<input type="number" value="0" id="kkal14" class="kkal">
+    		</div>
+    		<div class="col-md-2">
+    			<label for="">Підсумок</label>
+    			<input type="number" disabled value="0" id="result14" class="result">
+    		</div>
+				 		
+				 	</div>
+				 	<div class="row">
+   	 	<div class="col-md-6">
+    		<label for="">Продукти</label>
+    			 <select  name="food" id="products15" class="products">
+    			<option value="0"></option>
+    			<option value="0.371">Макарони</option>
+    			<optgroup label="Каші">
+    				<option value="313">Гречка</option>
+    					<option value="316"> Пшенична каша</option>
+    			</optgroup>
+    			<optgroup label="Картопля">
+    				<option value="80">Картопля варена</option>
+    				<option value="192">Картопля смажена</option>
+    			</optgroup>
+    			<optgroup label="М'ясо">
+    				<option value="0.239">Курятина</option>
+    				<option value="0.242">Свинина</option>
+    			</optgroup>
+    				<optgroup label="Напої">
+    			<option value="65">Чай з цукром</option>
+    				<option value="30">Чай без цукру</option>
+    						<option value="0.059">Йогурт</option>
+    			</optgroup>
+							<option value="270">Пельмені</option>
+							<option value="125">Вареники</option>
+							<option value="0.301">Ковбаса</option>
+							<option value="0.265">Хліб</option>
+							<option value="0.112">Кетчуп</option>
+							<option value="0.402">Сир</option>
+							<option value="0.207">Морозиво</option>
+							<option value="0.89">Банан</option>
+    		</select>
+    		</div>
+    		<div class="col-md-2">
+    			<label for="">Грам</label>
+    			<input type="number" value="100" id="gram15" class="gram">
+    		</div>
+    		<div class="col-md-2">
+    			<label for="">кКал/100 г.</label>
+    		<input type="number" value="0" id="kkal15" class="kkal">
+    		</div>
+    		<div class="col-md-2">
+    			<label for="">Підсумок</label>
+    			<input type="number" disabled value="0" id="result15" class="result">
+    		</div>
+				 </div>
+				 <div class="row">
+   	 	<div class="col-md-6">
+    		<label for="">Продукти</label>
+    	 <select  name="food" id="products16" class="products">
+    			<option value="0"></option>
+    			<option value="0.371">Макарони</option>
+    			<optgroup label="Каші">
+    				<option value="313">Гречка</option>
+    					<option value="316"> Пшенична каша</option>
+    			</optgroup>
+    			<optgroup label="Картопля">
+    				<option value="80">Картопля варена</option>
+    				<option value="192">Картопля смажена</option>
+    			</optgroup>
+    			<optgroup label="М'ясо">
+    				<option value="0.239">Курятина</option>
+    				<option value="0.242">Свинина</option>
+    			</optgroup>
+    				<optgroup label="Напої">
+    			<option value="65">Чай з цукром</option>
+    				<option value="30">Чай без цукру</option>
+    						<option value="0.059">Йогурт</option>
+    			</optgroup>
+							<option value="270">Пельмені</option>
+							<option value="125">Вареники</option>
+							<option value="0.301">Ковбаса</option>
+							<option value="0.265">Хліб</option>
+							<option value="0.112">Кетчуп</option>
+							<option value="0.402">Сир</option>
+							<option value="0.207">Морозиво</option>
+							<option value="0.89">Банан</option>
+    		</select>
+    		</div>
+    		<div class="col-md-2">
+    			<label for="">Грам</label>
+    			<input type="number" value="100" id="gram16" class="gram">
+    		</div>
+    		<div class="col-md-2">
+    			<label for="">кКал/100 г.</label>
+    		<input type="number" value="0" id="kkal16" class="kkal">
+    		</div>
+    		<div class="col-md-2">
+    			<label for="">Підсумок</label>
+    			<input type="number" disabled value="0" id="result16" class="result">
+    		</div>
+				 </div>
+				 </div>
+				<div class="row">
+				<div class="col-md-3 res">
+					<label for="">Підсумок:</label>
+					<input type="number" disabled value="0" class="resultand" id="resultand">
+				</div>
+				<div class="col-md-2 col-md-offset-4">
+					<button class=" result_btn">Розрахувати</button>
+				</div>
+			</div>
+				 </div>
+				</div>	
+			</div>		
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Js-->
+   <script src="script.js"></script>
+  </body>
+</html>
