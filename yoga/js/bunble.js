@@ -44,7 +44,7 @@ function calc(){
 
 module.exports = calc;
 },{}],2:[function(require,module,exports){
-window.addEventListener('DOMContentLoaded', function(){
+
     let tab = require('../js/tab.js');
     let timer = require('../js/timer.js');  
     let slider = require('../js/slider.js');  
@@ -59,7 +59,7 @@ window.addEventListener('DOMContentLoaded', function(){
     modal();
 
 
-});
+
 },{"../js/calc.js":1,"../js/modal.js":3,"../js/slider.js":4,"../js/tab.js":5,"../js/timer.js":6}],3:[function(require,module,exports){
 function modal(){
 	let more = document.querySelector('.more'),

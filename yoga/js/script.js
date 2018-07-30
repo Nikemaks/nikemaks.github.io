@@ -1,4 +1,4 @@
-window.addEventListener('DOMContentLoaded', function(){
+
 	let tab = document.getElementsByClassName('info-header-tab'),
 		tabContent = document.getElementsByClassName('info-tabcontent'),
 		info = document.getElementsByClassName('info-header')[0];
@@ -85,6 +85,8 @@ window.addEventListener('DOMContentLoaded', function(){
         updateClock();
 
         let timeInterval = setInterval(updateClock, 1000);
+
+        return ''
 
  }
 
@@ -207,4 +209,3 @@ let slideIndex = 1,
             }
         });
 
-});
