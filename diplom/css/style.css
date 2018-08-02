@@ -439,6 +439,26 @@
   background: url("../img/skin/skin-1.png") center no-repeat;
   background-size: cover;
 }
+.custom-char .person-skin-2 {
+  position: absolute;
+  margin-top: 30px;
+  left: 50%;
+  transform: translate(-50%);
+  width: 180px;
+  height: 450px;
+  background: url("../img/skin/skin-2.png") center no-repeat;
+  background-size: cover;
+}
+.custom-char .person-skin-3 {
+  position: absolute;
+  margin-top: 30px;
+  left: 50%;
+  transform: translate(-50%);
+  width: 180px;
+  height: 450px;
+  background: url("../img/skin/skin-3.png") center no-repeat;
+  background-size: cover;
+}
 
 
 .custom-char .person-clothes {
