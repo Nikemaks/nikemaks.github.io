@@ -135,13 +135,17 @@ next_hair.addEventListener('click', function(){
 
 });
 
-function sliderHair(b){
+function sliderShowHair(b){
 	if (b > hair_style.length) {
 			indexHair = 1;
 	};
 	if (b < 1){
 			indexHair = hair_style.length ;
 	};
+
+	for (let i = 0; i < hair_style.length; i++) {
+		hair_style
+	}
 };
 
 	
