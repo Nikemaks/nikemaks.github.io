@@ -132,7 +132,7 @@ let indexHair = 1,
 				hair_style = document.getElementsByClassName('hair-style');
 
 next_hair.addEventListener('click', function(){
-
+		sliderShowHair(1);
 });
 
 function sliderShowHair(b){
@@ -143,11 +143,12 @@ function sliderShowHair(b){
 			indexHair = hair_style.length ;
 	};
 
-	for (let i = 0; i < hair_style.length; i++) {
-		hair_style
-	}
+	for (let i = 1; i < hair_style.length; i++) {
+		hair_style[i].style.display = 'none';
+	};
+	
+	 hair_style[indexHair - 1].style.display = 'block';
 };
 
-	
 });
 
