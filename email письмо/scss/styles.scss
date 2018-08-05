@@ -1,0 +1,51 @@
+@import "foundation";
+
+
+.no-bg {
+  background: transparent !important;
+}
+.custom-pb{
+  padding-bottom: 10px !important;
+}
+.tiny-text {
+  font-size: 12px;
+}
+.text-uppercase{
+  text-transform: uppercase;
+
+}
+.basic-link{
+  color: $black;
+  text-decoration: underline;
+}
+.main-sub-heading{
+  color: $grey;
+  text-transform: uppercase;
+  margin: 0;
+  font-size: 20px;
+}
+.main-heading{
+  text-transform: uppercase;
+  margin: 0;
+  font-size: 22px;
+}
+.main-body-p{
+  color: $grey;
+  font-size: 14px;
+  line-height: (22/14);
+}
+.decoration-line{
+  background: $grey;
+  height: 1px;
+
+}
+
+.item-name{
+  text-transform: uppercase;
+  color: $accent;
+}
+.price{
+  font-weight: bold;
+  color: $grey;
+  
+}
