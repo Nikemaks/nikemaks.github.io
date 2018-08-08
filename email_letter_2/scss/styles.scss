@@ -1,0 +1,37 @@
+@import "foundation";
+
+
+.header-menu{
+  color: #fff;
+  margin-left: 5px;
+}
+
+.text-head{
+  font-size: 40px;
+  font-family: 'Trebuchet MS';
+}
+.blue-color{
+  color: #40bcf0;
+}
+.blue-text-2{
+  font-size: 20px;
+  color: #0857a0;
+  font-family: 'Myriad Pro';
+}
+.bg{
+  background: linear-gradient( to right, #fff, #f8d845)!important;
+}
+.bg-1{
+  background: #40bcf0!important;
+}
+.head-img{
+  background: url("../img/Безимени-3.jpg") center no-repeat;
+  background-size: cover;
+  height: 330px;
+}
+.white-color{
+  color: #fff;
+}
+.info {
+  background: #000;
+}
