@@ -1,0 +1,189 @@
+@charset "UTF-8";
+body {
+  background: #202e3e url(../img/bg.jpg) center no-repeat;
+  height: 100vh;
+  font-family: 'Roboto'; }
+
+h1 {
+  color: #fff;
+  padding: 2%; }
+
+.main-title {
+  padding-left: 16%; }
+
+p {
+  color: grey;
+  width: 70%;
+  display: inline-block;
+  text-align: left;
+  padding: 0;
+  margin: 0; }
+
+h2,
+h3 {
+  color: #fff;
+  width: 73%;
+  display: inline-block;
+  text-align: left;
+  margin: 0; 
+  margin-bottom: 10px;}
+
+.block {
+  border: 1px solid #32434c;
+  border-radius: 15px;
+  margin-top: 70px; }
+
+h2 {
+  width: 55%; }
+
+.currency {
+  width: 85%;
+  height: 40px;
+  margin-top: 10%;
+  color: #fff;
+  background: #20282f;
+  border: 1px solid #92e8fe;
+  border-radius: 5px;
+  padding-left: 15px; }
+
+select:focus,
+select:active,
+input {
+  outline: none; }
+
+select {
+  padding-right: 25px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+
+.select:after {
+  content: "▼";
+  color: #92e8fe;
+  right: 25px;
+  position: relative;
+  font-size: 12px;
+  z-index: 1;
+  text-align: center;
+  width: 10%;
+  height: 100%;
+  pointer-events: none;
+  box-sizing: border-box; }
+
+input {
+  width: 10%;
+  display: inline-block; }
+
+.input_price {
+  width: 30%;
+  border: none;
+  background: transparent;
+  color: #fff;
+  text-align: right;
+  font-size: 18px;
+  font-weight: bold; }
+
+.block-2 {
+  text-align: center; }
+
+.img {
+  width: 140px;
+  height: 125px; }
+
+.img-bitcoin {
+  width: 197px; }
+
+.img-litecoin {
+  width: 107px; }
+
+.currency_input {
+  background: transparent;
+  border: none;
+  color: #70c446;
+  width: 60px;
+  text-align: center; }
+
+.ethereum {
+  border-radius: 10px;
+  margin-top: 35px;
+  padding: 0;
+  background: #283c24; }
+
+.litecoin {
+  border-radius: 10px;
+  margin-top: 35px;
+  padding: 0;
+  background: #353535; }
+
+.bitcoin {
+  border-radius: 10px;
+  margin-top: 35px;
+  background: #311204; }
+
+.lastElement {
+  margin-bottom: 25px; }
+
+.toggle-bg {
+  background: #3aa5da;
+  height: 17px;
+  width: 40px;
+  display: inline-block;
+  border-radius: 20px;
+  position: relative; }
+
+.precent {
+  height: 15px;
+  left: 0;
+  margin: 0;
+  opacity: 0;
+  padding: 0;
+  position: absolute;
+  top: 0px;
+  width: 15px;
+  z-index: 2; }
+
+.dolar {
+  height: 15px;
+  left: 30px;
+  margin: 0;
+  opacity: 0;
+  padding: 0;
+  position: absolute;
+  top: 0px;
+  width: 15px;
+  z-index: 2; }
+
+@keyframes power {
+  0% {
+    transform: translate3d(0px, 0px, 0px); }
+  100% {
+    transform: translate3d(26px, 0px, 0px);
+    animation-timing-function: linear; } }
+
+@keyframes off {
+  0% {
+    transform: translate3d(26px, 0px, 0px); }
+  100% {
+    transform: translate3d(0px, 0px, 0px);
+    animation-timing-function: linear; } }
+
+.switch {
+  background: url(../img/radio.png);
+  display: block;
+  float: left;
+  height: 24px;
+  left: -5px;
+  position: relative;
+  top: -4px;
+  width: 24px;
+  z-index: 1; }
+
+.power {
+  animation-name: power;
+  animation-duration: 0.3s;
+  animation-fill-mode: both; }
+
+.off {
+  animation-name: off;
+  animation-duration: 0.3s;
+  animation-fill-mode: both; }
