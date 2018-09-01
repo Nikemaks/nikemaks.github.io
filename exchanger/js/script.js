@@ -52,10 +52,10 @@ document.addEventListener('DOMContentLoaded', function(){
                           switch_in[0].classList.remove('off');
                           switch_in[0].classList.add('power');
                           toggle[0].style.background = "#b0b1b2";
-                          hour_change[0].value = '$' + result.changes.price.hour;
-                          day_change[0].value = '$' + result.changes.price.day;
-                          week_change[0].value = '$' + result.changes.price.week;
-                          month_change[0].value = '$' + result.changes.price.month;
+                          hour_change[0].value = result.changes.price.hour  +'$' ;
+                          day_change[0].value = result.changes.price.day  +'$' ;
+                          week_change[0].value = result.changes.price.week  +'$' ;
+                          month_change[0].value = result.changes.price.month  +'$' ;
                       });
                         precent[1].addEventListener('change',  function(){
                           switch_in[1].classList.add('off');
@@ -70,10 +70,10 @@ document.addEventListener('DOMContentLoaded', function(){
                           switch_in[1].classList.add('power');
                           switch_in[1].classList.remove('off');
                           toggle[1].style.background = "#b0b1b2";
-                          hour_change[1].value = '$' + result.changes.price.hour;
-                          day_change[1].value = '$' + result.changes.price.day;
-                          week_change[1].value = '$' + result.changes.price.week;
-                          month_change[1].value = '$' + result.changes.price.month;
+                          hour_change[1].value = result.changes.price.hour + '$' ;
+                          day_change[1].value = result.changes.price.day + '$' ;
+                          week_change[1].value = result.changes.price.week + '$' ;
+                          month_change[1].value = result.changes.price.month + '$' ;
                       });
                         precent[2].addEventListener('change',  function(){
                           switch_in[2].classList.add('off');
@@ -88,10 +88,10 @@ document.addEventListener('DOMContentLoaded', function(){
                           switch_in[2].classList.add('power');
                           switch_in[2].classList.remove('off');
                           toggle[2].style.background = "#b0b1b2";
-                          hour_change[2].value = '$' + result.changes.price.hour;
-                          day_change[2].value = '$' + result.changes.price.day;
-                          week_change[2].value = '$' + result.changes.price.week;
-                          month_change[2].value = '$' + result.changes.price.month;
+                          hour_change[2].value = result.changes.price.hour + '$';
+                          day_change[2].value = result.changes.price.day + '$';
+                          week_change[2].value = result.changes.price.week + '$';
+                          month_change[2].value = result.changes.price.month + '$';
                       });
 
                
@@ -118,10 +118,10 @@ document.addEventListener('DOMContentLoaded', function(){
                           switch_in[0].classList.remove('off');
                           switch_in[0].classList.add('power');
                           toggle[0].style.background = "#b0b1b2";
-                          hour_change[0].value = '₽' + 67*result.changes.price.hour;
-                          day_change[0].value = '₽' + 67*result.changes.price.day;
-                          week_change[0].value = '₽' + 67*result.changes.price.week;
-                          month_change[0].value = '₽' + 67*result.changes.price.month;
+                          hour_change[0].value =  67*result.changes.price.hour + '₽';
+                          day_change[0].value =  67*result.changes.price.day + '₽';
+                          week_change[0].value =  67*result.changes.price.week + '₽';
+                          month_change[0].value =  67*result.changes.price.month + '₽';
                       });
                         precent[1].addEventListener('change',  function(){
                           switch_in[1].classList.add('off');
@@ -136,10 +136,10 @@ document.addEventListener('DOMContentLoaded', function(){
                           switch_in[1].classList.add('power');
                           switch_in[1].classList.remove('off');
                           toggle[1].style.background = "#b0b1b2";
-                          hour_change[1].value = '₽' + result.changes.price.hour;
-                          day_change[1].value = '₽' + result.changes.price.day;
-                          week_change[1].value = '₽' + result.changes.price.week;
-                          month_change[1].value = '₽' + result.changes.price.month;
+                          hour_change[1].value =  result.changes.price.hour + '₽';
+                          day_change[1].value =  result.changes.price.day + '₽';
+                          week_change[1].value =  result.changes.price.week + '₽';
+                          month_change[1].value =  result.changes.price.month + '₽';
                       });
                         precent[2].addEventListener('change',  function(){
                           switch_in[2].classList.add('off');
@@ -154,10 +154,10 @@ document.addEventListener('DOMContentLoaded', function(){
                           switch_in[2].classList.add('power');
                           switch_in[2].classList.remove('off');
                           toggle[2].style.background = "#b0b1b2";
-                          hour_change[2].value = '₽' + result.changes.price.hour;
-                          day_change[2].value = '₽' + result.changes.price.day;
-                          week_change[2].value = '₽' + result.changes.price.week;
-                          month_change[2].value = '₽' + result.changes.price.month;
+                          hour_change[2].value =  result.changes.price.hour + '₽';
+                          day_change[2].value =  result.changes.price.day + '₽';
+                          week_change[2].value =  result.changes.price.week + '₽';
+                          month_change[2].value =  result.changes.price.month + '₽';
                       });
 
                
@@ -182,10 +182,10 @@ document.addEventListener('DOMContentLoaded', function(){
                              switch_in[0].classList.remove('off');
                              switch_in[0].classList.add('power');
                              toggle[0].style.background = "#b0b1b2";
-                             hour_change[0].value = '£' + 1.30*67*result.changes.price.hour;
-                             day_change[0].value = '£' + 1.30*67*result.changes.price.day;
-                             week_change[0].value = '£' + 1.30*67*result.changes.price.week;
-                             month_change[0].value = '£' + 1.30*67*result.changes.price.month;
+                             hour_change[0].value =  1.30*67*result.changes.price.hour + '£';
+                             day_change[0].value =  1.30*67*result.changes.price.day + '£';
+                             week_change[0].value =  1.30*67*result.changes.price.week + '£';
+                             month_change[0].value =  1.30*67*result.changes.price.month + '£';
                          });
                            precent[1].addEventListener('change',  function(){
                              switch_in[1].classList.add('off');
@@ -200,10 +200,10 @@ document.addEventListener('DOMContentLoaded', function(){
                              switch_in[1].classList.add('power');
                              switch_in[1].classList.remove('off');
                              toggle[1].style.background = "#b0b1b2";
-                             hour_change[1].value = '£' + 1.30*result.changes.price.hour;
-                             day_change[1].value = '£' + 1.30*result.changes.price.day;
-                             week_change[1].value = '£' + 1.30*result.changes.price.week;
-                             month_change[1].value = '£' + 1.30*result.changes.price.month;
+                             hour_change[1].value =  1.30*result.changes.price.hour + '£';
+                             day_change[1].value =  1.30*result.changes.price.day + '£';
+                             week_change[1].value =  1.30*result.changes.price.week + '£';
+                             month_change[1].value =  1.30*result.changes.price.month + '£';
                          });
                            precent[2].addEventListener('change',  function(){
                              switch_in[2].classList.add('off');
@@ -218,10 +218,10 @@ document.addEventListener('DOMContentLoaded', function(){
                              switch_in[2].classList.add('power');
                              switch_in[2].classList.remove('off');
                              toggle[2].style.background = "#b0b1b2";
-                             hour_change[2].value = '£' + 1.30*result.changes.price.hour;
-                             day_change[2].value = '£' + 1.30*result.changes.price.day;
-                             week_change[2].value = '£' + 1.30*result.changes.price.week;
-                             month_change[2].value = '£' + 1.30*result.changes.price.month;
+                             hour_change[2].value =  1.30*result.changes.price.hour + '£';
+                             day_change[2].value =  1.30*result.changes.price.day + '£';
+                             week_change[2].value =  1.30*result.changes.price.week + '£';
+                             month_change[2].value =  1.30*result.changes.price.month + '£';
                          });
 
                   
