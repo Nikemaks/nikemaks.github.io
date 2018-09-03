@@ -41,6 +41,10 @@ button:active {
   border: 1px solid #41424e;
   cursor: pointer; }
 
+.btn:focus {
+  border: 1px solid #41424e;
+  cursor: pointer; }
+
 .nav {
   margin-right: 2.5%; }
 
