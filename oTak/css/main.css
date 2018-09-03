@@ -75,7 +75,8 @@ button:active {
   font-weight: bold;
   text-transform: uppercase;
   border: none;
-  background: #f95079; }
+  background: #f95079;
+  cursor: pointer; }
 
 .img {
   z-index: 99;
