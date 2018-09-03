@@ -98,42 +98,66 @@ button:active
 
 
 .fade-left
-	animation: fade 1.5s  ease-in-out
+	animation: fade 3s  ease-out
 .fade-left-2
-	animation: fade 2s  ease-in-out
+	animation: fade 3.5s  ease-in-out
 .fade-up
-	animation: fadeUp 1.8s ease-out
+	animation: fadeUp 2.2s ease-out
 .fade-up-2
-	animation: fadeUp2 2s ease-in-out
+	animation: fadeUp2 2s linear
 
 @keyframes fade
  from
-  transform: translateX(-150%)
+  transform: translateX(-250%)
  to 
   transform: translateX(0%)
 
 @keyframes fadeUp
  0%
-  transform: translate(-300%, -400%)
+  border-radius: 0% 100% 100% 100%
+  left: 40%
+  top: -20%
+  transform: rotate(45deg)
   height: 50px
   width: 50px
  30% 
-  transform: translate(-150%, 0%)
+  left: 40%
+  border-radius: 0% 100% 100% 100%
+  transform: rotate(45deg)
+  height: 50px
+  width: 50px
  50%
- transform: translate(-100%, 0%)
+  left: 40%
+  border-radius: 0% 100% 100% 100%
+ 	transform: rotate(45deg)
+ 	height: 50px
+ 	width: 50px
+ 60%
+  left: 30%
+  top: 30%
+ 	border-radius: 50%
+		transform: rotate(45deg)
+		height: 300px
+		width: 300px
  70%
-		transform: translate(-50%, 0%)
+  border-radius: 50%
+	 transform:  rotate(45deg)
+		
  100% 
-  transform: translate(0%, 0%)
+  transform:  rotate(45deg)
    width: 300px
    height: 300px 
 
 @keyframes fadeUp2
- from
-  transform: translateX(-40%)
+ 0%
+  transform: translate(-50%, 100%)
   opacity: 0
- to 
-  transform: translateX(0%)
+ 50% 
+  opacity: 0
+  transform: translate(-50%, 25%)
+ 100%
+  transform: translate(0%, 0%)
+  
 
 @media (min-width:1900px)
 	.circle
