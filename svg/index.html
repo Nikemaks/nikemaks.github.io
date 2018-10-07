@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>SVG</title>
+</head>
+<body>
+
+	
+<div id="circle"></div>
+
+
+	<script src="js/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/2.6.6/svg.min.js"></script>
+	
+	<script type="text/javascript">
+		var draw = SVG('circle').size(1920, 1080);
+		var circle  =  draw.circle(150).fill('#f06');
+	 	circle.attr({
+			cx: 850, cy: -20
+	 	});
+
+
+		
+	</script>
+</body>
+</html>
