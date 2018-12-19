@@ -14,7 +14,7 @@ let countBtn = document.getElementById('count').onclick = function (){
     } 
 
 function count(priceApple, discountApple, priceOrange, discountOrange){
-  if (parseInt(priceApple) > 0 && parseInt(discountApple) <= 100 && parseInt(priceOrange) > 0 && parseInt(discountOrange) <= 100 ) {
+  if (parseInt(priceApple) > 0 && parseInt(discountApple) < 99 && parseInt(priceOrange) > 0 && parseInt(discountOrange) < 99 ) {
    if (parseInt(discountApple) > 0 && parseInt(discountOrange) > 0) {
      price = priceApple - (priceApple * (discountApple/100));
      price1 = priceOrange - (priceOrange * (discountOrange/100));
@@ -26,10 +26,13 @@ function count(priceApple, discountApple, priceOrange, discountOrange){
       цена: ${price1}грн.`);
     result1.value = price,
     result2.value = price1;
+    errorMessage.style.opacity = '0';
    }else{
     errorMessage.style.opacity = '1';
    }
-  }
+  }else{
+    errorMessage.style.opacity = '1';
+   }
 };
 
 //2
