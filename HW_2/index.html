@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Home work 2</title>
+</head>
+<body>
+	<style type="text/css">
+		.contaniner{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			width: 80%;
+			margin: 0 auto;
+		}
+		button{
+			width: 200px;
+			height: 40px;
+			border: none;
+			outline: none;
+			margin: 50px auto;
+			cursor: pointer;
+			font-size: 14px;
+		}
+		label{
+			margin: 20px auto;
+		}
+		input{
+			margin-left: 15px;
+		}
+		input::-webkit-outer-spin-button,
+		input::-webkit-inner-spin-button {
+		    -webkit-appearance: none;
+		    margin: 0; 
+		}
+		.error-message{
+			color: red;
+			margin: 0 auto;
+			width: 50%;
+			font-size: 16px;
+			font-family: sans-serif;
+			text-align: center;
+			opacity: 0;
+			transition: 0.4s all;
+		}
+	</style>
+<div class="contaniner">
+	<label>Ведите цену на яблоки
+	<input  value="12.5" id="price-apple" type="number"></label>
+	<label>Ведите скидку на яблоки
+	<input value="15" id="discount-apple" type="number"> %</label>
+	<label>Ведите цену на апельсины
+	<input value="12.5"  id="price-orange" type="number"></label>
+	<label>Ведите скидку на апельсины
+	<input value="15" id="discount-orange" type="number"> %</label>
+	<button id="count">Посчитать</button>
+	<p class="error-message">Вы ввели не правильные данные (*скидка не может быть меньше 0% и больше 100%, цена так же не может быть меньше 0)</p>
+	<label>Цена на яблоки<input id="result1" type="number"></label>
+	<label>Цена на апельсины<input id="result2" type="number"></label>
+</div>
+
+	<script src="script.js"></script>
+</body>
+</html>
