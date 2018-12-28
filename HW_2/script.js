@@ -14,8 +14,7 @@ let countBtn = document.getElementById('count').onclick = function (){
     } 
 
 function count(priceApple, discountApple, priceOrange, discountOrange){
-  if (parseInt(priceApple) > 0 && parseInt(discountApple) < 99 && parseInt(priceOrange) > 0 && parseInt(discountOrange) < 99 ) {
-   if (parseInt(discountApple) > 0 && parseInt(discountOrange) > 0) {
+  if (parseInt(discountApple) > 0 && parseInt(discountOrange) > 0 && parseInt(priceApple) > 0 && parseInt(discountApple) < 99 && parseInt(priceOrange) > 0 && parseInt(discountOrange) < 99 ) {
      price = priceApple - (priceApple * (discountApple/100));
      price1 = priceOrange - (priceOrange * (discountOrange/100));
      console.log('Ябоки украинские. \n цена: '+ price + 'грн.');
@@ -27,9 +26,6 @@ function count(priceApple, discountApple, priceOrange, discountOrange){
     result1.value = price,
     result2.value = price1;
     errorMessage.style.opacity = '0';
-   }else{
-    errorMessage.style.opacity = '1';
-   }
   }else{
     errorMessage.style.opacity = '1';
    }
