@@ -19,12 +19,12 @@ function count(priceApple, discountApple, priceOrange, discountOrange){
      price1 = priceOrange - (priceOrange * (discountOrange/100));
      console.log('Ябоки украинские. \n цена: '+ price + 'грн.');
      console.log(`Ябоки украинские. 
-      цена: ${price}грн.`);
+      цена: ${price.toFixed(2)}грн.`);
      console.log('Апельсины заморские. \n цена: '+ price1 + 'грн.');
      console.log(`Апельсины заморские. 
-      цена: ${price1}грн.`);
-    result1.value = price,
-    result2.value = price1;
+      цена: ${price1.toFixed(2)}грн.`);
+    result1.value = price.toFixed(2),
+    result2.value = price1.toFixed(2);
     errorMessage.style.opacity = '0';
   }else{
     errorMessage.style.opacity = '1';
