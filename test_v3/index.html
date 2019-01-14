@@ -41,7 +41,7 @@
     	        	<h5>Обратная связь</h5>
     	        	<label for="">Ваше имя *<input required type="text"></label>
     	        	<label for="">Телефон *<input required type="text"></label>
-    	        	<label for="">Email *<input id="email-input" required type="text"></label>
+    	        	<label for="">Email *<input required id="email-input" required type="text"></label>
     	        	<label for="">Сообщение<textarea name="" id="" cols="30" rows="10"></textarea></label>
     	        	<input class="form-submit" type="submit">
     	        </form>
@@ -322,6 +322,10 @@
             	$('#email-input').addClass('feedback-modal__erorr');
             	$('#email-input').val('Поле обязательное для заполнения');
             }
+    	  });
+    	  $('#email-input').focus(function(){
+             $(this).val('');
+             $(this).removeClass('feedback-modal__erorr');
     	  });
     	});
     </script>
