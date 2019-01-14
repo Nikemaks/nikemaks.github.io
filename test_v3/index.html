@@ -14,11 +14,11 @@
     <header class="header">
     	<div class="container">
     	 	<div class="row header-top">
-    	 		<div class="col-xl-3">
+    	 		<div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 col-12">
     	 				<img src="img/logo.PNG" alt="logo">
     	 		</div>
-    	 		<div class="offset-xl-4 col-xl-5">
-    	 			<div class="header-tell ">
+    	 		<div class="offset-xl-4 col-xl-5 offset-lg-4 col-lg-5 offset-md-4 col-md-4 offset-sm-6 col-sm-6 col-6 offset-6">
+    	 			<div class="header-tell">
     	 				<a href="tell:+38 (097) 977-97-97">+38 (097) 977-97-97</a>
     	 				<a href="tell:+38 (050) 977-97-97">+38 (097) 977-97-97</a>
     	 			</div>
@@ -41,7 +41,7 @@
     	        	<h5>Обратная связь</h5>
     	        	<label for="">Ваше имя *<input required type="text"></label>
     	        	<label for="">Телефон *<input required type="text"></label>
-    	        	<label for="">Email *<input  required type="text"></label>
+    	        	<label for="">Email *<input id="email-input" required type="text"></label>
     	        	<label for="">Сообщение<textarea name="" id="" cols="30" rows="10"></textarea></label>
     	        	<input class="form-submit" type="submit">
     	        </form>
@@ -97,18 +97,233 @@
   	 	<div class="row">
   	 		<div class="col-xl-6">
   	 			<ul class="content-menu">
-  	 				<li class="active-link">Главная</li><span class="splitter">/</span>
-  	 				<li class="active-link">Каталог</li> <span class="splitter">/</span>
-  	 				<li>Бытовая техника</li>
+  	 				<li class="active-link"><a href="#">Главная</a></li><span class="splitter">/</span>
+  	 				<li class="active-link"><a href="#">Каталог</a></li> <span class="splitter">/</span>
+  	 				<li><a href="#">Бытовая техника</a></li>
   	 			</ul>
   	 		</div>
   	 	</div>
+  	 	<div class="row">
+  	 		<div class="col-xl-3">
+  	 			<aside>
+  	 				<div id="accordion">
+  	 				  <div>
+  	 				    <div class="" id="headingOne">
+  	 				      <h5 class="mb-0">
+  	 				        <button class="btn according-title " data-toggle="collapse" data-target="#collapseOne"  aria-controls="collapseOne" aria-expanded="true">
+  	 				          Автомобили
+  	 				        </button>
+  	 				      </h5>
+  	 				    </div>
+
+  	 				    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+  	 				      <div class="card-body">
+  	 				      </div>
+  	 				    </div>
+  	 				  </div>
+  	 				  <div >
+  	 				    <div id="headingTwo">
+  	 				      <h5 class="mb-0">
+  	 				        <button class="btn according-title  according-title__active  collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+  	 				          Бытовая техника
+  	 				        </button>
+  	 				      </h5>
+  	 				    </div>
+  	 				    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+  	 				      <div class="nav-list">
+  	 				        <ul>
+  	 				        	<li><a href="#">Микроволновки</a></li>
+  	 				        	<li><a href="#">Холодильники</a></li>
+  	 				        	<li><a href="#">Посудомоечные машины</a></li>
+  	 				        	<li class="nav-list__active"><a href="#">Чайники</a></li>
+  	 				        </ul>
+  	 				      </div>
+  	 				    </div>
+  	 				  </div>
+
+  	 				  <div>
+  	 				    <div id="headingThree">
+  	 				      <h5 class="mb-0">
+  	 				        <button class="btn according-title collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+  	 				          Мобильная техника
+  	 				        </button>
+  	 				      </h5>
+  	 				    </div>
+  	 				    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+  	 				      <div class="card-body">
+  	 				      </div>
+  	 				    </div>
+  	 				  </div>
+
+  	 				  <div>
+  	 				    <div id="heading4">
+  	 				      <h5 class="mb-0">
+  	 				        <button class="btn according-title collapsed" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+  	 				          Компьютеры
+  	 				        </button>
+  	 				      </h5>
+  	 				    </div>
+  	 				    <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordion">
+  	 				      <div class="card-body">
+  	 				      	
+  	 				      </div>
+  	 				    </div>
+  	 				  </div>
+
+  	 				  <div>
+  	 				    <div id="heading5">
+  	 				      <h5 class="mb-0">
+  	 				        <button class="btn according-title collapsed" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+  	 				          Одежда
+  	 				        </button>
+  	 				      </h5>
+  	 				    </div>
+  	 				    <div id="collapse5" class="collapse" aria-labelledby="heading5" data-parent="#accordion">
+  	 				      <div class="card-body">
+  	 				      	
+  	 				      </div>
+  	 				    </div>
+  	 				  </div>
+
+  	 				  <div>
+  	 				    <div id="heading6">
+  	 				      <h5 class="mb-0">
+  	 				        <button class="btn according-title collapsed" data-toggle="collapse" data-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+  	 				          Недвижимость
+  	 				        </button>
+  	 				      </h5>
+  	 				    </div>
+  	 				    <div id="collapse6" class="collapse" aria-labelledby="heading6" data-parent="#accordion">
+  	 				      <div class="card-body">
+  	 				      	
+  	 				      </div>
+  	 				    </div>
+  	 				  </div>
+
+  	 				</div>
+  	 				<a class="download-price" href="prais tz.xlsx" download><img src="img/price.png" alt="price-list"></a>
+  	 			</aside>
+  	 		</div>
+  	 	<div class="col-xl-9">
+  	 		<article class="product">
+  	 			<div class="row">
+  	 				<div class="col-xl-4 col-lg-4 col-md-6">
+  	 					<div class="product-card">
+  	 							<img src="img/nophoto.jpg" alt="nophoto">
+  	 							<h6>Самый клевый чайник, который надо купить!</h6>
+  	 						<div class="product-card__bot">
+  	 								<p class="price">900 <span class="product-card__bot-valute">грн</span></p>
+  	 								<a href="" class="basket"><img src="img/addtobasket_mini.png" alt="basket"></a>
+  	 						</div>	
+  	 					</div>
+  	 				</div>	
+  	 				<div class="col-xl-4 col-lg-4 col-md-6">
+  	 					<div class="product-card">
+  	 							<img src="img/nophoto.jpg" alt="nophoto">
+  	 							<h6>Самый клевый чайник, который надо купить!</h6>
+  	 						<div class="product-card__bot">
+  	 								<p class="price">750 <span class="product-card__bot-valute">грн</span></p>
+  	 								<a href="" class="basket"><img src="img/addtobasket_mini.png" alt="basket"></a>
+  	 						</div>	
+  	 					</div>
+  	 				</div>
+  	 				<div class="col-xl-4 col-lg-4 col-md-6">
+  	 					<div class="product-card">
+  	 							<img src="img/nophoto.jpg" alt="nophoto">
+  	 							<h6>Самый клевый чайник, который надо купить!</h6>
+  	 						<div class="product-card__bot">
+  	 								<p class="price">500 <span class="product-card__bot-valute">грн</span></p>
+  	 								<a href="" class="basket"><img src="img/addtobasket_mini.png" alt="basket"></a>
+  	 						</div>	
+  	 					</div>
+  	 				</div>	
+  	 		
+  	 			
+  	 				<div class="col-xl-4 col-lg-4 col-md-6">
+  	 					<div class="product-card">
+  	 							<img src="img/nophoto.jpg" alt="nophoto">
+  	 							<h6>Самый клевый чайник, который надо купить!</h6>
+  	 						<div class="product-card__bot">
+  	 								<p class="price">1 200 <span class="product-card__bot-valute">грн</span></p>
+  	 								<a href="" class="basket"><img src="img/addtobasket_mini.png" alt="basket"></a>
+  	 						</div>	
+  	 					</div>
+  	 				</div>	
+  	 				<div class="col-xl-4 col-lg-4 col-md-6">
+  	 					<div class="product-card">
+  	 							<img src="img/nophoto.jpg" alt="nophoto">
+  	 							<h6>Самый клевый чайник, который надо купить!</h6>
+  	 						<div class="product-card__bot">
+  	 								<p class="price">1 000 <span class="product-card__bot-valute">грн</span></p>
+  	 								<a href="" class="basket"><img src="img/addtobasket_mini.png" alt="basket"></a>
+  	 						</div>	
+  	 					</div>
+  	 				</div>
+  	 			</div>
+  	 			<div class="row">
+  	 				<nav class="pagination">
+  	 					<ul>
+  	 						<li><a href="#">1</a></li>
+  	 						<li><a href="#">2</a></li>
+  	 						<li class="pagination-active"><a href="#">3</a></li>
+  	 						<li><a href="#">4</a></li>
+  	 						<li><a href="#">5</a></li>
+  	 						<li><a href="#">6</a></li>
+  	 						<li><a href="#">7</a></li>
+  	 					</ul>
+  	 				</nav>
+  	 		 </div>	
+  	 		</article>
+  	 		<article class="info">
+  	 			<div class="row">
+  	 				<div class="col"><p>Компания «АЙДИА ДИДЖИТАЛ ЭДЖЕНСИ» существует уже 2 года. Мы занимаемся внедрением интернет-инструментов, которые помогают бизнесу наших клиентов расти и приносить прибыль. За это время мы создали более 20 сайтов для разных направлений бизнеса. На данный момент наш коллектив состоит из 13 сотрудников. Мы заинтересованы в постоянном развитии и стремимся предоставлять нашим клиентам качественные услуги. Девиз нашей компании «КРЕАТИВ И КОММУНИКАЦИИ В СТИЛЕ ROCK'N'ROLL»</p></div>
+  	 				<div class="col"><p>Вторым направлением нашей деятельности является интернет-маркетинг.  На данный момент мы работаем с более чем 20 постоянными клиентами в разных сферах интернет-маркетинга. При этом в работе основной акцент мы делаем на качестве работ, а так же применяем собственные уникальные разработки в области SEO продвижения и рекламы в социальных сетях. На данный момент отдел маркетинга состоит из 6 человек под руководством ведущего специалиста. Отдел маркетинга тесно сотрудничает с отделом разработки.</p></div>
+  	 			</div>
+  	 		</article> 
+  	 	 </div>	
+  	 	</div>
   	 </div> 
   </div>
-
+  <footer class="footer">
+  	<div class="container">
+  		<div class="row footer-with">
+  			<div class="col col-sm-4">
+  				<p>© 2012–2018 ООО «Пиксель»</p>
+  				<a href="">info@name.com</a>
+  			</div>
+  			<div class="col col-sm-4">
+  				<ul class="footer-nav">
+  					<li><a href="#">Главная</a></li>
+  					<li><a href="#">Каталог</a></li>
+  					<li><a href="#">Доставка и оплата</a></li>
+  					<li><a href="#">Прайс-лист</a></li>
+  					<li><a href="#">Контакты</a></li>
+  				</ul>
+  			</div>
+  			<div class="col col-sm-4">
+  				<div class="footer-right">
+  					<img src="img/company.png" alt="company">
+  					<p><span>Разработка сайта</span> — <br>
+					компания IdeaDigital.Agency</p>
+  				</div>
+  			</div>
+  		</div>
+  	</div>
+  </footer>
+ 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src= "js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    	$( document ).ready(function() {
+    	  $('.form-submit').click(function() {
+            if ($('#email-input').val() == '') {
+            	$('#email-input').addClass('feedback-modal__erorr');
+            	$('#email-input').val('Поле обязательное для заполнения');
+            }
+    	  });
+    	});
+    </script>
   </body>
 </html>
