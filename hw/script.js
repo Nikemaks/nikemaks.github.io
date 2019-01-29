@@ -23,11 +23,14 @@ var studentList = [ student_1 = {
 getListStudent(2005, 2008);
 
 function getListStudent(dataStart, dataEnd) {
+  let arrayStudent = [];
    for (var i = 0; i < studentList.length; i++) {
     if (studentList[i].dataStart >= dataStart && studentList[i].dataEnd <= dataEnd || studentList[i].dataStart <= dataStart && studentList[i].dataEnd <= dataEnd && studentList[i].dataEnd >= dataStart ) {
      console.log(studentList[i]);
+     arrayStudent.push(studentList[i]);
     }
   }
+  return arrayStudent;
 }
 //2 
 //  getMaxStudent(2001, 2005);
