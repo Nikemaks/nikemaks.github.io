@@ -6,10 +6,10 @@ let sidebar = document.getElementById('left-sidebar'),
 buton_menu.onclick = function(){
 	if (content.classList.contains('sadebar-active')) {
        content.classList.remove("sadebar-active");
-       sidebar.style.left = '-25%';
+       sidebar.classList.remove("sadebar-left");
 	}else{
 		content.classList.add("sadebar-active");
-		sidebar.style.left = '0';
+		sidebar.classList.add("sadebar-left");
 	}
 };
 

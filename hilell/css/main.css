@@ -8,6 +8,13 @@ body {
   background: #fff;
   margin: 0;
   max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 a {
@@ -36,6 +43,9 @@ header {
 .logo {
   font-size: 20px;
   font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .head-nav ul {
@@ -81,6 +91,8 @@ header {
   overflow: auto;
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .left-sidebar__section {
@@ -124,6 +136,9 @@ header {
 main {
   max-width: 800px;
   margin: 0 auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
 }
 
 .main-content {
@@ -138,19 +153,21 @@ main {
   transition: 0.3s all;
 }
 
+.sadebar-left {
+  left: 0;
+}
+
 .btn-menu {
   background: transparent;
   border: none;
   outline: none;
   cursor: pointer;
-  position: relative;
-  top: 12px;
-  left: 0;
 }
 
 .footer {
-  position: absolute;
-  bottom: 0;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
   width: 100%;
 }
 
@@ -183,4 +200,44 @@ main {
 
 .footer-content ul li:first-child {
   margin-left: 0;
+}
+
+@media only screen and (max-width: 1024px) {
+  .left-sidebar {
+    height: 40vh;
+    width: 100%;
+    top: -100%;
+    left: 0;
+    z-index: 9;
+  }
+  .sadebar-left {
+    top: 70px;
+  }
+  .sadebar-active {
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  body {
+    max-width: 980px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .head-nav {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .footer-content ul li {
+    margin-left: 25px;
+  }
+}
+
+@media only screen and (max-width: 325px) {
+  .footer-content ul li {
+    margin-left: 15px;
+  }
 }
