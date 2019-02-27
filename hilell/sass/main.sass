@@ -37,11 +37,16 @@ header
      color: #000
      &:hover
       color: #b20600
- &-search
-  &__svg
-   width: 20px  
-   height: 20px
-   cursor: pointer
+.time 
+ min-height: 25px      
+.real-time
+ transition: 0.3s all
+ font-size: 18px
+ .time-hours, .time-minutes
+  position: relative
+  &:after 
+   content: ":"
+   position: absolute
 .left-sidebar
  width: 25%
  height: 100vh

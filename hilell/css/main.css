@@ -73,10 +73,23 @@ header {
   color: #b20600;
 }
 
-.head-search__svg {
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
+.time {
+  min-height: 25px;
+}
+
+.real-time {
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  font-size: 18px;
+}
+
+.real-time .time-hours, .real-time .time-minutes {
+  position: relative;
+}
+
+.real-time .time-hours:after, .real-time .time-minutes:after {
+  content: ":";
+  position: absolute;
 }
 
 .left-sidebar {
