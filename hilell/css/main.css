@@ -81,6 +81,10 @@ header {
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
   font-size: 18px;
+  color: #000;
+  padding: 5px;
+  -webkit-box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.4);
+          box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.4);
 }
 
 .real-time .time-hours, .real-time .time-minutes {
@@ -216,6 +220,19 @@ main {
 
 .footer-content ul li:first-child {
   margin-left: 0;
+}
+
+.footer-timer {
+  cursor: pointer;
+}
+
+.footer-timer_minutes, .footer-timer_hours {
+  position: relative;
+}
+
+.footer-timer_minutes:after, .footer-timer_hours:after {
+  content: ':';
+  position: absolute;
 }
 
 @media only screen and (max-width: 1024px) {
