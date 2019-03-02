@@ -161,6 +161,7 @@ main
  justify-content: center
  text-align: center
  width: 800px
+ max-width: 100%
  height: 40%
  margin: 20px 0
  background: url('../img/Anthony.jpg') no-repeat top
@@ -225,6 +226,16 @@ td
  .head-nav
    display: none
 @media only screen and (max-width: 425px)
+ .interface-control
+  flex-direction: column
+ main 
+  max-width: 100%
+ .interface 
+  button
+   margin: 20px 0 
+  label
+   padding: 15px 
+   justify-content: space-between
  .footer-content 
   ul 
    li 
