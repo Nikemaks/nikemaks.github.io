@@ -87,9 +87,10 @@ header {
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
   font-size: 18px;
-  color: #000;
   padding: 5px;
-  background-size: cover;
+  color: #051937;
+  text-shadow: 1px 1px 1px black, 1px 1px 1em white;
+  font-size: 20px;
 }
 
 .real-time .time-hours, .real-time .time-minutes {
@@ -152,18 +153,6 @@ header {
 .left-sidebar__block ul li {
   list-style: none;
   margin: 20px 0 0 0;
-  -webkit-transition: 0.3s all;
-  transition: 0.3s all;
-}
-
-.left-sidebar__block ul li:hover:before {
-  content: '';
-  width: 30px;
-  height: 30px;
-  display: inline-block;
-  position: absolute;
-  left: 140px;
-  background: url("../img/ball.png") no-repeat center;
 }
 
 .left-sidebar__block ul li a {
@@ -175,6 +164,16 @@ header {
 
 .left-sidebar__block ul li a:hover {
   color: #ff5a3c;
+}
+
+.left-sidebar__block ul li a:hover:before {
+  content: '';
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  position: absolute;
+  left: 140px;
+  background: url("../img/ball.png") no-repeat center;
 }
 
 main {
@@ -219,6 +218,11 @@ main {
   width: 100%;
 }
 
+.footer .sizeScreen {
+  font-size: 20px;
+  text-shadow: 1px 1px 2px black, 1px 1px 1em red;
+}
+
 .footer-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -253,8 +257,10 @@ main {
 
 .footer-timer {
   cursor: pointer;
+  font-size: 20px;
   -webkit-animation: timer 4s linear 2s  alternate;
           animation: timer 4s linear 2s  alternate;
+  text-shadow: 1px 1px 2px black, 1px 1px 1em red;
 }
 
 .footer-timer_minutes, .footer-timer_hours {
@@ -302,10 +308,19 @@ main {
   max-width: 100%;
   height: 40%;
   margin: 20px 0;
+  border-radius: 10px;
   background: url("../img/Anthony.jpg") no-repeat top;
   background-size: cover;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
   -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
           box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+}
+
+.interface:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 1px -2px 1px rgba(0, 0, 0, 0.6);
+          box-shadow: 1px -2px 1px rgba(0, 0, 0, 0.6);
 }
 
 .interface-control {
@@ -339,6 +354,7 @@ main {
 
 .interface input {
   margin: 0 0 0 10px;
+  padding: 0 0 0 5px;
   display: inherit;
   width: 100px;
 }
