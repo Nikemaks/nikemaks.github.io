@@ -1,5 +1,5 @@
 body
- font: 14px/20px BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif
+ font: 14px/20px BlinkMacSystemFont, Bree Serif,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif
  text-size-adjust: none
  color: #333
  margin: 0
@@ -23,6 +23,7 @@ header
  font-size: 20px
  font-weight: bold
  display: flex
+ color: #051937
 .head
  &-nav
   ul 
@@ -77,12 +78,27 @@ header
   align-items: center 
   ul 
    padding: 0
+   margin: 80px 0
+   text-align: center
    li 
     list-style: none
-    margin: 10px 0 0 0
+    margin: 20px 0 0 0
+    &:before
+     content: ''
+     width: 30px
+     height: 30px
+     display: inline-block
+     position: absolute
+     left: 140px
+     background: url("../img/ball.png")no-repeat center
+     opacity: 0
     a
      color: #fff
+     font-size: 18px
+     text-transform: uppercase
+     vertical-align: middle
 main 
+ font-family: 'Bree Serif'
  max-width: 800px
  margin: 0 auto	
  padding-bottom: 80px
@@ -136,7 +152,7 @@ main
  display: flex
  flex-direction: column
  align-items: center
- justify-content: center
+ justify-content: flex-start
  height: 90vh 
 .interface
  display: flex
@@ -144,24 +160,42 @@ main
  align-items: center
  justify-content: center
  text-align: center
- label
+ width: 800px
+ height: 40%
+ margin: 20px 0
+ background: url('../img/Anthony.jpg') no-repeat top
+ background-size: cover
+ box-shadow: 5px 5px 5px rgba(0, 0, 0, .6)
+ &-control
   display: flex
-  flex-direction: column 
-  color: #000
+  flex-direction: row
+ &-description
+  p 
+   font-size: 18px 
+   color: #fff
+ label
+  color: #fff
   font-weight: bold
-  text-shadow: 1px
   font-size: 18px
+  display: inline-flex
+  align-items: center
+  padding: 0 10px 0 20px
+  background: rgba(0,0,0, 0.4)
  input
-  margin: 10px 0
+  margin: 0 0 0 10px
+  display: inherit
+  width: 100px
  button
   padding: 10px
-  font-size: 1em
+  font-size: 1.4em
   border: none
   cursor: pointer
-  color: #fff
-  background: #14c92c
+  color: white
+  background: transparent
+  background-size: cover
   border-radius: 15px
   transition: 0.3s all
+  margin: 0 0 0 50px
   box-shadow: 5px 5px 5px rgba(0, 0, 0, .6)
   &:hover
    box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, .4)

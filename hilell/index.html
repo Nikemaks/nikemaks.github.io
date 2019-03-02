@@ -7,10 +7,11 @@
 	<link rel="icon" href="favicon.png" type="image/x-icon">
 	<link rel="stylesheet" href="css/normalaze.min.css">
 	<link rel="stylesheet" href="css/main.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/bree/bree.css">
 </head>
 <body>
 	<header>
-		<div class="logo">JavaScript
+		<div class="logo">MENU
 		 <button id="btn-menu" class="btn-menu"><svg width = "20" height = "20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M491.318 235.318H20.682C9.26 235.318 0 244.577 0 256s9.26 20.682 20.682 20.682h470.636c11.423 0 20.682-9.259 20.682-20.682 0-11.422-9.259-20.682-20.682-20.682zM491.318 78.439H20.682C9.26 78.439 0 87.699 0 99.121c0 11.422 9.26 20.682 20.682 20.682h470.636c11.423 0 20.682-9.26 20.682-20.682 0-11.422-9.259-20.682-20.682-20.682zM491.318 392.197H20.682C9.26 392.197 0 401.456 0 412.879s9.26 20.682 20.682 20.682h470.636c11.423 0 20.682-9.259 20.682-20.682s-9.259-20.682-20.682-20.682z"/></svg></button>
 		</div>
 		<div class="head-nav">
@@ -25,6 +26,7 @@
 			<div class="date">
 				<span class="date-number"></span>
 				<span class="date-month"></span>
+				<span class="date-year"></span>
 			</div>
 		</div>
 
@@ -34,32 +36,31 @@
 		<sidebar id="left-sidebar" class="left-sidebar">
 			<div class="left-sidebar__block">
 				<div class="left-sidebar__section">
-					<h4>Раздел</h4>
 					<ul class="left-sidebar__nav-1">
 						<li><a href="#">Таблица</a></li>
-						<li><a href="#">link-2</a></li>
+						<li><a href="#">Слайдер</a></li>
+						<li><a href="#">link-3</a></li>
+						<li><a href="#">link-4</a></li>
+						<li><a href="#">link-5</a></li>
+						<li><a href="#">link-6</a></li>
+						<li><a href="#">link-7</a></li>
 					</ul>
 				</div>
-				<div class="left-sidebar__section">	
-					<h4>Навигация по уроку</h4>
-				<ul class = "left-sidebar__nav-2">
-					<li><a href="#">link-1</a></li>
-					<li><a href="#">link-2</a></li>
-					<li><a href="#">link-3</a></li>
-					<li><a href="#">link-4</a></li>
-					<li><a href="#">link-5</a></li>
-				</ul>
-			</div>
 		</div>
 		</sidebar>
 		<section class="main-content" id = "main-contant">
 			<div class="container">
-				<div id = "picture-table" class="picture-table">
-				</div>
 				<div class="interface">
-					<label for="column">Количество колонок<input id="column" type="text" class="column"></label>
-					<label for="row">Количество строк<input id="row" type="text" class="row"></label>
-					<button class="create-table">Создать таблицу</button>
+					<div class="interface-description">
+						<p>Вы можете создать таблицу с ограничениями до 10 колонок и 10 строк</p>
+					</div>
+					<div class="interface-control">
+						<label for="column">Колонки<input id="column" type="text" class="column"></label>
+						<label for="row">Cтроки<input id="row" type="text" class="row"></label>
+						<button class="create-table">Создать таблицу</button>
+					</div>
+				</div>
+				<div id = "picture-table" class="picture-table">
 				</div>
 			</div>
 		</section>
@@ -80,5 +81,10 @@
 		</div>
 	</footer>
 	<script src="js/script.js"></script>
+	<script src="js/showTime.js"></script>
+	<script src="js/showDate.js"></script>
+	<script src="js/resizeWindow.js"></script>
+	<script src="js/timerFooter.js"></script>
+	<script src="js/createTable.js"></script>
 </body>
 </html>
