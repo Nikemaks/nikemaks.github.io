@@ -64,8 +64,7 @@ header
  left: -25%
  right: 0
  bottom: 0
- overflow: auto
- transition: 0.3s all
+ overflow: auto 
  box-shadow: 0 2px 5px rgba(0,0,0, 0.3)
  &__section
   width: 70%
@@ -126,6 +125,7 @@ main
    transition: 0.3s all	
   &-left
    left: 0
+   transition: 0.3s all 
    background: url("../img/images.jpg")no-repeat top
 .section-button
   display: none
@@ -152,8 +152,52 @@ main
     border: none
     border-radius: 10px
     text-transform: uppercase  
+.section-slider
+ display: none
+ flex-direction: column
+ min-height: 90vh
+.slider
+ overflow: hidden
+ &-wrapp
+  display: flex
+  flex-direction: row
+  width: 100%
+  position: relative
+ &-item
+  width: 100%
+  margin: 0 auto
+  position: relative 
+.prev, .next
+ position: absolute
+ font-size: 50px
+ color: #fff
+ display: flex
+ align-items: center
+ width: 50px
+ height: 100%
+ cursor: pointer
+.next
+  right: 0
+  background: url('../img/Slider/arrow-right.png')no-repeat center
+.prev
+ background: url('../img/Slider/arrow-left.png')no-repeat center        
 .section-active
- display: flex  
+ display: flex
+.slider-dots
+ display: flex
+ ul
+  padding: 0
+  margin: 20px auto
+  li 
+   display: inline-flex
+   justify-content: center
+   align-items: center  
+   flex-direction: row
+   width: 15px
+   height: 15px
+   background: #051937
+   border-radius: 50%
+   margin-left: 10px  
 .btn-menu
  background: transparent
  border: none

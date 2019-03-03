@@ -32,7 +32,6 @@ window.onload = function(){
 
 		for (let i = 0; i < sections.length; i++) {
 			if (activeSection == sections[i].getAttribute('id')) {
-				console.log(activeSection, sections[i].getAttribute('id'));
 				showSection(i,sections);
 			}
 			

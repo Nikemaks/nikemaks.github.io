@@ -113,8 +113,6 @@ header {
   right: 0;
   bottom: 0;
   overflow: auto;
-  -webkit-transition: 0.3s all;
-  transition: 0.3s all;
   -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
@@ -213,6 +211,8 @@ main {
 
 .sadebar-left {
   left: 0;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
   background: url("../img/images.jpg") no-repeat top;
 }
 
@@ -256,10 +256,97 @@ main {
   text-transform: uppercase;
 }
 
+.section-slider {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 90vh;
+}
+
+.slider {
+  overflow: hidden;
+}
+
+.slider-wrapp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  position: relative;
+}
+
+.slider-item {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.prev, .next {
+  position: absolute;
+  font-size: 50px;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50px;
+  height: 100%;
+  cursor: pointer;
+}
+
+.next {
+  right: 0;
+  background: url("../img/Slider/arrow-right.png") no-repeat center;
+}
+
+.prev {
+  background: url("../img/Slider/arrow-left.png") no-repeat center;
+}
+
 .section-active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.slider-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.slider-dots ul {
+  padding: 0;
+  margin: 20px auto;
+}
+
+.slider-dots ul li {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 15px;
+  height: 15px;
+  background: #051937;
+  border-radius: 50%;
+  margin-left: 10px;
 }
 
 .btn-menu {
