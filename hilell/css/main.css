@@ -333,7 +333,7 @@ main {
           flex-direction: row;
 }
 
-.interface-description p {
+.interface-description p:first-child {
   font-size: 18px;
   color: #fff;
 }
@@ -388,6 +388,17 @@ td {
   width: 40px;
   height: 40px;
   cursor: pointer;
+}
+
+.picture-table {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.messageTab {
+  text-transform: uppercase;
+  color: red;
+  font-size: 22px;
+  font-weight: bold;
 }
 
 @-webkit-keyframes timer {

@@ -8,6 +8,9 @@ let button = document.querySelector(".create-table"),
 			
 		if (rowTable <= 10 && columnTable <= 10) {
 			createTable(rowTable, columnTable);
+			document.querySelector('.messageTab').innerHTML = '';
+		} else {
+			document.querySelector('.messageTab').innerHTML = 'Нельзя создать  таблицу  больше чем 10 строк и 10 столбцов!';
 		}
 	}
 
