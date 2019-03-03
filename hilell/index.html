@@ -40,9 +40,9 @@
 			<div class="left-sidebar__block">
 				<div class="left-sidebar__section">
 					<ul class="left-sidebar__nav-1">
-						<li><a href="#">Таблица</a></li>
+						<li><a class="left-sidebar__block-active" href="main-contant">Таблица</a></li>
+						<li><a href="section-button">Button</a></li>
 						<li><a href="#">Слайдер</a></li>
-						<li><a href="#">link-3</a></li>
 						<li><a href="#">link-4</a></li>
 						<li><a href="#">link-5</a></li>
 						<li><a href="#">link-6</a></li>
@@ -51,8 +51,8 @@
 				</div>
 		</div>
 		</sidebar>
-		<section class="main-content" id = "main-contant">
-			<div class="container">
+		<section class="main-content section section-active" id = "main-contant">
+			<div class="container" >
 				<div class="interface">
 					<div class="interface-description">
 						<p>Вы можете создать таблицу с ограничениями до 10 колонок и 10 строк!</p>
@@ -67,6 +67,22 @@
 				<div id = "picture-table" class="picture-table">
 				</div>
 			</div>
+		</section>
+		<section class="section-button section" id="section-button">
+			<div class="container">
+				<div class="wrapper">
+					<div class="message-button">
+						<p>Волшебные кнопки, нажми на кнопку и убедсь в этом</p>
+					</div>
+					<div class="block-button">
+						<input type="button" value="red">
+						<input type="button" value="green">
+						<input type="button" value="blue">
+					</div>
+				</div>
+				
+			</div>
+
 		</section>
 		
 	</main>
@@ -90,5 +106,6 @@
 	<script src="js/resizeWindow.js"></script>
 	<script src="js/timerFooter.js"></script>
 	<script src="js/createTable.js"></script>
+	<script src="js/buttons.js"></script>
 </body>
 </html>

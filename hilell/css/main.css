@@ -172,7 +172,21 @@ header {
   height: 30px;
   display: inline-block;
   position: absolute;
-  left: 140px;
+  left: 20%;
+  background: url("../img/ball.png") no-repeat center;
+}
+
+.left-sidebar__block-active {
+  color: #ff5a3c !important;
+}
+
+.left-sidebar__block-active:before {
+  content: '';
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  position: absolute;
+  left: 20%;
   background: url("../img/ball.png") no-repeat center;
 }
 
@@ -188,6 +202,7 @@ main {
   width: 100%;
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
+  display: none;
 }
 
 .sadebar-active {
@@ -199,6 +214,52 @@ main {
 .sadebar-left {
   left: 0;
   background: url("../img/images.jpg") no-repeat top;
+}
+
+.section-button {
+  display: none;
+  width: 100%;
+}
+
+.section-button .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 20%;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 50px;
+  margin: 30px 0;
+}
+
+.section-button .message-button p {
+  font-size: 20px;
+  color: #fff;
+}
+
+.section-button .block-button input {
+  cursor: pointer;
+  margin: 0 35px;
+  padding: 10px;
+  width: 80px;
+  border: none;
+  border-radius: 10px;
+  text-transform: uppercase;
+}
+
+.section-active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .btn-menu {

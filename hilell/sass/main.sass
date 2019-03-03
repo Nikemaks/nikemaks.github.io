@@ -98,8 +98,18 @@ header
        height: 30px
        display: inline-block
        position: absolute
-       left: 140px
+       left: 20%
        background: url("../img/ball.png")no-repeat center
+.left-sidebar__block-active 
+ color: #ff5a3c!important  
+ &:before
+  content: ''
+  width: 30px
+  height: 30px
+  display: inline-block
+  position: absolute
+  left: 20%
+  background: url("../img/ball.png")no-repeat center    
 main 
  font-family: 'Bree Serif'
  max-width: 800px
@@ -109,6 +119,7 @@ main
  position: relative
  width: 100%
  transition: 0.3s all
+ display: none
 .sadebar
   &-active
    padding-left: 25%
@@ -116,7 +127,33 @@ main
   &-left
    left: 0
    background: url("../img/images.jpg")no-repeat top
-
+.section-button
+  display: none
+  width: 100%
+  .wrapper
+   display: flex
+   flex-direction: column
+   align-items: center
+   justify-content: space-between
+   height: 20%
+   background: rgba(0,0,0, .3)
+   padding: 50px
+   margin: 30px 0
+  .message-button
+   p 
+    font-size: 20px
+    color: #fff
+  .block-button
+   input 
+    cursor: pointer
+    margin: 0 35px
+    padding: 10px
+    width: 80px
+    border: none
+    border-radius: 10px
+    text-transform: uppercase  
+.section-active
+ display: flex  
 .btn-menu
  background: transparent
  border: none
