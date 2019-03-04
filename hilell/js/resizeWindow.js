@@ -1,17 +1,11 @@
 
 	window.onresize = function(){
-		timer();
-	};
-	function timer(){
-		let date = new Date(),
-			seconds = date.getSeconds();
 
 		let timer = setTimeout(function(){
-			if (seconds == seconds) {
 				paintScreen();
 				clearTimeout(timer);
-			}
 		}, 2000);
+		//console.log(timer);
 	};
 	function paintScreen(){
 		let widthScreen = document.body.clientWidth,
