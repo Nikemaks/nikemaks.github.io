@@ -158,6 +158,7 @@ main
  min-height: 90vh
 .slider
  overflow: hidden
+ position: relative
  &-wrapp
   display: flex
   flex-direction: row
@@ -174,7 +175,8 @@ main
  display: flex
  align-items: center
  width: 50px
- height: 100%
+ height: 50px
+ top: 40%
  cursor: pointer
 .next
   right: 0
@@ -183,6 +185,10 @@ main
  background: url('../img/Slider/arrow-left.png')no-repeat center        
 .section-active
  display: flex
+.dot
+  cursor: pointer
+  &-active
+   background: #fff!important
 .slider-dots
  display: flex
  ul
