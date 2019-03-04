@@ -17,7 +17,8 @@ let button = document.querySelector(".create-table"),
 function createTable(rowTable, columnTable) {
 	let	tagTable = document.createElement("table"),
 		trTable = document.createElement("tr"),
-		tdTable = document.createElement("td");
+		tdTable = document.createElement("td"),
+		index = 0;
 
 		if (paintTab.children[0]) {
 			paintTab.removeChild(paintTab.children[0]);
@@ -29,7 +30,15 @@ function createTable(rowTable, columnTable) {
 		for (let i = 0; i < rowTable ; i++) {
 			paintTab.childNodes[1].appendChild(trTable.cloneNode(true));
 			for (let j = 0; j < columnTable; j++) {
-				paintTab.childNodes[1].children[i].appendChild(tdTable.cloneNode(true));
+				paintTab.childNodes[1].children[i].appendChild(tdTable.cloneNode(true)).setAttribute('index', index);
+				index++;
 			}
 		}	 
+}
+
+paintTab.onmouseover = function(event){
+ let indexHover = event.target.getAttribute('index');
+ if (paintTab.children[0] !== event.target) {
+  	event.target.innerHTML = indexHover;
+ }
 }

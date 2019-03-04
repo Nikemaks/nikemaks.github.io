@@ -536,6 +536,9 @@ td {
   width: 40px;
   height: 40px;
   cursor: pointer;
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
 }
 
 .picture-table {
