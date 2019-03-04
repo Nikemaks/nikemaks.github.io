@@ -629,6 +629,9 @@ td {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
+  .section-button .block-button input {
+    margin: 0 10px;
+  }
   .footer-content ul li {
     margin-left: 25px;
   }
