@@ -4,7 +4,6 @@ function ready(){
 	this.el = document.querySelector(element);
 	this.speed = speed;
 	this.init(speed);
-	
 	}
 
 	SliderMax.prototype = {
@@ -17,12 +16,10 @@ function ready(){
 			this.slide = this.el.querySelector('.slider-item');
 			this.speed = speed;
 			this.autoplay(this.wrapper,this.slide,this.slideAll, this.speed);	
-			console.log(this.slide.childNodes);
 		},
 		navigation: function () {
 
 		},
-
 		slide: function(element){	
 
 		},
@@ -32,6 +29,7 @@ function ready(){
 		autoplay: function (wrapper,slide,slideAll, speed) {
 			let offsetSlid = slide.offsetWidth; 
 			let autoplayTimer = setInterval(function(){
+				
 				if ((slideAll.length * slide.offsetWidth) == offsetSlid) {
 					wrapper.style.left = 0;
 					offsetSlid = 0;
