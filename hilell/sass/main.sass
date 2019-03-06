@@ -9,6 +9,9 @@ body
  background: url("../img/bg.jpg")no-repeat center
 input:active, input:focus, button:active, button:focus
   outline: none
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button 
+ -webkit-appearance: none
 a   
  text-decoration: none
 header
@@ -119,6 +122,15 @@ main
  width: 100%
  transition: 0.3s all
  display: none
+ table, tr, td
+  border: 2px solid #fff
+ td
+  width: 40px
+  height: 40px
+  cursor: pointer
+  font-size: 20px
+  text-align: center
+  color: #fff
 .sadebar
   &-active
    padding-left: 25%
@@ -162,13 +174,13 @@ main
  width: 100%
  transition: 0.6s all
  margin: 40px 0
- box-shadow: 5px 10px 10px rgba(0,0,0, .4)
  &-wrapp
   display: flex
   flex-direction: row
   position: relative
   transition: 1s all
   left: 0
+  box-shadow: 5px 10px 10px rgba(0,0,0, .4)
  &-item
   width: 100%
   margin: 0 auto
@@ -183,14 +195,15 @@ main
  width: 50px
  height: 50px
  top: 40%
- cursor: pointer
+ cursor: pointer 
 .next
   right: 0
   background: url('../img/Slider/arrow-right.png')no-repeat center
 .prev
  background: url('../img/Slider/arrow-left.png')no-repeat center        
 .section-active
- display: flex
+ display: flex!important
+ min-height: 90vh
 .dot
   cursor: pointer
   &-active
@@ -309,15 +322,7 @@ main
   box-shadow: 5px 5px 5px rgba(0, 0, 0, .6)
   &:hover
    box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, .4)
-table, tr, td
- border: 2px solid #fff
-td
- width: 40px
- height: 40px
- cursor: pointer
- font-size: 20px
- text-align: center
- color: #fff
+
 
 .picture-table
  background: rgba(0,0,0, 0.4) 
@@ -333,7 +338,64 @@ td
   transform: rotateY(-90deg) 
  100% 
   transform: rotateY(-180deg) 
-
+.section-student
+ display: none
+ flex-direction: column
+ &__form
+  display: flex
+  flex-direction: row
+  width: 600px
+  height: 25%
+  padding: 15px
+  margin: 20px 0
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, .6)
+  background: rgba(0,0,0, 0.4)
+  input[type="button"]
+   border: none
+   width: 80px
+   border-radius: 10px
+   padding: 5px
+   cursor: pointer
+   transition: 0.3s all
+   box-shadow: 5px 5px 5px rgba(0, 0, 0, .6)
+   &:hover
+    box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, .4) 
+  input
+   border: none
+  &-left
+   display: flex
+   flex-direction: column
+   align-items: center
+   width: 50%
+   label 
+    display: flex
+    flex-direction: row
+    width: 100%
+    justify-content: space-between
+    margin: 5px 0
+    color: #fff
+    font-size: 16px
+   .button-group
+    display: flex
+    flex-direction: row
+    width: 60%
+    justify-content: space-between 
+    margin: 40px 0
+  &-rigth
+   display: flex
+   flex-direction: column
+   align-items: flex-end
+   width: 50%
+   input 
+    margin: 20px 0
+    &:first-child
+     margin: 30px 0 20px  
+ &__table
+  background: rgba(0,0,0, 0.6)
+  table
+   width: 100%
+   border-color: #fff
+   color: #fff
 @media only screen and( max-width: 1024px )
  .left-sidebar
    height: 45vh

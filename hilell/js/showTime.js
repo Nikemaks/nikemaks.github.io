@@ -1,7 +1,7 @@
 	function showTime(hour, minuts, seconds) {
-	let  timeHours = document.getElementsByClassName('time-hours')[0],
-		 timeMinutes = document.getElementsByClassName('time-minutes')[0],
-		 timeSeconds = document.getElementsByClassName('time-seconds')[0];
+	let  timeHours = document.querySelector('.time-hours'),
+		 timeMinutes = document.querySelector('.time-minutes'),
+		 timeSeconds = document.querySelector('.time-seconds');
 
 		if (+timeHours.innerHTML !== hour ) {
 			timeHours.innerHTML = hour;

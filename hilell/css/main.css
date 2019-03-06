@@ -21,6 +21,11 @@ input:active, input:focus, button:active, button:focus {
   outline: none;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
 a {
   text-decoration: none;
 }
@@ -203,6 +208,19 @@ main {
   display: none;
 }
 
+.main-content table, .main-content tr, .main-content td {
+  border: 2px solid #fff;
+}
+
+.main-content td {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+}
+
 .sadebar-active {
   padding-left: 25%;
   -webkit-transition: 0.3s all;
@@ -272,8 +290,6 @@ main {
   -webkit-transition: 0.6s all;
   transition: 0.6s all;
   margin: 40px 0;
-  -webkit-box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.4);
-          box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.4);
 }
 
 .slider-wrapp {
@@ -288,6 +304,8 @@ main {
   -webkit-transition: 1s all;
   transition: 1s all;
   left: 0;
+  -webkit-box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.4);
+          box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.4);
 }
 
 .slider-item {
@@ -324,9 +342,10 @@ main {
 }
 
 .section-active {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  min-height: 90vh;
 }
 
 .dot {
@@ -548,19 +567,6 @@ main {
           box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.4);
 }
 
-table, tr, td {
-  border: 2px solid #fff;
-}
-
-td {
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  font-size: 20px;
-  text-align: center;
-  color: #fff;
-}
-
 .picture-table {
   background: rgba(0, 0, 0, 0.4);
 }
@@ -600,6 +606,130 @@ td {
     -webkit-transform: rotateY(-180deg);
             transform: rotateY(-180deg);
   }
+}
+
+.section-student {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.section-student__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 600px;
+  height: 25%;
+  padding: 15px;
+  margin: 20px 0;
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.section-student__form input[type="button"] {
+  border: none;
+  width: 80px;
+  border-radius: 10px;
+  padding: 5px;
+  cursor: pointer;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+}
+
+.section-student__form input[type="button"]:hover {
+  -webkit-box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.4);
+}
+
+.section-student__form input {
+  border: none;
+}
+
+.section-student__form-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+}
+
+.section-student__form-left label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 5px 0;
+  color: #fff;
+  font-size: 16px;
+}
+
+.section-student__form-left .button-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 60%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 40px 0;
+}
+
+.section-student__form-rigth {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 50%;
+}
+
+.section-student__form-rigth input {
+  margin: 20px 0;
+}
+
+.section-student__form-rigth input:first-child {
+  margin: 30px 0 20px;
+}
+
+.section-student__table {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.section-student__table table {
+  width: 100%;
+  border-color: #fff;
+  color: #fff;
 }
 
 @media only screen and (max-width: 1024px) {
