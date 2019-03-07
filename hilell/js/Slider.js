@@ -42,5 +42,6 @@ function ready(){
 		}
 	};
 var slider1 = new SliderMax("#slider", 2500);
+var slider1 = new SliderMax("#slider2", 3500);
 }
 document.addEventListener("DOMContentLoaded", ready);
