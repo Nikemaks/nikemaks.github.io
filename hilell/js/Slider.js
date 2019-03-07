@@ -28,8 +28,8 @@ function ready(){
 		},
 		autoplay: function (wrapper,slide,slideAll, speed) {
 			let offsetSlid = slide.offsetWidth; 
+
 			let autoplayTimer = setInterval(function(){
-				
 				if ((slideAll.length * slide.offsetWidth) == offsetSlid) {
 					wrapper.style.left = 0;
 					offsetSlid = 0;
