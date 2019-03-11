@@ -186,7 +186,6 @@ main
   width: 100%
   margin: 0 auto
   position: relative
-  transition: 0.6s all
 .prev, .next
  position: absolute
  font-size: 50px
@@ -197,7 +196,7 @@ main
  height: 50px
  top: 40%
  cursor: pointer 
-.next
+.next 
   right: 0
   background: url('../img/Slider/arrow-right.png')no-repeat center
 .prev
@@ -211,6 +210,7 @@ main
    background: #fff!important
 .slider-dots
  display: flex
+ transition: 1s all
  ul
   padding: 0
   margin: 20px auto
@@ -224,6 +224,8 @@ main
    background: #051937
    border-radius: 50%
    margin-left: 10px  
+   transition: 1s all
+
 .btn-menu
  background: transparent
  border: none
