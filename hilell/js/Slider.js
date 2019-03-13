@@ -24,7 +24,7 @@ function ready(){
 			prevBtn.addEventListener('click', function() {
 				--index;
 				if (wrapper.style.left == '0px') {
-					offsetSlid = (slideAll.length - 1)* slide.offsetWidth ;
+					offsetSlid = (slideAll.length - 1) * slide.offsetWidth ;
 					wrapper.style.left = '-' + offsetSlid  +'px';
 					index = link.length - 1;
 				} else {
