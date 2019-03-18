@@ -32,22 +32,31 @@ let input = document.querySelectorAll('.form-input'),
 
  	formSave.addEventListener('click', function(){
  		for (var i = 0; i < input.length; i++) {
- 			console.log(input[i].value);
+ 			let inputValue = input[i].value;
+ 			createStudentTAble(inputValue);
  		}
- 			createStudentTAble();
  	});
- 	function createStudentTAble(){
+ 	function createStudentTAble(inputValue){
  		let edit = document.createElement('img'),
  			delet = document.createElement('img'),
  			tableTr = document.createElement('tr'),
- 			tableTd = document.createElement('td');
+ 			tableTd = document.createElement('td'),
+ 			inputValue = [];
 
  		    edit.setAttribute('src', 'img/pencil-edit-button.png');
  		    delet.setAttribute('src', 'img/rubbish-bin.png');
 
-		
-		console.log(studenTabled.childNodes[1].childNodes[0]);
+			//studenTabled.childNodes[3].appendChild(tableTr);
+
+			console.log(inputValue);
+
+
+		console.log(studenTabled.childNodes);
+		// console.log(studenTabled.childNodes[1]);
+
+
  	}
+
  
 })();
 
