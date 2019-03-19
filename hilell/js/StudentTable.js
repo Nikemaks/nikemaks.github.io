@@ -5,16 +5,16 @@ let input = document.querySelectorAll('.form-input'),
 	formCancel = document.querySelector('.form-cancel'),
 	formSave = document.querySelector('.form-save'),
 	formClear = document.querySelector('.form-clear'),
-	studenTabled = document.querySelector('.student-table');
+	studenTabled = document.querySelector('.student-table'),
+	count2 = 0;
 
 	(function eventButtonSave() {
 		for (var i = 0; i < input.length; i++) {
-			input[i].addEventListener('blur', function(){
+			input[i].addEventListener('keyup', function(){
 				checkInput();
 			});
 	  }	
 	})();
-
 
 	function checkInput() {
 		let counter = 0;
@@ -24,40 +24,58 @@ let input = document.querySelectorAll('.form-input'),
  			}
  		}
  		if (counter == input.length)  {
- 			console.log('ok');
  			formSave.disabled = false;
  			formSave.classList.add('form-save__active');
+ 		} else {
+ 			formSave.disabled = true;
+ 			formSave.classList.remove('form-save__active');
+
+
  		}
  	}
 
  	formSave.addEventListener('click', function(){
+ 		let InputArr = [];
  		for (var i = 0; i < input.length; i++) {
- 			let inputValue = input[i].value;
- 			createStudentTAble(inputValue);
+ 			InputArr.push(input[i].value);	
  		}
+ 		createStudentTAble(InputArr);
  	});
- 	function createStudentTAble(inputValue){
- 		let edit = document.createElement('img'),
- 			delet = document.createElement('img'),
- 			tableTr = document.createElement('tr'),
+ 	function createStudentTAble(InputArr){
+ 		var tableTr = document.createElement('tr'),
  			tableTd = document.createElement('td'),
- 			inputValue = [];
+ 			count = 0,
+ 			parentNode = studenTabled.childNodes[3];
+ 			
+			parentNode.appendChild(tableTr);
+			console.log(parentNode);
 
- 		    edit.setAttribute('src', 'img/pencil-edit-button.png');
- 		    delet.setAttribute('src', 'img/rubbish-bin.png');
+			while (count < 6){
+				parentNode.childNodes[count2].appendChild(tableTd.cloneNode(true));
+				count++;
+				
+			}
 
-			//studenTabled.childNodes[3].appendChild(tableTr);
-
-			console.log(inputValue);
-
-
-		console.log(studenTabled.childNodes);
-		// console.log(studenTabled.childNodes[1]);
-
+			addInfoTable(InputArr,count2);
+			count2++;
 
  	}
 
- 
+ 	function addInfoTable(InputArr,count2){
+		let parentNode = studenTabled.childNodes[3].childNodes[count2],
+			edit = document.createElement('img'),
+ 			delet = document.createElement('img');
+
+ 		    edit.setAttribute('src', 'img/pencil-edit-button.png');
+ 		    edit.className = 'edit';
+ 		    delet.setAttribute('src', 'img/rubbish-bin.png');
+ 		    delet.className = 'delet';
+	
+		parentNode.childNodes[0].innerHTML = count2 + 1;
+		parentNode.childNodes[1].innerHTML = InputArr[0];
+		parentNode.childNodes[2].innerHTML = InputArr[1];
+		parentNode.childNodes[3].innerHTML = InputArr[2];
+		parentNode.childNodes[4].appendChild(edit);
+		parentNode.childNodes[5].appendChild(delet);	
+	}
 })();
-
-
