@@ -34,7 +34,7 @@ let input = document.querySelectorAll('.form-input'),
  		}
  	}
 
- 	formSave.addEventListener('click', function(){
+ 	formAdd.addEventListener('click', function(){
  		let InputArr = [];
  		for (var i = 0; i < input.length; i++) {
  			InputArr.push(input[i].value);	
