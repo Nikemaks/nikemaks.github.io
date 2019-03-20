@@ -737,6 +737,8 @@ main {
   width: 100%;
   border-color: #fff;
   color: #fff;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
 }
 
 .form-save__active {
