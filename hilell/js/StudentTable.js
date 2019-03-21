@@ -1,7 +1,7 @@
 (function StydentTable(){
 let input = document.querySelectorAll('.form-input'),
 	formAdd = document.querySelector('.form-add'),
-	formGo = document.querySelector('.form-go'),
+	// formGo = document.querySelector('.form-go'),
 	formCancel = document.querySelector('.form-cancel'),
 	formSave = document.querySelector('.form-save'),
 	formClear = document.querySelector('.form-clear'),
@@ -32,7 +32,9 @@ let input = document.querySelectorAll('.form-input'),
  			formSave.classList.remove('form-save__active');
  		}
  	}
-
+ 	formCancel.addEventListener('click', function(){
+ 		localStorage.clear();
+ 	});
  	formAdd.addEventListener('click', function(){
  		if (formSave.disabled !== true) {
  			createStudentTAble();
@@ -127,4 +129,27 @@ let input = document.querySelectorAll('.form-input'),
 		deleElemntTable(event);
 		checkInput();
 	}
+
+
 })();
+
+document.getElementById('form-search').addEventListener('keyup', SearchTable);
+
+function SearchTable() {
+  var inputSearch, filter, table, tr, td, i, txtValue;
+  inputSearch = document.getElementById("form-search");
+  filter = inputSearch.value.toUpperCase();
+  table = document.getElementById("student-table");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[1];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
