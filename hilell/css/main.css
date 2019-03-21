@@ -783,6 +783,46 @@ main {
   transition: 0.3s all;
 }
 
+.animate-ball {
+  position: fixed;
+  right: 8%;
+}
+
+.animate-ball__keyframe {
+  -webkit-animation: balsJump 5s linear  infinite alternate;
+          animation: balsJump 5s linear  infinite alternate;
+}
+
+@-webkit-keyframes balsJump {
+  0% {
+    top: 5vh;
+  }
+  50% {
+    top: 95vh;
+  }
+  90% {
+    top: 45vh;
+  }
+  100% {
+    top: 5vh;
+  }
+}
+
+@keyframes balsJump {
+  0% {
+    top: 5vh;
+  }
+  50% {
+    top: 95vh;
+  }
+  90% {
+    top: 45vh;
+  }
+  100% {
+    top: 5vh;
+  }
+}
+
 @media only screen and (max-width: 1024px) {
   .left-sidebar {
     height: 45vh;
