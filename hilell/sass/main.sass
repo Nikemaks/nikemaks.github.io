@@ -416,8 +416,17 @@ main
 #form-search
  background-image: url('../img/loupe.png')
  background-repeat: no-repeat
- background-position: 2% 50%
- padding-left: 20px    
+ background-position: 2% 60%
+ padding-left: 20px
+ transition: 0.3s all
+ &:focus
+  background-image: none  
+  transition: 0.3s all   
+ &:focus::-webkit-input-placeholder 
+  color: transparent
+  transition: 0.3s all
+
+  
 @media only screen and( max-width: 1024px )
  .left-sidebar
    height: 45vh
