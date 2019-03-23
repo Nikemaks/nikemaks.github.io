@@ -52,10 +52,30 @@ header {
 .logo {
   font-size: 20px;
   font-weight: bold;
+  color: #051937;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  color: #051937;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-map__search-active {
+  width: 450px !important;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+#pac-input {
+  font-size: 16px;
+  width: 230px;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
 }
 
 .head-nav ul {
@@ -391,6 +411,9 @@ main {
 }
 
 .btn-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   background: transparent;
   border: none;
   outline: none;
@@ -791,6 +814,26 @@ main {
 .animate-ball__keyframe {
   -webkit-animation: balsJump 5s linear  infinite alternate;
           animation: balsJump 5s linear  infinite alternate;
+}
+
+.section-maps {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.section-maps h1 {
+  color: #fff;
+  margin: 20px auto;
+}
+
+#map {
+  width: 85vh;
+  height: 80vh;
 }
 
 @-webkit-keyframes balsJump {

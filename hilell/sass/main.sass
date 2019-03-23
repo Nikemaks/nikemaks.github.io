@@ -25,8 +25,18 @@ header
 .logo
  font-size: 20px
  font-weight: bold
- display: flex
  color: #051937
+ height: 100%
+ display: flex
+ justify-content: center
+ align-items: center
+.header-map__search-active
+  width: 450px!important
+  transition: 0.3s all
+#pac-input
+ font-size: 16px
+ width: 230px
+ transition: 0.3s all  
 .head
  &-nav
   ul 
@@ -225,6 +235,7 @@ main
    border-radius: 50%
    margin-left: 10px  
 .btn-menu
+ display: flex
  background: transparent
  border: none
  outline: none
@@ -431,6 +442,15 @@ main
  right: 8%
 .animate-ball__keyframe
  animation: balsJump 5s linear  infinite alternate
+.section-maps
+ display: flex
+ flex-direction: column
+ h1 
+  color: #fff
+  margin: 20px auto 
+#map
+ width: 85vh
+ height: 80vh 
 @keyframes balsJump
  0%
   top: 5vh
