@@ -957,6 +957,8 @@ main {
 .section-promise__content-element__previe {
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
+  max-height: 140px;
+  overflow: hidden;
 }
 
 .section-promise__content-element__previe p {
