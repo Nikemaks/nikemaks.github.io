@@ -29,7 +29,6 @@ document.querySelector('.button-two').addEventListener('click', animationArticle
 let elemArticle = document.querySelectorAll('.section-promise__content-element');
 function  animationArticle(){
 	for (var i = 0; i < elemArticle.length; i++) {
-		console.log(elemArticle[i].childNodes);
 		elemArticle[i].childNodes[1].classList.add('opacityZeroAnimate');
 	}
   setTimeout(animationArticleText, 1500);

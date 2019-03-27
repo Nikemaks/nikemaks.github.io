@@ -11,8 +11,11 @@ let input = document.querySelectorAll('.form-input'),
 
 	(function eventButtonSave() {
 		for (var i = 0; i < input.length; i++) {
-			input[i].addEventListener('keyup', function(){
+			input[i].addEventListener('keyup', function(event){
 				checkInput();
+				if (event.target.type == 'number') {
+					checkInputAge(event);
+				}
 			});
 	  }	
 	})();
@@ -32,6 +35,22 @@ let input = document.querySelectorAll('.form-input'),
  			formSave.classList.remove('form-save__active');
  		}
  	}
+				
+ 	function checkInputAge(event){
+ 		if (event.target.value < 0 || event.target.value > 110) {
+ 			event.target.value = '';
+ 			document.querySelector('#overlay').style.display = "flex";
+ 			document.querySelector('.student-modal').style.display = "flex";	
+ 		}
+ 		document.querySelector('.modal-close').addEventListener('click', function(){
+ 			document.querySelector('#overlay').style.display = "none";
+ 			document.querySelector('.student-modal').style.display = "none";
+ 		});
+ 		document.querySelector('#overlay').addEventListener('click', function(){
+ 			document.querySelector('#overlay').style.display = "none";
+ 			document.querySelector('.student-modal').style.display = "none";
+ 		});
+ 	};
  	formCancel.addEventListener('click', function(){
  		localStorage.clear();
  	});
