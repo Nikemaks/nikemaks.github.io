@@ -1,6 +1,8 @@
 var promise = new Promise(function(resolve, reject) {
   var progressBar = document.getElementById('progressBar');
-  let buttonAllProgress = document.querySelector('.button-two').addEventListener('click', function  () {
+  let buttonAllProgress = document.querySelector('.button-two'),
+  linkPromise = document.querySelector('.left-sidebar__nav-1');
+  linkPromise.childNodes[11].addEventListener('click', function  () {
   	updateProgressBar();
   })
   function updateProgressBar() {
@@ -8,7 +10,7 @@ var promise = new Promise(function(resolve, reject) {
     var update = setInterval(function() {
       if ( curr < 0) {
         clearInterval(update);
-        resolve("result");
+        deleteDisabled();
       }
       progressBar.value = curr--;
     }, 25)
@@ -23,7 +25,7 @@ promise
       alert("Rejected: " + error);
     }
   );
-
+document.querySelector('.button-two').addEventListener('click', animationArticle);
 let elemArticle = document.querySelectorAll('.section-promise__content-element');
 function  animationArticle(){
 	for (var i = 0; i < elemArticle.length; i++) {
@@ -54,9 +56,13 @@ function animationArticleBlock() {
 }
 function returnArticle() {
   for (var i = 0; i < elemArticle.length; i++) {
-  elemArticle[i].childNodes[1].classList.remove('opacityZeroAnimate');
-  elemArticle[i].childNodes[3].childNodes[3].classList.remove('opacityZeroAnimate');
-  elemArticle[i].childNodes[3].childNodes[1].classList.remove('opacityZeroAnimate');
-  elemArticle[i].classList.remove('opacityZeroAnimate');
+  elemArticle[i].childNodes[1].classList.add('opacityZeroAnimateRev');
+  elemArticle[i].childNodes[3].childNodes[3].classList.add('opacityZeroAnimateRev');
+  elemArticle[i].childNodes[3].childNodes[1].classList.add('opacityZeroAnimateRev');
+  elemArticle[i].classList.add('opacityZeroAnimateRev');
   }
+}
+function deleteDisabled(){
+  document.querySelector('.button-one').removeAttribute('disabled');
+  document.querySelector('.button-two').removeAttribute('disabled');
 }

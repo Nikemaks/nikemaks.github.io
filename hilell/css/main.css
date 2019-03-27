@@ -984,6 +984,14 @@ main {
           animation-fill-mode: forwards;
 }
 
+.opacityZeroAnimateRev {
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  animation: opacityZero 2s linear 2s  reverse;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
 @-webkit-keyframes opacityZero {
   0% {
     opacity: 1;
