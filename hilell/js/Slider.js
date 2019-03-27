@@ -32,7 +32,6 @@ function ready(){
 					offsetSlid -= slide.offsetWidth;
 
 				}
-				console.log(wrapper.style.left);
 				SliderMax.prototype.setCurrentLink(index, link);
 			
 			});
@@ -47,8 +46,6 @@ function ready(){
 					offsetSlid += slide.offsetWidth;
 				}
 				    SliderMax.prototype.setCurrentLink(index, link);
-
-
 			});
 		},
 		stopSlide: function(autoplayTimer,wrapper,slide,slideAll,speed){	
