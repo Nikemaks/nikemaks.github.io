@@ -153,7 +153,6 @@ let input = document.querySelectorAll('.form-input'),
 })();
 
 document.getElementById('form-search').addEventListener('keyup', SearchTable);
-
 function SearchTable() {
   var inputSearch, filter, table, tr, td, i, txtValue;
   inputSearch = document.getElementById("form-search");
