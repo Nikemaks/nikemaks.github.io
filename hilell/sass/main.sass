@@ -25,8 +25,18 @@ header
 .logo
  font-size: 20px
  font-weight: bold
- display: flex
  color: #051937
+ height: 100%
+ display: flex
+ justify-content: center
+ align-items: center
+.header-map__search-active
+  width: 450px!important
+  transition: 0.3s all
+#pac-input
+ font-size: 16px
+ width: 230px
+ transition: 0.3s all  
 .head
  &-nav
   ul 
@@ -227,6 +237,7 @@ main
    transition: 1s all
 
 .btn-menu
+ display: flex
  background: transparent
  border: none
  outline: none
@@ -347,6 +358,7 @@ main
  &__form
   display: flex
   flex-direction: row
+  font-family: 'Bree Serif'
   width: 600px
   height: 25%
   padding: 15px
@@ -378,12 +390,14 @@ main
     margin: 5px 0
     color: #fff
     font-size: 16px
+   input
+    padding: 5px 0 5px 15px 
    .button-group
     display: flex
     flex-direction: row
     width: 60%
     justify-content: space-between 
-    margin: 40px 0
+    margin: 40px 0 10px
   &-rigth
    display: flex
    flex-direction: column
@@ -399,6 +413,186 @@ main
    width: 100%
    border-color: #fff
    color: #fff
+   transition: 0.3s all 
+.form-save__active
+ transition: 0.3s all
+ box-shadow: 0px 0px 15px rgb(0, 255, 0)!important 
+ &:hover 
+  box-shadow: 0px 0px 2px 1px  rgb(0, 255, 0)!important  
+.student-table   
+ tr 
+  text-align: center
+  td
+   &:nth-child(5), &:nth-child(6)
+    cursor: pointer
+    background: #fff
+#form-search
+ background-image: url('../img/loupe.png')
+ background-repeat: no-repeat
+ background-position: 2% 60%
+ padding-left: 20px
+ transition: 0.3s all
+ &:focus
+  background-image: none  
+  transition: 0.3s all   
+ &:focus::-webkit-input-placeholder 
+  color: transparent
+  transition: 0.3s all
+
+.animate-ball
+ position: fixed
+ right: 8%
+.animate-ball__keyframe
+ animation: balsJump 5s linear  infinite alternate
+.section-maps
+ display: none
+ flex-direction: column
+ h1 
+  color: #fff
+  margin: 10px auto
+  padding: 10px
+  background: rgba(0,0,0, 0.75)
+  box-shadow: 10px 5px 5px #000
+#map
+ width: 85vh
+ height: 80vh 
+@keyframes balsJump
+ 0%
+  top: 5vh
+ 50%
+  top: 95vh
+ 90%
+  top: 45vh
+ 100% 
+  top: 5vh
+.section-promise
+  display: none 
+  flex-direction: column
+  width: 85vh
+  h1 
+   color: #fff
+   text-align: center
+  &__content
+   box-shadow: 0px -10px 10px rgba(0,0,0, 0.6)
+   &-btn
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    width: 95%
+    margin: 0 auto
+    padding: 20px 0 0
+    button 
+     width: 146px
+     height: 36px
+     border: none
+     border-radius: 15px
+     cursor: pointer
+     font-weight: bold
+     font-size: 16px
+     font-family: 'Bree Serif'
+     transition: 0.3s all
+     box-shadow: 10px 5px 5px rgba(0,0,0, 0.6)
+     &:hover 
+      box-shadow: 0px 5px 5px rgba(0,0,0, 0.6)
+   &-elements 
+    display: flex
+    flex-direction: column
+    margin: 20px auto  
+    transition: 0.3s all 
+   &-element
+    display: flex
+    background: rgba(0,0,0, 0.6)
+    width: 95%
+    height: 140px
+    margin: 20px auto 0
+    transition: 0.3s all
+    border: 1px solid #fff
+    img 
+     max-width: 130px
+     max-height: 100%
+     padding: 5px
+    &__previe
+     transition: 0.3s all
+     max-height: 140px 
+     overflow: hidden
+     p 
+      color: #fff
+      padding: 0 15px 0 35px 
+#progressBar
+  width: 100%
+  padding: 10px 
+  margin: 20px auto
+  transition: 0.3s all
+.opacityZeroAnimate
+  transition: 0.3s all
+  animation: opacityZero 2s linear 2s  
+  animation-fill-mode: forwards  
+.opacityZeroAnimateRev
+  transition: 0.3s all
+  animation: opacityZero 2s linear 2s  reverse
+  animation-fill-mode: forwards  
+// modal window
+#overlay
+ display: none
+ background: rgba(0,0,0, 0.8)
+ height: 100vh
+ width: 100% 
+ position: fixed
+ top: 0 
+ left: 0
+ transition: 0.3s all
+ z-index: 99
+.student-modal
+ display: none
+ flex-direction: column
+ transform: translate(-50%, -50%)
+ top: 50%
+ left: 50%
+ width: 400px
+ height: 100px 
+ position: absolute
+ border: 1px solid red
+ color: red
+ transition: 0.3s all
+ z-index: 999
+ animation: fadeTop 1s linear 
+ &__title
+  display: flex
+  flex-direction: row
+  justify-content: center
+  align-items: center
+  padding: 0 20px
+  span 
+   cursor: pointer
+ &__content
+  p 
+   text-align: center
+   font-size: 18px
+   margin: 0
+   color: red
+.modal-close
+ position: absolute
+ top: -3px
+ right: 0
+ color: #fff
+
+@keyframes opacityZero
+ 0%
+  opacity: 1
+  transform: translateX(0)
+ 50%
+  opacity: 0.5
+  transform: translateX(-50px)
+ 100%
+  opacity: 0
+  transform: translateX(-1000px)  
+@keyframes fadeTop
+ 0%
+  top: -50%
+ 50%
+  top: 0
+ 100%
+  top: 50%
 @media only screen and( max-width: 1024px )
  .left-sidebar
    height: 45vh
