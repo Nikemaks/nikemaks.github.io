@@ -44,6 +44,7 @@ class SliderMax{
 			clearInterval(this.autoplayTimer);
 		});
 		this.wrapper.addEventListener('mouseleave', ()=> {
+			clearInterval(this.autoplayTimer);
 			this.autoplay();
 		});
 	}
