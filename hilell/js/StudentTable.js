@@ -133,8 +133,12 @@ let input = document.querySelectorAll('.form-input'),
 	function deleElemntTable(event) {
 		let el = event.target.parentElement.parentElement,
 			localStorEle = event.target.parentElement.parentElement.childNodes[0].innerHTML;
-			
-		el.parentNode.removeChild(el);
+
+		if (el.parentNode) 
+			{
+				el.parentNode.removeChild(el);
+			}
+
 		localStorage.removeItem(localStorEle-1);
 		count2--;
 	}
