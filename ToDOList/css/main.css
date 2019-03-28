@@ -1,0 +1,295 @@
+body {
+  font-family: 'Arial', sans-serif, serif;
+  font-size: 10px;
+}
+
+input:focus, button:focus {
+  outline: none;
+}
+
+input:active, button:active {
+  outline: none;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 15px;
+  max-width: 100%;
+}
+
+.container h1 {
+  font-size: 2.4em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.todolist {
+  width: 60%;
+  -webkit-box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.7);
+          box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.7);
+  border-radius: 0 0 20px 20px;
+}
+
+.todolist-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: -webkit-gradient(linear, left top, left bottom, from(#4D7CBF), to(#3A59A0));
+  background: linear-gradient(#4D7CBF, #3A59A0);
+  padding: 0 15px;
+}
+
+.todolist-header:hover .todolist-header__right {
+  opacity: 1;
+}
+
+.todolist-header__right, .todolist-header__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.todolist-header__left h2 {
+  color: #F9FAFB;
+  padding-left: 10px;
+}
+
+.todolist-header__right {
+  position: relative;
+  cursor: pointer;
+  opacity: 0;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+.todolist-header__right::after {
+  content: '';
+  display: block;
+  height: 16px;
+  width: 1px;
+  background: white;
+  position: absolute;
+  opacity: 0.6;
+  left: 50%;
+}
+
+.todolist-header__right svg {
+  cursor: pointer;
+}
+
+.todolist-addTask {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  background: #CECECE;
+}
+
+.todolist-addTask svg {
+  cursor: pointer;
+}
+
+.todolist-addTask_groupButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.4em;
+  width: 93%;
+  height: 32px;
+}
+
+.todolist-addTask_groupButton input[type="text"] {
+  width: 80%;
+  padding-left: 10px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.4);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.todolist-addTask_groupButton input[type="submit"] {
+  width: 17%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#89BFA2), to(#518868));
+  background: linear-gradient(#89BFA2, #518868);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  -webkit-box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.6);
+          box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.6);
+}
+
+.todolist-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #fff;
+  width: 100%;
+  border-radius: 0 0 20px 20px;
+}
+
+.todolist-content__elem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 46px;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  cursor: pointer;
+  border-top: 1px solid #EEF1F0;
+}
+
+.todolist-content__elem:hover .todolist-content__elem-tools {
+  opacity: 1;
+}
+
+.todolist-content__elem-tools {
+  height: 100%;
+  width: 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: relative;
+  opacity: 0;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+.todolist-content__elem-tools::after {
+  content: '';
+  display: block;
+  height: 16px;
+  width: 1px;
+  background: grey;
+  position: absolute;
+  opacity: 0.6;
+  left: 33.3%;
+}
+
+.todolist-content__elem-tools::before {
+  content: '';
+  display: block;
+  height: 16px;
+  width: 1px;
+  background: grey;
+  position: absolute;
+  opacity: 0.6;
+  right: 33.3%;
+}
+
+.todolist-content__elem-check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 6%;
+  height: 100%;
+  border-right: 1px solid #EEF1F0;
+  cursor: pointer;
+}
+
+.todolist-content__elem p {
+  color: grey;
+  font-size: 1.4em;
+  padding: 0 0 0 10px;
+  margin: 0;
+}
+
+.todolist-content__elem input {
+  width: 16px;
+  height: 16px;
+}
+
+.todolist-content__elem:hover {
+  background: #FCFED5;
+}
+
+.todolist-content__elem-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 75%;
+  height: 100%;
+  border-left: 1px solid #EEF1F0;
+  border-right: 1px solid #EEF1F0;
+}
+
+.todolist-edit {
+  padding-right: 10px;
+}
+
+.addTodoList {
+  margin: 50px auto;
+  width: 196px;
+  height: 46px;
+  background: #3A609E;
+  color: #fff;
+  border: none;
+  font-size: 1.6em;
+  font-weight: bold;
+  cursor: pointer;
+  background-image: url("../img/add2.png");
+  background-repeat: no-repeat;
+  background-position: 5% 50%;
+  -webkit-box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.7);
+          box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.7);
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+.addTodoList:hover {
+  -webkit-box-shadow: 1px 0px 0px rgba(0, 0, 0, 0.7);
+          box-shadow: 1px 0px 0px rgba(0, 0, 0, 0.7);
+}
