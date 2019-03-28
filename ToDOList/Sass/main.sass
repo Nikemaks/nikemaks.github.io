@@ -21,17 +21,19 @@ input, button
  width: 60%
  box-shadow: 1px 5px 5px rgba(0,0,0, 0.7)
  border-radius: 0 0 20px 20px
+ margin: 20px 0
  &-header
   display: flex
   flex-direction: row
   justify-content: space-between
   background: linear-gradient(#4D7CBF, #3A59A0)
   padding: 0 15px
+  height: 52px
   &:hover
    .todolist-header__right
     opacity: 1
 
-  &__right, &__left 
+  &__right, &__left, &__left-Create, &__right-Create
    display: flex
    align-items: center
   &__left
@@ -43,6 +45,28 @@ input, button
    cursor: pointer
    opacity: 0
    transition: 0.3s all
+   &-Create
+    button
+     width: 110px
+     height: 26px
+     font-size: 1.2em
+     background: linear-gradient(#89bfa2,#518868)
+     border: none
+     color: #fff
+     cursor: pointer
+   &-title
+    input 
+     width: 70vh
+     background: transparent
+     border: none
+     color: #fff
+     font-size: 1.1em
+    &__Create
+     padding-left: 10px
+     input 
+      width: 64vh
+      color: grey
+      font-size: 1.1em 
    &::after
     content: '' 
     display: block
@@ -77,6 +101,7 @@ input, button
     border: none
     color: #fff
     cursor: pointer
+    border-radius: 0 5px 5px 0
     box-shadow: inset 0 1px 5px rgba(0,0,0, 0.6)
  &-content
   display: flex
@@ -85,7 +110,6 @@ input, button
   background: #fff
   width: 100%
   border-radius: 0 0 20px 20px
-
   &__elem
    display: flex
    justify-content: space-between
@@ -133,11 +157,6 @@ input, button
     height: 100%
     border-right: 1px solid #EEF1F0
     cursor: pointer
-   p 
-    color: grey
-    font-size: 1.4em
-    padding: 0 0 0 10px
-    margin: 0
    input 
     width: 16px
     height: 16px 
@@ -150,6 +169,13 @@ input, button
     height: 100%
     border-left: 1px solid #EEF1F0
     border-right: 1px solid #EEF1F0
+    input
+     width: 100%
+     border: none
+     background: transparent
+     font-size: 1.2em
+     padding-left: 10px
+     cursor: pointer
 
 
 .todolist-edit
@@ -171,4 +197,4 @@ input, button
  box-shadow: 1px 5px 5px rgba(0,0,0, 0.7)
  transition: 0.3s all
  &:hover
-  box-shadow: 1px 0px 0px rgba(0,0,0, 0.7)
+  box-shadow: -1px 0 0 rgba(0,0,0, 0.6)

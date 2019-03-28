@@ -40,6 +40,7 @@ input:active, button:active {
   -webkit-box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.7);
           box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.7);
   border-radius: 0 0 20px 20px;
+  margin: 20px 0;
 }
 
 .todolist-header {
@@ -56,13 +57,14 @@ input:active, button:active {
   background: -webkit-gradient(linear, left top, left bottom, from(#4D7CBF), to(#3A59A0));
   background: linear-gradient(#4D7CBF, #3A59A0);
   padding: 0 15px;
+  height: 52px;
 }
 
 .todolist-header:hover .todolist-header__right {
   opacity: 1;
 }
 
-.todolist-header__right, .todolist-header__left {
+.todolist-header__right, .todolist-header__left, .todolist-header__left-Create, .todolist-header__right-Create {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -82,6 +84,35 @@ input:active, button:active {
   opacity: 0;
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
+}
+
+.todolist-header__right-Create button {
+  width: 110px;
+  height: 26px;
+  font-size: 1.2em;
+  background: -webkit-gradient(linear, left top, left bottom, from(#89bfa2), to(#518868));
+  background: linear-gradient(#89bfa2, #518868);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.todolist-header__right-title input {
+  width: 70vh;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.1em;
+}
+
+.todolist-header__right-title__Create {
+  padding-left: 10px;
+}
+
+.todolist-header__right-title__Create input {
+  width: 64vh;
+  color: grey;
+  font-size: 1.1em;
 }
 
 .todolist-header__right::after {
@@ -140,6 +171,7 @@ input:active, button:active {
   border: none;
   color: #fff;
   cursor: pointer;
+  border-radius: 0 5px 5px 0;
   -webkit-box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.6);
           box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.6);
 }
@@ -237,13 +269,6 @@ input:active, button:active {
   cursor: pointer;
 }
 
-.todolist-content__elem p {
-  color: grey;
-  font-size: 1.4em;
-  padding: 0 0 0 10px;
-  margin: 0;
-}
-
 .todolist-content__elem input {
   width: 16px;
   height: 16px;
@@ -264,6 +289,15 @@ input:active, button:active {
   height: 100%;
   border-left: 1px solid #EEF1F0;
   border-right: 1px solid #EEF1F0;
+}
+
+.todolist-content__elem-text input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  font-size: 1.2em;
+  padding-left: 10px;
+  cursor: pointer;
 }
 
 .todolist-edit {
@@ -290,6 +324,6 @@ input:active, button:active {
 }
 
 .addTodoList:hover {
-  -webkit-box-shadow: 1px 0px 0px rgba(0, 0, 0, 0.7);
-          box-shadow: 1px 0px 0px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: -1px 0 0 rgba(0, 0, 0, 0.6);
+          box-shadow: -1px 0 0 rgba(0, 0, 0, 0.6);
 }
