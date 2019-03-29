@@ -103,6 +103,7 @@ input:active, button:active {
   border: none;
   color: #fff;
   font-size: 1.1em;
+  padding: 5px;
 }
 
 .todolist-header__right-title__Create {
@@ -300,8 +301,44 @@ input:active, button:active {
   cursor: pointer;
 }
 
+.eddit-input {
+  background: #fff !important;
+  color: grey !important;
+  border: 1px solid grey !important;
+}
+
 .todolist-edit {
   padding-right: 10px;
+}
+
+.save-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  opacity: 0;
+  z-index: -1;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+.save-icons__task {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 80%;
+  opacity: 0;
+  z-index: -1;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
 }
 
 .addTodoList {
@@ -326,4 +363,30 @@ input:active, button:active {
 .addTodoList:hover {
   -webkit-box-shadow: -1px 0 0 rgba(0, 0, 0, 0.6);
           box-shadow: -1px 0 0 rgba(0, 0, 0, 0.6);
+}
+
+.done-task {
+  position: relative;
+}
+
+.done-task:before {
+  content: '';
+  width: 100%;
+  height: 1px;
+  background: grey;
+  position: absolute;
+  top: 50%;
+}
+
+.defoult-Tools {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
