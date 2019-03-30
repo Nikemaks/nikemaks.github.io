@@ -11,6 +11,39 @@ input:active, button:active {
   outline: none;
 }
 
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 60px;
+}
+
+.header-button button {
+  border: none;
+  width: 146px;
+  height: 36px;
+  cursor: pointer;
+  margin-right: 10px;
+  background: #3a609e;
+  color: #fff;
+  font-size: 1.2em;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  -webkit-box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.7);
+          box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.7);
+}
+
+.header-button button:hover {
+  -webkit-box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.7);
+          box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.7);
+}
+
 .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -389,4 +422,114 @@ input:active, button:active {
   width: 100%;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+#overlay {
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+.modal-logIn {
+  display: none;
+  width: 400px;
+  height: 290px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: #fff;
+  border: 1px solid grey;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+.modal-logIn__title span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1.4em;
+  cursor: pointer;
+}
+
+.modal-logIn form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.modal-logIn form h2 {
+  font-size: 2.4em;
+  margin: 0 0 20px;
+}
+
+.modal-logIn form input[type="text"], .modal-logIn form input[type="password"] {
+  width: 286px;
+  height: 26px;
+  margin: 15px 0;
+  padding-left: 25px;
+  font-size: 1.1em;
+}
+
+.modal-logIn form input[type="text"] {
+  background: #fff url("../img/avatar.png") no-repeat 2% 50%;
+}
+
+.modal-logIn form input[type="password"] {
+  background: #fff url("../img/key.png") no-repeat 2% 50%;
+}
+
+.modal-logIn form input[type="submit"] {
+  width: 286px;
+  height: 36px;
+  background: #3a609e;
+  font-size: 1.2em;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+.modal-logIn form input[type="submit"]:hover {
+  background: #3a608e;
+}
+
+.message-sucsess, .message-erorr {
+  margin: 0;
+  font-size: 1.4em;
+  font-weight: bold;
+  opacity: 0;
+}
+
+.message-sucsess {
+  color: green;
+}
+
+.message-erorr {
+  color: red;
 }

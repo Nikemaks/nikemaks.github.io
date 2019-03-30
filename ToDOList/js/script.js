@@ -15,6 +15,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		if (event.target.className == 'addNewTask') {
 			addNewTask(event);
 		}
+		if (event.target.className == 'header-button__login') {
+			modalLogin();
+		}
+		if (event.target.className == 'header-button__registr') {
+			modalReg();
+		}
 	});
 
 	addTodoList.addEventListener('click', createTitleToDo);
@@ -49,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		let todolistHeaderAddTask = '<div class="todolist-header">\
 					<div class="todolist-header__left">\
 						<img src="img/calendar.png" alt="calendar">\
-						<h2 class="todolist-header__right-title"><input class = "title-todo" disabled type="text" value = '+title+'></h2>\
+						<h2 class="todolist-header__right-title"><input class = "title-todo" disabled type="text" value = "'+title+'"></h2>\
 					</div>\
 					<div class="todolist-header__right">\
 						<div class = eddit-icons>\
@@ -79,7 +85,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	}
 
 	function addNewTask(event){
-		let textTask = event.target.parentNode.querySelector('.text-task').value,
+		let textTaskOnput = event.target.parentNode.querySelector('.text-task'),
+			textTask = textTaskOnput.value,
 			inputTextTask = event.target.parentNode.querySelector('.text-task'),
 			todolistaddTask = document.querySelector('.todolist-addTask'),
 			todolist = event.target.parentNode.parentNode.parentNode,
@@ -88,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 							<input class = "check-task" type="checkbox">\
 						</div>\
 						<div class="todolist-content__elem-text">\
-							<input class = "text-task"  type="text" disabled value='+textTask+'>\
+							<input class = "text-task"  type="text" disabled value= "'+ textTask +'"">\
 						</div>\
 						<div class="todolist-content__elem-tools">\
 							<div class = "defoult-Tools">\
@@ -106,6 +113,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		div.className = "todolist-content";
 		div.innerHTML = todoTaskContent;
 
+		console.log(''+textTaskOnput.value+'');
 		todolist.appendChild(div,todolistaddTask);			
 		inputTextTask.value = '';
 		taskDone();
