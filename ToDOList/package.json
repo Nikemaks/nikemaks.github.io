@@ -22,7 +22,7 @@
     "passport-local": "^1.0.0",
     "sass": "^1.13.2",
     "sass-autoprefixer": "^1.0.1",
-    "sequelize": "^5.2.6"
+    "sequelize": "^5.2.7"
   },
   "devDependencies": {
     "gulp": "^3.9.1",

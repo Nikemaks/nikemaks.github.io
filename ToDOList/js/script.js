@@ -9,17 +9,20 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		
 
 	main.addEventListener('click', function(event){
-		if (event.target.className == 'create-todo') {
-			addNewList();
-		}
-		if (event.target.className == 'addNewTask') {
-			addNewTask(event);
-		}
-		if (event.target.className == 'header-button__login') {
-			modalLogin();
-		}
-		if (event.target.className == 'header-button__registr') {
-			modalReg();
+		let target = event.target;
+		switch(target.className){
+			case 'create-todo':
+				addNewList();
+				break;
+			case 'addNewTask':
+				addNewTask(event);
+				break;
+			case 'header-button__login':
+				modalLogin();
+				break;
+			case 'header-button__registr':
+				modalReg();	
+				break;			
 		}
 	});
 
@@ -82,6 +85,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		container.insertBefore(div, addTodoList);
 		getTitleTaks();
 		edditTitleSave();
+		editTitleCancel();
 	}
 
 	function addNewTask(event){
@@ -113,12 +117,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		div.className = "todolist-content";
 		div.innerHTML = todoTaskContent;
 
-		console.log(''+textTaskOnput.value+'');
 		todolist.appendChild(div,todolistaddTask);			
 		inputTextTask.value = '';
 		taskDone();
 		taskToolsDelete();
 		taskToolsEddit();
+		taskToolsSave();
+		taskToolsCancel();
 
 	}
 
@@ -126,7 +131,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		let editTitle = document.querySelectorAll('.todolist-edit');
 			for (let i = 0; i < editTitle.length; i++) {
 				editTitle[i].addEventListener('click', (event)=>{
-					let titleInput = event.target.parentNode.parentNode.parentNode.parentNode.children[0].children[0].children[1].children[0],
+					let titleInput = event.target.closest('.todolist-header').children[0].children[1].children[0],
 						edditIcons = event.target.parentNode.children[0],
 				    	deleteIcons = event.target.parentNode.children[1],
 				    	saveIcons = event.target.parentNode.parentNode.querySelector('.save-icons'),
@@ -149,7 +154,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		let deleteTask = document.querySelectorAll('.todolist-delete');
 			for (let i = 0; i < deleteTask.length; i++) {
 				deleteTask[i].addEventListener('click', (event)=>{
-					let todoList = event.target.parentNode.parentNode.parentNode.parentNode;
+					let todoList = event.target.closest('.todolist');
 					todoList.remove();
 				});
 			}
@@ -194,15 +199,49 @@ document.addEventListener("DOMContentLoaded", function(event) {
 				newIcons.style.opacity = 1;
 				newIcons.style.zIndex = 1;
 				input.focus();
-
 			});
 		}
 	}
+	function taskToolsSave() {
+		let allButtonSave = document.querySelectorAll('.save-newTask');
+		for (let i = 0; i < allButtonSave.length; i++) {
+			allButtonSave[i].addEventListener('click', (event)=>{
+
+				let input = event.target.parentNode.parentNode.parentNode.children[1].children[0],
+					defoultIcon = event.target.parentNode.parentNode.children[0],
+					newIcons = event.target.parentNode.parentNode.children[1];
+
+				input.setAttribute('disabled', 'disabled');
+				input.classList.remove('eddit-input');
+				defoultIcon.style.opacity = 1;
+				newIcons.style.zIndex = -1;
+				newIcons.style.opacity = 0;
+			});
+		}
+	}
+	function taskToolsCancel() {
+		let allButtonCancel = document.querySelectorAll('.cancel-editTask');
+		for (let i = 0; i < allButtonCancel.length; i++) {
+			allButtonCancel[i].addEventListener('click', (event)=>{
+
+				let input = event.target.parentNode.parentNode.parentNode.children[1].children[0],
+					defoultIcon = event.target.parentNode.parentNode.children[0],
+					newIcons = event.target.parentNode.parentNode.children[1];
+
+				input.setAttribute('disabled', 'disabled');
+				input.classList.remove('eddit-input');
+				defoultIcon.style.opacity = 1;
+				newIcons.style.zIndex = -1;
+				newIcons.style.opacity = 0;
+			});
+		}
+	}
+
 	function edditTitleSave(){
 		let saveTitle = document.querySelectorAll('.save-HeaderTitle');
 		for (var i = 0; i < saveTitle.length; i++) {
 			saveTitle[i].addEventListener('click', (event)=>{
-				let titleInput = event.target.parentNode.parentNode.parentNode.parentNode.children[0].children[0].children[1].children[0],
+				let titleInput =  event.target.closest('.todolist-header').children[0].children[1].children[0],
 					edditIcons = event.target.parentNode.children[0],
 			    	deleteIcons = event.target.parentNode.children[1],
 			    	saveIcons = event.target.parentNode.parentNode.querySelector('.save-icons'),
@@ -219,7 +258,31 @@ document.addEventListener("DOMContentLoaded", function(event) {
 				righIcons.style.opacity = '';
 				righIcons1.style.opacity = '';
 				righIcons2.style.opacity = '';
-			})
+			});
 		}
 	}
-});
+	function editTitleCancel(){
+		let cancelEdditTitle = document.querySelectorAll('.edit-HeaderTitle');
+			for (var i = 0; i < cancelEdditTitle.length; i++) {
+				cancelEdditTitle[i].addEventListener('click', (event)=>{
+					let titleInput =  event.target.closest('.todolist-header').children[0].children[1].children[0],
+						edditIcons = event.target.parentNode.children[0],
+				    	deleteIcons = event.target.parentNode.children[1],
+				    	saveIcons = event.target.parentNode.parentNode.querySelector('.save-icons'),
+				    	righIcons = event.target.parentNode.parentNode,
+				    	righIcons1 = event.target.parentNode.parentNode.children[0].children[0],
+				    	righIcons2 = event.target.parentNode.parentNode.children[0].children[1];
+
+					titleInput.setAttribute('disabled', 'disabled');
+					titleInput.classList.remove('eddit-input');
+					edditIcons.style.opacity = '';
+					deleteIcons.style.opacity = '';
+					saveIcons.style.opacity = 0;
+					saveIcons.style.zIndex = -1;
+					righIcons.style.opacity = '';
+					righIcons1.style.opacity = '';
+					righIcons2.style.opacity = '';
+				});
+			}
+	}
+})
