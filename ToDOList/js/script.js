@@ -75,9 +75,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 					</div>\
 					<div class="todolist-header__right">\
 						<div class = eddit-icons>\
-							<svg class="todolist-edit" height="16px" width="16px" fill="#98B0D2" viewBox="0 0 476.764 476"  xmlns="http://www.w3.org/2000/svg"><path d="M451.023 26.117c-34.386-34.312-90.058-34.312-124.449 0v.047L40.992 311.714a7.968 7.968 0 0 0-1.543 2.337 6.842 6.842 0 0 0-.273.656 6.889 6.889 0 0 0-.262.664L.258 467.133c-.715 2.742.082 5.66 2.086 7.664s4.922 2.797 7.664 2.086l151.754-38.64c.23-.063.43-.184.656-.263a7.26 7.26 0 0 0 .68-.273 7.931 7.931 0 0 0 2.328-1.543l285.543-285.559.054-.042c34.32-34.383 34.32-90.063 0-124.446zm-11.312 11.309c25.887 25.949 28.187 67.183 5.351 95.851L343.873 32.074c28.663-22.836 69.898-20.531 95.839 5.352zm-107.473 5.707L434.047 144.89l-28.68 28.687L303.56 71.773zm-303.445 376.8a56.536 56.536 0 0 1 28.414 28.415L19.09 458.05zm44 24.422a72.503 72.503 0 0 0-40-40l18.145-71.382 93.23 93.238zm86.977-25.199L57.96 317.371 292.25 83.082l101.805 101.809zm0 0"/></svg>\
-							<svg class="todolist-delete" height="16px" width="16px" fill="#98B0D2" viewBox="-40 0 427 427.001"  xmlns="http://www.w3.org/2000/svg"><path d="M232.398 154.703c-5.523 0-10 4.477-10 10v189c0 5.52 4.477 10 10 10 5.524 0 10-4.48 10-10v-189c0-5.523-4.476-10-10-10zm0 0M114.398 154.703c-5.523 0-10 4.477-10 10v189c0 5.52 4.477 10 10 10 5.524 0 10-4.48 10-10v-189c0-5.523-4.476-10-10-10zm0 0"/><path d="M28.398 127.121V373.5c0 14.563 5.34 28.238 14.668 38.05A49.246 49.246 0 0 0 78.796 427H268a49.233 49.233 0 0 0 35.73-15.45c9.329-9.812 14.668-23.487 14.668-38.05V127.121c18.543-4.922 30.559-22.836 28.079-41.863-2.485-19.024-18.692-33.254-37.88-33.258h-51.199V39.5a39.289 39.289 0 0 0-11.539-28.031A39.288 39.288 0 0 0 217.797 0H129a39.288 39.288 0 0 0-28.063 11.469A39.289 39.289 0 0 0 89.398 39.5V52H38.2C19.012 52.004 2.805 66.234.32 85.258c-2.48 19.027 9.535 36.941 28.078 41.863zM268 407H78.797c-17.098 0-30.399-14.688-30.399-33.5V128h250v245.5c0 18.813-13.3 33.5-30.398 33.5zM109.398 39.5a19.25 19.25 0 0 1 5.676-13.895A19.26 19.26 0 0 1 129 20h88.797a19.26 19.26 0 0 1 13.926 5.605 19.244 19.244 0 0 1 5.675 13.895V52h-128zM38.2 72h270.399c9.941 0 18 8.059 18 18s-8.059 18-18 18H38.199c-9.941 0-18-8.059-18-18s8.059-18 18-18zm0 0"/><path d="M173.398 154.703c-5.523 0-10 4.477-10 10v189c0 5.52 4.477 10 10 10 5.524 0 10-4.48 10-10v-189c0-5.523-4.476-10-10-10zm0 0"/></svg>\
-						</div>\
+							<img class="todolist-edit" src="img/pencil-edit-button.png" alt="edit">\
+							<img class="todolist-delete" src="img/rubbish-bin.png" alt="delete">\
+							</div>\
 						<div class = "save-icons">\
 							<img class = "save-HeaderTitle" src="img/save-file-option.png" alt = "save">\
 							<img class = "edit-HeaderTitle" src="img/cancel.png" alt = "cancel">\
@@ -93,6 +93,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 				</div>';
 		let div = document.createElement('div');
 		div.className = "todolist";
+		div.setAttribute('list-number', idLists);
 		div.innerHTML = todolistHeaderAddTask;
 
 		container.insertBefore(div, addTodoList);
@@ -181,13 +182,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			let textTaskOnput = event.target.closest('.todolist-content__elem').children[1].children[0].value;
 				if (event.target.checked) {
       				event.target.parentNode.parentNode.classList.add('done-task');
-					objBd.taskDone.push(textTaskOnput);
-      				console.log(objBd);
-					
+					objBd.taskDone.push(textTaskOnput);				
    				} else {
       				event.target.parentNode.parentNode.classList.remove('done-task');
-      				removeBdTaskDon(event, textTaskOnput)
-      				console.log(objBd);
+      				removeBdTaskDon(event, textTaskOnput)     				
    				}
 			});
 		}
@@ -231,7 +229,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		let allButtonSave = document.querySelectorAll('.save-newTask');
 		for (let i = 0; i < allButtonSave.length; i++) {
 			allButtonSave[i].addEventListener('click', (event)=>{
-				closeEditTask(event);
+				closeEditTask(event, false);
 			});
 		}
 	}
@@ -239,26 +237,33 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		let allButtonCancel = document.querySelectorAll('.cancel-editTask');
 		for (let i = 0; i < allButtonCancel.length; i++) {
 			allButtonCancel[i].addEventListener('click',(event) =>{
-				closeEditTask(event);
+				closeEditTask(event, true);
 			});
 		}
 	}
-	function closeEditTask(event){
+	function closeEditTask(event, cancel){
 		let input = event.target.parentNode.parentNode.parentNode.children[1].children[0],
 			defoultIcon = event.target.parentNode.parentNode.children[0],
-			newIcons = event.target.parentNode.parentNode.children[1];
+			newIcons = event.target.parentNode.parentNode.children[1],
+			index = event.target.closest('.todolist').getAttribute('list-number');
 
 		input.setAttribute('disabled', 'disabled');
 		input.classList.remove('eddit-input');
 		defoultIcon.style.opacity = 1;
 		newIcons.style.zIndex = -1;
 		newIcons.style.opacity = 0;
+
+		if (cancel) {
+			input.value = objBd.task[index];
+		} else {
+			objBd.task[index] = input.value;
+		}
 	}
 	function edditTitleSave(){
 		let saveTitle = document.querySelectorAll('.save-HeaderTitle');
 		for (var i = 0; i < saveTitle.length; i++) {
 			saveTitle[i].addEventListener('click', (event)=>{
-				closeTitleEdit(event);
+				closeTitleEdit(event, false);
 			});
 		}
 	}
@@ -266,18 +271,19 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		let cancelEdditTitle = document.querySelectorAll('.edit-HeaderTitle');
 			for (var i = 0; i < cancelEdditTitle.length; i++) {
 				cancelEdditTitle[i].addEventListener('click',(event)=>{
-					closeTitleEdit(event);
+					closeTitleEdit(event, true);
 				});
 			}
 	}
-	function closeTitleEdit(event){
+	function closeTitleEdit(event, cancel){
 			let titleInput =  event.target.closest('.todolist-header').children[0].children[1].children[0],
 				edditIcons = event.target.parentNode.children[0],
 		    	deleteIcons = event.target.parentNode.children[1],
 		    	saveIcons = event.target.parentNode.parentNode.querySelector('.save-icons'),
 		    	righIcons = event.target.parentNode.parentNode,
 		    	righIcons1 = event.target.parentNode.parentNode.children[0].children[0],
-		    	righIcons2 = event.target.parentNode.parentNode.children[0].children[1];
+		    	righIcons2 = event.target.parentNode.parentNode.children[0].children[1],
+		    	index = event.target.closest('.todolist').getAttribute('list-number');
 
 			titleInput.setAttribute('disabled', 'disabled');
 			titleInput.classList.remove('eddit-input');
@@ -288,5 +294,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			righIcons.style.opacity = '';
 			righIcons1.style.opacity = '';
 			righIcons2.style.opacity = '';
+
+			if (cancel) {
+				titleInput.value = objBd.title[index];
+			} else {
+				objBd.title[index] = titleInput.value;
+			}
 	}
 })
