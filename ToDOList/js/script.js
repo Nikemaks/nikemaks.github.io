@@ -4,7 +4,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		addTodoList = document.getElementById('addTodoList'),
 		createTodo = document.querySelectorAll('.create-todo'),
 		main = document.querySelector('main'),
-		checkBoxDone = document.querySelectorAll('.check-task');
+		checkBoxDone = document.querySelectorAll('.check-task'),
+		objBd = {
+			idList: [],
+			title: [],
+			task: [],
+			taskDone: []
+		},
+		idLists = 0;
 		
 		
 
@@ -51,7 +58,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		let title = document.querySelector('.todolistNewTitle').value,
 			createList = document.querySelector('.create-list');
 		createNewToDoList(title);
+		bdToDo(title);
 		createList.remove();
+	}
+	function bdToDo(title){
+		objBd.title.push(title);
+		objBd.idList.push(idLists);
+		idLists++;
 	}
 
 	function createNewToDoList(title){
@@ -124,7 +137,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		taskToolsEddit();
 		taskToolsSave();
 		taskToolsCancel();
-
+		
+		objBd.task.push(textTask);
 	}
 
 	function getTitleTaks(){
@@ -164,15 +178,26 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		let allCheckBox = document.querySelectorAll('.check-task');
 		for (let i = 0; i < allCheckBox.length; i++) {
 			allCheckBox[i].addEventListener('click', (event)=>{
+			let textTaskOnput = event.target.closest('.todolist-content__elem').children[1].children[0].value;
 				if (event.target.checked) {
       				event.target.parentNode.parentNode.classList.add('done-task');
+					objBd.taskDone.push(textTaskOnput);
+      				console.log(objBd);
+					
    				} else {
       				event.target.parentNode.parentNode.classList.remove('done-task');
+      				removeBdTaskDon(event, textTaskOnput)
+      				console.log(objBd);
    				}
 			});
 		}
 	}
-
+	function removeBdTaskDon(event, textTaskOnput){
+		let index = objBd.taskDone.indexOf(textTaskOnput);
+		if (index > -1) {
+  			objBd.taskDone.splice(index, 1);
+		}
+	}
 	function taskToolsDelete() {
 		let allButtonDelete = document.querySelectorAll('.editing-deleteTask');
 		for (let i = 0; i < allButtonDelete.length; i++) {
@@ -206,83 +231,62 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		let allButtonSave = document.querySelectorAll('.save-newTask');
 		for (let i = 0; i < allButtonSave.length; i++) {
 			allButtonSave[i].addEventListener('click', (event)=>{
-
-				let input = event.target.parentNode.parentNode.parentNode.children[1].children[0],
-					defoultIcon = event.target.parentNode.parentNode.children[0],
-					newIcons = event.target.parentNode.parentNode.children[1];
-
-				input.setAttribute('disabled', 'disabled');
-				input.classList.remove('eddit-input');
-				defoultIcon.style.opacity = 1;
-				newIcons.style.zIndex = -1;
-				newIcons.style.opacity = 0;
+				closeEditTask(event);
 			});
 		}
 	}
 	function taskToolsCancel() {
 		let allButtonCancel = document.querySelectorAll('.cancel-editTask');
 		for (let i = 0; i < allButtonCancel.length; i++) {
-			allButtonCancel[i].addEventListener('click', (event)=>{
-
-				let input = event.target.parentNode.parentNode.parentNode.children[1].children[0],
-					defoultIcon = event.target.parentNode.parentNode.children[0],
-					newIcons = event.target.parentNode.parentNode.children[1];
-
-				input.setAttribute('disabled', 'disabled');
-				input.classList.remove('eddit-input');
-				defoultIcon.style.opacity = 1;
-				newIcons.style.zIndex = -1;
-				newIcons.style.opacity = 0;
+			allButtonCancel[i].addEventListener('click',(event) =>{
+				closeEditTask(event);
 			});
 		}
 	}
+	function closeEditTask(event){
+		let input = event.target.parentNode.parentNode.parentNode.children[1].children[0],
+			defoultIcon = event.target.parentNode.parentNode.children[0],
+			newIcons = event.target.parentNode.parentNode.children[1];
 
+		input.setAttribute('disabled', 'disabled');
+		input.classList.remove('eddit-input');
+		defoultIcon.style.opacity = 1;
+		newIcons.style.zIndex = -1;
+		newIcons.style.opacity = 0;
+	}
 	function edditTitleSave(){
 		let saveTitle = document.querySelectorAll('.save-HeaderTitle');
 		for (var i = 0; i < saveTitle.length; i++) {
 			saveTitle[i].addEventListener('click', (event)=>{
-				let titleInput =  event.target.closest('.todolist-header').children[0].children[1].children[0],
-					edditIcons = event.target.parentNode.children[0],
-			    	deleteIcons = event.target.parentNode.children[1],
-			    	saveIcons = event.target.parentNode.parentNode.querySelector('.save-icons'),
-			    	righIcons = event.target.parentNode.parentNode,
-			    	righIcons1 = event.target.parentNode.parentNode.children[0].children[0],
-			    	righIcons2 = event.target.parentNode.parentNode.children[0].children[1];
-
-				titleInput.setAttribute('disabled', 'disabled');
-				titleInput.classList.remove('eddit-input');
-				edditIcons.style.opacity = '';
-				deleteIcons.style.opacity = '';
-				saveIcons.style.opacity = 0;
-				saveIcons.style.zIndex = -1;
-				righIcons.style.opacity = '';
-				righIcons1.style.opacity = '';
-				righIcons2.style.opacity = '';
+				closeTitleEdit(event);
 			});
 		}
 	}
 	function editTitleCancel(){
 		let cancelEdditTitle = document.querySelectorAll('.edit-HeaderTitle');
 			for (var i = 0; i < cancelEdditTitle.length; i++) {
-				cancelEdditTitle[i].addEventListener('click', (event)=>{
-					let titleInput =  event.target.closest('.todolist-header').children[0].children[1].children[0],
-						edditIcons = event.target.parentNode.children[0],
-				    	deleteIcons = event.target.parentNode.children[1],
-				    	saveIcons = event.target.parentNode.parentNode.querySelector('.save-icons'),
-				    	righIcons = event.target.parentNode.parentNode,
-				    	righIcons1 = event.target.parentNode.parentNode.children[0].children[0],
-				    	righIcons2 = event.target.parentNode.parentNode.children[0].children[1];
-
-					titleInput.setAttribute('disabled', 'disabled');
-					titleInput.classList.remove('eddit-input');
-					edditIcons.style.opacity = '';
-					deleteIcons.style.opacity = '';
-					saveIcons.style.opacity = 0;
-					saveIcons.style.zIndex = -1;
-					righIcons.style.opacity = '';
-					righIcons1.style.opacity = '';
-					righIcons2.style.opacity = '';
+				cancelEdditTitle[i].addEventListener('click',(event)=>{
+					closeTitleEdit(event);
 				});
 			}
+	}
+	function closeTitleEdit(event){
+			let titleInput =  event.target.closest('.todolist-header').children[0].children[1].children[0],
+				edditIcons = event.target.parentNode.children[0],
+		    	deleteIcons = event.target.parentNode.children[1],
+		    	saveIcons = event.target.parentNode.parentNode.querySelector('.save-icons'),
+		    	righIcons = event.target.parentNode.parentNode,
+		    	righIcons1 = event.target.parentNode.parentNode.children[0].children[0],
+		    	righIcons2 = event.target.parentNode.parentNode.children[0].children[1];
+
+			titleInput.setAttribute('disabled', 'disabled');
+			titleInput.classList.remove('eddit-input');
+			edditIcons.style.opacity = '';
+			deleteIcons.style.opacity = '';
+			saveIcons.style.opacity = 0;
+			saveIcons.style.zIndex = -1;
+			righIcons.style.opacity = '';
+			righIcons1.style.opacity = '';
+			righIcons2.style.opacity = '';
 	}
 })
