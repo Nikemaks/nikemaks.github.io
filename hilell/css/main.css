@@ -412,6 +412,10 @@ main {
   transition: 1s all;
 }
 
+.header-weather {
+  color: red;
+}
+
 .btn-menu {
   display: -webkit-box;
   display: -ms-flexbox;
