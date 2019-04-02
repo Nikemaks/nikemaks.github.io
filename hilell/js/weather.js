@@ -9,14 +9,17 @@ function getWeather() {
 		fetch(`${link}${city}&${api}&units=metric`)
 			.then(
 				response=>{
+					document.querySelector('.header-weather').children[0].innerHTML = '';
 					return response.json();
 				}
 			)
 			.then(
 				weather => {
-					// console.log(weather);
-					let weatherDiv = document.querySelector('.header-weather');
-					weatherDiv.innerHTML = weather.main.temp + ' °C'
+					let weatherDiv = document.querySelector('.header-weather'),
+						img = document.createElement('img');
+						img.setAttribute('src',`https://openweathermap.org/img/w/${weather.weather[0].icon}.png`);
+					weatherDiv.children[0].appendChild(img);
+					weatherDiv.children[1].innerHTML =  weather.main.temp + ' °C';
 				}
 			)
 			.catch(
