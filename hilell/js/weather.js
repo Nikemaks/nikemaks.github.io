@@ -16,7 +16,7 @@ function getWeather() {
 				weather => {
 					// console.log(weather);
 					let weatherDiv = document.querySelector('.header-weather');
-					weatherDiv.innerHTML = weather.main.temp + '  °C'
+					weatherDiv.innerHTML = weather.main.temp + ' °C'
 				}
 			)
 			.catch(
