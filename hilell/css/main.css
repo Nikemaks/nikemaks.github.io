@@ -984,8 +984,8 @@ main {
 .opacityZeroAnimate {
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
-  -webkit-animation: opacityZero 1s linear 2s;
-          animation: opacityZero 1s linear 2s;
+  -webkit-animation: opacityZero 2s linear 2s;
+          animation: opacityZero 2s linear 2s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
