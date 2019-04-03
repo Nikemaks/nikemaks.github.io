@@ -90,7 +90,7 @@ function returnAll() {
 	promise2
 	  .then(
 	  	result => {
-			 hideElem(i)
+			// hideElem(i)
 	  		console.log('11');
 	  	}
 	  )
@@ -102,10 +102,25 @@ function returnAll() {
 	  )
  }
 function hideElem(i){
-	event.stopPropagation();
-	elemArticle[i].classList.add('opacityZeroAnimate');
-	elemArticle[i].children[1].children[0].classList.add('opacityZeroAnimate');
-	elemArticle[i].children[1].children[1].classList.add('opacityZeroAnimate');
-	elemArticle[i].children[0].classList.add('opacityZeroAnimate');
+		event.stopPropagation();
+
+		elemArticle[i].children[1].children[0].classList.add('opacityZeroAnimate');
+
+		elemArticle[i].children[1].children[0].addEventListener('animationend', function hideimg(){
+			event.stopPropagation();
+			elemArticle[i].children[1].children[1].classList.add('opacityZeroAnimate');
+			elemArticle[i].children[1].children[0].removeEventListener('animationend', hideimg)
+		})
+		elemArticle[i].children[1].children[1].addEventListener('animationend', function hideTitle() {
+			event.stopPropagation();
+			elemArticle[i].children[0].classList.add('opacityZeroAnimate');
+			elemArticle[i].children[1].children[1].removeEventListener('animationend', hideTitle);
+		})
+		elemArticle[i].children[0].addEventListener('animationend', ()=>{
+			event.stopPropagation();
+			elemArticle[i].classList.add('opacityZeroAnimate');
+		})
+		
+	//elemArticle[i].children[0].classList.add('opacityZeroAnimate');
 
 }
