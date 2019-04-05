@@ -1,0 +1,122 @@
+body {
+  font-size: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+input[type='button'], button {
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+}
+
+input[type='button']:focus, button:focus {
+  outline: none;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.student-table__form {
+  width: 80%;
+  border: 1px solid grey;
+  margin: 20px auto 0;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.student-table__form-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+}
+
+.student-table__form-left label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 1.6em;
+  margin: 0 0 15px;
+}
+
+.student-table__form-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 50%;
+}
+
+.student-table__form-right input {
+  width: 80px;
+  height: 26px;
+  font-size: 16px;
+}
+
+.student-table__content {
+  margin: 20px auto;
+}
+
+.student-table__content table, .student-table__content tr, .student-table__content td, .student-table__content th {
+  border: 1px solid grey;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.student-table__content table tr, .student-table__content table th, .student-table__content tr tr, .student-table__content tr th, .student-table__content td tr, .student-table__content td th, .student-table__content th tr, .student-table__content th th {
+  min-width: 100px;
+}
+
+.button-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.button-group button {
+  width: 80px;
+  height: 26px;
+  font-size: 16px;
+}
+
+.active-save {
+  -webkit-box-shadow: 1px 2px 3px rgba(0, 255, 0, 0.8);
+          box-shadow: 1px 2px 3px rgba(0, 255, 0, 0.8);
+}

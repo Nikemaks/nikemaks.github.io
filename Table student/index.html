@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Student Table</title>
+	<link rel="icon" href="favicon.png" type="image/x-icon">
+	<link rel="stylesheet" href="css/normalaze.min.css">
+	<link rel="stylesheet" href="css/main.min.css">
+</head>
+<body>
+	<div class="student-table">
+		<div class="wrapper">
+				<form class="student-table__form">
+					<div class="student-table__form-left">
+						<label for="">First Name / Last Name <input type="text"></label>
+						<label for="">Age<input type="text"></label>
+						<label for="">Faculty<input type="text"></label>
+						<label for="">Course<input type="number"></label>
+						<label for="">Sait<input type="email"></label>
+						<label for="">Phone number<input type="number"></label>
+						<div class="button-group">
+							<button class="btn-save" disabled>Save</button>
+							<button class="btn-clear">Clear</button>
+						</div>
+					</div>
+					<div class="student-table__form-right">
+						<input type="button" value = "Add">
+						<input type="button" value = "Cancel">
+					</div>
+				</form>
+				<div class="student-table__content">
+					<table>
+						<tr>
+							<th>ID</th>
+							<th>Name</th>
+							<th>Age</th>
+							<th>Faculty</th>
+							<th>Course</th>
+							<th>Sait</th>
+							<th>Phone number</th>
+						</tr>
+					</table>
+				</div>
+		</div>
+	</div>	
+	<script src="node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>

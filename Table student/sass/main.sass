@@ -1,0 +1,59 @@
+body 
+  font-size: 10px
+  box-sizing: border-box
+input[type = 'button'], button 
+ cursor: pointer 
+ border-radius: 10px 
+ border: none
+ &:focus 
+  outline: none 
+.wrapper
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+.student-table
+ &__form
+  width: 80%
+  border: 1px solid grey
+  margin: 20px auto 0
+  padding: 10px
+  display: flex
+  &-left
+   display: flex
+   flex-direction: column
+   width: 50% 
+   label
+    display: flex
+    justify-content: space-between
+    font-size: 1.6em
+    margin: 0 0 15px
+  &-right
+   display: flex
+   flex-direction: column
+   justify-content: space-around
+   align-items: flex-end
+   width: 50%
+   input 
+    width: 80px
+    height: 26px
+    font-size: 16px
+ &__content
+  margin: 20px auto
+  table, tr, td ,th
+   border: 1px solid grey  
+   font-size: 1.2rem
+   text-align: center
+   tr,th 
+    min-width: 100px 
+.button-group
+  display: flex
+  flex-direction: row
+  justify-content: space-around
+  button 
+   width: 80px
+   height: 26px
+   font-size: 16px
+.active
+ &-save
+  box-shadow: 1px 2px 3px rgba(0, 255, 0, 0.8)   
