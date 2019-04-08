@@ -588,15 +588,27 @@ main
   flex-direction: column
   width: 100vh
   &__elem 
+   display: flex
+   flex-direction: column
+   align-items: center
+   justify-content: flex-start
+   button
+    margin: 10px
    ul 
     padding: 0
     margin: 0
+    display: none
+   li 
+    color: #fff 
+    list-style: none
   &__content
    display: flex
    flex-direction: column
    width: 100%
    &-sidebar__1, &-sidebar__2
     display: flex
+   &-sidebar__1
+    align-items: flex-start
    &-sidebar__2
     flex-direction: column
     align-items: flex-end
