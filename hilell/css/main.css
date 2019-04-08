@@ -1091,6 +1091,11 @@ main {
   width: 100vh;
 }
 
+.section-mediator__elem ul {
+  padding: 0;
+  margin: 0;
+}
+
 .section-mediator__content {
   display: -webkit-box;
   display: -ms-flexbox;
