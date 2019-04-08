@@ -22,7 +22,7 @@ let promise = new Promise(function(resolve, reject){
 			btnTwo.addEventListener('click', ()=> resolve(true));
 		}
 			progressBar.value = curr--;
-		}, 10)
+		}, 50)
 	}
 });
 
