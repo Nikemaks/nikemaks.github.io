@@ -198,7 +198,7 @@
       window.onload = function() {
         outputContainer = document.getElementById("output");
         //document.getElementById("load_symbol").style.display = "visible";
-        updateStatus("Initializing web audio and speech recognizer, waiting for approval to access the microphone");
+        updateStatus("Initializing web audio and speech recognizer, waiting for approval to access the microphone");debugger
         callbackManager = new CallbackManager();
         spawnWorker("static/js/recognizer.js", function(worker) {
             // This is the onmessage function, once the worker is fully loaded
