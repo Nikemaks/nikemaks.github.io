@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title></title>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+	<style type="text/css">
+
+		.audiotable {
+			vertical-align: middle;
+			display: inline-block;
+			list-style: none;
+			line-height: 1em;
+			border-collapse: collapse;
+		}
+		.audiofile {
+			padding-right: 10px;
+		}
+		.audiolink {
+			padding-right: 10px;
+		}
+		.material-icons {
+			vertical-align: middle;
+		}
+		.featcode {
+			word-wrap: break-word;
+		}
+		.nobullet {
+		    list-style: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+
+		<h1>Pronunciation intelligibility remediation using pocketsphinx.js: GSoC 2017 
+			<small>
+				<a class="badge badge-primary" target="_blank" href="https://storage.googleapis.com/summerofcode-prod.appspot.com/gsoc/core_project/doc/6739097470107648_1490815263_PronunciationIntelligibilityRemediation-Proposal_v2.pdf?Expires=1504015253&GoogleAccessId=summerofcode-prod%40appspot.gserviceaccount.com&Signature=Uy6uTucJcjl%2Bqnq5WaxckNBYSZG2EU0lRHatpmNqcP4VqgZAnE2OEazQoM%2FNozua3Wu1D2gl7CbASfeTGvr39T32j3W95%2FYCdb%2Flsu8ilhq2j7sNCE%2FdcmvEB0ySBXJowh7oXK7bYo%2B0f54QxGP8htfNE4lCqFm56f4FtwCw5USjsbN9h%2F9I0GXQGv0oV2lNkf6vWGT1yeSKedAWiMU%2BpIETMh3e8EZzAm197zzlMw1YaN09Dk5joCW3etZ3iziUYGQ7vSLukqJky6DctC5eod647R0%2FK73vAEqYBJSIcWH1GQyCE1ChMGfiASY0GmOIiQ8M0IFZhVFp%2F4d%2FdZ3gmw%3D%3D">proposal</a> 
+				<a class="badge badge-success" target="_blank" href="http://pronunce.blogspot.in/">blog</a> 
+				<a class="badge badge-dark" target="_blank" href="https://github.com/brijmohan/iremedy/tree/gh-pages/">github</a>
+				<a class="badge badge-info" target="_blank" href="https://youtu.be/274HguPiXSk">video</a>
+			</small>
+		</h1>
+
+		
+		<p><a class="btn btn-info" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+	    	Step 1: Select a word in scope
+	  	</a></p>
+		<div class="collapse" id="collapseExample">
+		  <div class="card card-body">
+		      <div class="row">
+			    <div class="col">
+			      <ul class="nobullet">
+			      	<li> <input type='radio' name='wtd' value='about'> about </li>
+                    <li> <input type='radio' name='wtd' value='afternoon'> afternoon </li>
+                    <li> <input type='radio' name='wtd' value='a'> a </li>
+                    <li> <input type='radio' name='wtd' value='and'> and </li>
+                    <li> <input type='radio' name='wtd' value='an'> an </li>
+                    <li> <input type='radio' name='wtd' value='any'> any </li>
+                    <li> <input type='radio' name='wtd' value='are'> are </li>
+                    <li> <input type='radio' name='wtd' value='because'> because </li>
+                    <li> <input type='radio' name='wtd' value='but'> but </li>
+                    <li> <input type='radio' name='wtd' value='can'> can </li>
+                    <li> <input type='radio' name='wtd' value='come'> come </li>
+                    <li> <input type='radio' name='wtd' value='does'> does </li>
+                    <li> <input type='radio' name='wtd' value='down'> down </li>
+                    <li> <input type='radio' name='wtd' value='drank'> drank </li>
+                    <li> <input type='radio' name='wtd' value='five'> five </li>
+                    <li> <input type='radio' name='wtd' value='for'> for </li>
+                    <li> <input type='radio' name='wtd' value='from'> from </li>
+                    <li> <input type='radio' name='wtd' value='get'> get </li>
+                    <li> <input type='radio' name='wtd' value='go'> go </li>
+                    <li> <input type='radio' name='wtd' value='good'> good </li>
+                    <li> <input type='radio' name='wtd' value='had'> had </li>
+                    <li> <input type='radio' name='wtd' value='has'> has </li>
+                    <li> <input type='radio' name='wtd' value='have'> have </li>
+                    <li> <input type='radio' name='wtd' value='he'> he </li>
+                    <li> <input type='radio' name='wtd' value='here'> here </li>
+                    <li> <input type='radio' name='wtd' value='him'> him </li>
+                    <li> <input type='radio' name='wtd' value='his'> his </li>
+                    <li> <input type='radio' name='wtd' value='i'> i </li>
+                    <li> <input type='radio' name='wtd' value='in'> in </li>
+			      </ul>
+			    </div>
+			    <div class="col">
+			      <ul class="nobullet">
+			      	<li> <input type='radio' name='wtd' value='is'> is </li>
+                    <li> <input type='radio' name='wtd' value='it'> it </li>
+                    <li> <input type='radio' name='wtd' value='just'> just </li>
+                    <li> <input type='radio' name='wtd' value='like'> like </li>
+                    <li> <input type='radio' name='wtd' value='mean'> mean </li>
+                    <li> <input type='radio' name='wtd' value='me'> me </li>
+                    <li> <input type='radio' name='wtd' value='my'> my </li>
+                    <li> <input type='radio' name='wtd' value='no'> no </li>
+                    <li> <input type='radio' name='wtd' value='not'> not </li>
+                    <li> <input type='radio' name='wtd' value='now'> now </li>
+                    <li> <input type='radio' name='wtd' value='of'> of </li>
+                    <li> <input type='radio' name='wtd' value='one'> one </li>
+                    <li> <input type='radio' name='wtd' value='on'> on </li>
+                    <li> <input type='radio' name='wtd' value='or'> or </li>
+                    <li> <input type='radio' name='wtd' value='other'> other </li>
+                    <li> <input type='radio' name='wtd' value='out'> out </li>
+                    <li> <input type='radio' name='wtd' value='people'> people </li>
+                    <li> <input type='radio' name='wtd' value='put'> put </li>
+                    <li> <input type='radio' name='wtd' value='really'> really </li>
+                    <li> <input type='radio' name='wtd' value='right'> right </li>
+                    <li> <input type='radio' name='wtd' value='said'> said </li>
+                    <li> <input type='radio' name='wtd' value='say'> say </li>
+                    <li> <input type='radio' name='wtd' value='see'> see </li>
+                    <li> <input type='radio' name='wtd' value='she'> she </li>
+                    <li> <input type='radio' name='wtd' value='some'> some </li>
+                    <li> <input type='radio' name='wtd' value='so'> so </li>
+                    <li> <input type='radio' name='wtd' value='tea'> tea </li>
+                    <li> <input type='radio' name='wtd' value='that'> that </li>
+                    <li> <input type='radio' name='wtd' value='them'> them </li>
+                    <li> <input type='radio' name='wtd' value='the'> the </li>
+			      </ul>
+			    </div>
+			    <div class="col">
+			      <ul class="nobullet">
+			      	<li> <input type='radio' name='wtd' value='then'> then </li>
+                    <li> <input type='radio' name='wtd' value='there'> there </li>
+                    <li> <input type='radio' name='wtd' value='these'> these </li>
+                    <li> <input type='radio' name='wtd' value='they'> they </li>
+                    <li> <input type='radio' name='wtd' value='think'> think </li>
+                    <li> <input type='radio' name='wtd' value='this'> this </li>
+                    <li> <input type='radio' name='wtd' value='three'> three </li>
+                    <li> <input type='radio' name='wtd' value='time'> time </li>
+                    <li> <input type='radio' name='wtd' value='to'> to </li>
+                    <li> <input type='radio' name='wtd' value='tv'> tv </li>
+                    <li> <input type='radio' name='wtd' value='two'> two </li>
+                    <li> <input type='radio' name='wtd' value='up'> up </li>
+                    <li> <input type='radio' name='wtd' value='very'> very </li>
+                    <li> <input type='radio' name='wtd' value='want'> want </li>
+                    <li> <input type='radio' name='wtd' value='was'> was </li>
+                    <li> <input type='radio' name='wtd' value='watched'> watched </li>
+                    <li> <input type='radio' name='wtd' value='well'> well </li>
+                    <li> <input type='radio' name='wtd' value='we'> we </li>
+                    <li> <input type='radio' name='wtd' value='what'> what </li>
+                    <li> <input type='radio' name='wtd' value='when'> when </li>
+                    <li> <input type='radio' name='wtd' value='where'> where </li>
+                    <li> <input type='radio' name='wtd' value='which'> which </li>
+                    <li> <input type='radio' name='wtd' value='who'> who </li>
+                    <li> <input type='radio' name='wtd' value='will'> will </li>
+                    <li> <input type='radio' name='wtd' value='with'> with </li>
+                    <li> <input type='radio' name='wtd' value='yes'> yes </li>
+                    <li> <input type='radio' name='wtd' value='you'> you </li>
+                    <li> <input type='radio' name='wtd' value='your'> your </li>
+			      </ul>
+			    </div>
+			  </div>
+		  </div>
+		</div>
+
+		<p><a class="badge badge-success" target="_blank" href="https://github.com/brijmohan/pocketsphinx.js">Feature extraction (details)</a> <a class="badge badge-success" target="_blank" href="https://github.com/brijmohan/proneval-service">Intelligibility service details (Keras on WMF)</a></p>
+
+
+		<ul>
+
+		<li>
+			<table class="audiotable">
+				<tbody>
+				<tr>
+					<td class="unicode audiolink"><input type="text" id="prompt_text" placeholder="Word to decode" readonly></td>
+					<td class="audiofile">
+						<audio controls="controls" src="En-uk-to_read.ogg.ogx">
+						  Your browser does not support the <code>audio</code> element.
+						</audio>
+					</td>
+					<td>Try saying: 
+						<button type="button" class="btn btn-primary btn-rec"> (2) Record <i class="material-icons">fiber_manual_record</i></button>
+						<canvas class="meter" height="35px" width="25px"></canvas>
+						<button type="button" data-word="because" class="btn btn-default btn-stop"> (3) Stop <i class="material-icons">stop</i></button>
+						<!--<button type="button" class="btn btn-default btn-play">Play <i class="material-icons">play_arrow</i></button>
+						<button type="button" class="btn btn-default btn-eq">Evaluate <i class="material-icons">equalizer</i></button>
+						<button type="button" class="btn btn-default btn-say">Say in phrase <i class="material-icons">insert_link</i></button>-->
+					</td>
+				</tr>
+				</tbody>
+			</table>
+		</li>
+
+
+		</ul>
+
+		<div id="status"></div>
+	</div>
+
+</body>
+
+<!-- JAVASCRIPT -->
+<script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+<script type="text/javascript">
+	$(function () {
+	  $('[data-toggle="tooltip"]').tooltip();
+	  $('[name="wtd"]').change(function(ele) {
+	    console.log(this.value);
+	    $("#prompt_text").val(this.value);
+	  });
+	});
+</script>
+
+<script type="text/javascript" src="{{ url_for('static', filename='js/keras.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/proneval.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/common.js') }}"></script>
+</html>
+
+
+
+
