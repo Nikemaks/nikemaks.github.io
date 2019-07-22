@@ -1,0 +1,67 @@
+body{
+	padding: 0;
+	margin: 0;
+}
+button:focus, button:active {
+	outline: none;
+}
+.container {
+	display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: center;
+    margin: 0 auto;
+}
+.addForm {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-direction: row;
+	margin: 20px 0;
+}
+label {
+	margin: 10px 0;
+}
+.bookContainer {
+	display: -webkit-inline-flex;
+	display: -moz-inline-flex;
+	display: -ms-inline-flex;
+	display: -o-inline-flex;
+	display: inline-flex;
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+	-o-flex-direction: row;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	width: 30%;
+	margin: 1%;
+	box-shadow: 0 1px 5px 5px rgba(0,0,0, 0.4);
+	transition: 0.3s all;
+}
+.bookContainer:hover {
+	box-shadow: 0 1px 5px 5px rgba(0,0,0, 0.2);
+	cursor: pointer;
+}
+.bookContainer ul li{
+	list-style: none;
+	margin: 10px 0;
+}
+.bookContainer ul {
+	padding: 0;
+}
+.bookContainer button {
+	padding: 10px 15px;
+	margin: 0 20px;
+	border: none;
+	cursor: pointer;
+	border-radius: 10px;
+	box-shadow: 0 1px 5px 5px rgba(0,0,0, 0.4);
+	transition: 0.3s all;
+}
+.bookContainer button:hover {
+	box-shadow: 0 1px 5px 5px rgba(0,0,0, 0.2);
+}
