@@ -13,4 +13,10 @@ $(function() {
         releaseDate: '2011', keywords: 'JavaScript Programming' }
     ];
     new app.LibraryView( books );
+    jQuery.get( '/api/books/', function( data, textStatus, jqXHR ) {
+    console.log( 'Get response:' );
+    console.dir( data );
+    console.log( textStatus );
+    console.dir( jqXHR );
+});
 });
