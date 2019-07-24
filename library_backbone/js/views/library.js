@@ -7,6 +7,7 @@ app.LibraryView = Backbone.View.extend({
 	initialize: function ( initialBooks ) {
 		this.collection = new app.Library ( initialBooks );
 		this.render();
+		this.listenTo( this.collection, 'add', this.renderBook );
 	},
 	render: function () {
 		this.collection.each(function( item ) {
@@ -28,6 +29,5 @@ app.LibraryView = Backbone.View.extend({
 			}
 		});
 		this.collection.add( new app.Book( formDate ) );
-		this.listenTo( this.collection, 'add', this.renderBook );
 	}
 });
