@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <script src = "js/libs/jquery.js"></script>
+    <script src = "js/libs/underscore.js"></script>
+    <script src = "js/libs/backbone.js"></script>
+    <script src = "js/model/RocketModel.js"></script>
+    <script src = "view/ViewRocket.js"></script>
+    <script src = "view/ViewRockets.js"></script>
+    <script src = "main.js"></script>
+</head>
+<body>
+
+<div id="container">
+    <div class="hero-unit span 8" id="rockets">
+        <h2>My Rocket</h2>
+        <div id="rocket"></div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+       var model1 = new RocketModel();
+       var view = new RocketView({
+           model: model1,
+           el: '#rocket'
+       });
+    });
+</script>
+
+<script type="tex/template" id="viewRockets">
+    <h2>My Rocket</h2>
+    <button class="btn btn-success addObject">add one</button>
+    <button class="btn btn-info toJSON">to JSON</button>
+    <table class="table table-striped">
+        <thead>
+            <th data-sort="name">Name</th>
+            <th data-sort="size">Size</th>
+            <th data-sort="descriptions">Descriptions</th>
+            <th>Actions</th>
+        </thead>
+        <tbody class="rocketList"></tbody>
+    </table>
+    <div class="rocketTotal">
+        Total items: <span class="rockets-count">0</span>
+        Total size: <span class="rockets-size">0</span>
+    </div>
+    <pre class="json-out"></pre>
+</script>
+
+<script type="text/template" id="viewRocket">
+    <td class="name" contenteditable="true"><%- name%></td>
+    <td class="size form-horizontal">
+        <button data-rel = "-10" class = "changeSize btn btn-small btn-primary">-</button>
+        <input type="number" class="size" value="<%- size %>">
+        <button data-rel = "10" class = "changeSize btn btn-small btn-success">+</button>
+    </td>
+    <td class="desc" contenteditable="true"><%- description %></td>
+    <td>
+        <button class = "deleteRow btn btn-small btn-danger">&times;</button>
+    </td>
+</script>
+
+</body>
+</html>
