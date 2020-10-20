@@ -1,10 +1,14 @@
 import TimeComponent1 from './showTime.js';
 import DateComponent1 from './showDate.js';
+import PaintScreen1 from './resizeWindow.js';
+import TimerSpend1 from './timerFooter.js';
 
 window.onload = function () {
 
     TimeComponent1.startTime();
     DateComponent1.showDate();
+    PaintScreen1.startListener();
+    TimerSpend1.startTimer();
 
     let sidebar = document.getElementById('left-sidebar'),
         content = document.getElementById('main-contant'),
