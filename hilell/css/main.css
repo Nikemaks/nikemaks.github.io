@@ -1131,6 +1131,7 @@ main {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
+  position: relative;
 }
 
 .section-mediator__content-sidebar__1, .section-mediator__content-sidebar__2 {
@@ -1156,6 +1157,8 @@ main {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  position: absolute;
+  right: 0;
 }
 
 .section-mediator h1 {
@@ -1220,6 +1223,10 @@ main {
   100% {
     top: 50%;
   }
+}
+
+.show {
+  display: block !important;
 }
 
 @media only screen and (max-width: 1024px) {

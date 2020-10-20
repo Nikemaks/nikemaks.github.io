@@ -1,36 +1,54 @@
-	function showTime(hour, minuts, seconds) {
-	let  timeHours = document.querySelector('.time-hours'),
-		 timeMinutes = document.querySelector('.time-minutes'),
-		 timeSeconds = document.querySelector('.time-seconds');
+class TimeComponent {
 
-		if (+timeHours.innerHTML !== hour ) {
-			timeHours.innerHTML = hour;
-		}
-		if (+timeMinutes.innerHTML !== minuts ) {
-			timeMinutes.innerHTML = minuts;
-		}	
-		if (+timeSeconds.innerHTML !== seconds ) {
-			timeSeconds.innerHTML = seconds;
-		}
-	};
-	let checkTime = () => {
-		let time = new Date(),
-			hour = time.getHours(),
-			minuts = time.getMinutes(),
-			seconds = time.getSeconds();
+    timeUpdate = 1000;
 
-		if(minuts.toString().length == 1){
-			minuts = '0' + minuts;
-		}  else {
-				minuts;
-		}
-		if(seconds.toString().length == 1){
-		 	seconds = '0' + seconds;
-		} else{
-			 seconds;
-		}
+    constructor(hours, minutes, second) {
+        this.$elemHours = document.querySelector(hours);
+        this.$elemMinutes = document.querySelector(minutes);
+        this.$elemSecond = document.querySelector(second);
 
-		showTime(hour, minuts, seconds)
-	} 
-	setInterval(checkTime, 1000);
-	
+    }
+
+    updateTime() {
+        const timeHours = this.$elemHours;
+        const timeMinutes = this.$elemMinutes;
+        const timeSeconds = this.$elemSecond;
+        const {hour, minute, seconds} = this.timeFormat();
+
+
+        if (+timeHours.innerHTML !== hour) {
+            timeHours.innerHTML = hour;
+        }
+        if (+timeMinutes.innerHTML !== minute) {
+            timeMinutes.innerHTML = minute;
+        }
+        if (+timeSeconds.innerHTML !== seconds) {
+            timeSeconds.innerHTML = seconds;
+        }
+    }
+
+    startTime() {
+        setInterval(this.updateTime.bind(this), this.timeUpdate);
+    }
+
+    timeFormat() {
+        const time = new Date();
+        let hour = time.getHours();
+        let minute = time.getMinutes();
+        let seconds = time.getSeconds();
+
+        minute = minute.toString().length === 1 ? '0' + minute : minute;
+        seconds = seconds.toString().length === 1 ? '0' + seconds : seconds;
+        hour = hour.toString().length === 1 ? '0' + hour : hour;
+
+        return {
+            hour,
+            minute,
+            seconds
+        }
+    }
+}
+
+const TimeComponent1 = new TimeComponent('.time-hours', '.time-minutes', '.time-seconds');
+
+export default TimeComponent1;

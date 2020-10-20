@@ -1,41 +1,31 @@
-let mediatorBtn = document.querySelectorAll('.mediator-btn');
+const component1 = document.querySelector('.section-mediator__content-sidebar__1');
+const component2 = document.querySelector('.section-mediator__content-sidebar__2');
 
-function clickbtnMediator() {
-	for (var i = 0; i < mediatorBtn.length; i++) {
-			mediatorBtn[i].addEventListener('click', (event)=>{
-			event.target.parentNode.children[1].style.display = 'block';
-				console.log(mediatorBtn[i]);
-		});
-	}
+class eventRegisterMediator {
+
+    constructor(component, event) {
+        this.component = component;
+        this.event = event;
+    }
+
+    subscribeEvent() {
+        this.component.addEventListener(this.event, this.showList)
+    }
+
+    unsubscribeEvent() {
+        this.component.removeEventListener(this.event, this.showList)
+    }
+
+    showList(e) {
+        const numberList = e.target.dataset.list;
+        const elem = document.querySelectorAll(`.list${numberList}`);
+        elem.forEach( elem => elem.classList.toggle('show') );
+    }
+
 }
-clickbtnMediator();
-let mediator = (function(){
-	let subscribers = {};
-	return {
-		subscribe: function (event, callback) {
-			subscribers[event] = subscribers[event] || [];
-			subscribers[event].push(callback);
-		},
-		unsubscribe: function (event, callback) {
-			let subscriberIndex;
 
-			if (!event) {
-				subscribers = {};
-			} else if (event && !callback) {
-				subscribers[event] = [];
-			} else {
-				subscriberIndex = subscribers[event].indexOf(callback);
-				if (subscribeIndex > -1) {
-					subscribers[event].splice(subscriberIndex, 1);
-				}
-			}
-		},
-		publish: function (event, data) {
-			if (subscribers[event]) {
-				subscribers[event].forEach(function (callback){
-					callback(data);
-				})
-			}
-		}
-	}
-}());
+const element1 = new eventRegisterMediator(component1, 'click');
+const element2 = new eventRegisterMediator(component2, 'click');
+element1.subscribeEvent();
+element2.subscribeEvent();
+
