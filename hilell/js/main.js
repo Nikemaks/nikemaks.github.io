@@ -1,7 +1,11 @@
-import TimeComponent1 from './showTime.js';
-import DateComponent1 from './showDate.js';
-import PaintScreen1 from './resizeWindow.js';
-import TimerSpend1 from './timerFooter.js';
+import TimeComponent1 from './apps/src/Components/showTime.js';
+import DateComponent1 from './apps/src/Components/showDate.js';
+import PaintScreen1 from './apps/src/Components/resizeWindow.js';
+import TimerSpend1 from './apps/src/Components/timerFooter.js';
+import ButtonComponent from './apps/src/Components/buttons.js';
+import Table from './apps/src/Components/createTable.js';
+import AnimationBall from './apps/src/Components/AnimateBalls.js';
+import createTable from "./apps/src/Components/table-students/table-student-controller.js";
 
 window.onload = function () {
 
@@ -9,6 +13,7 @@ window.onload = function () {
     DateComponent1.showDate();
     PaintScreen1.startListener();
     TimerSpend1.startTimer();
+    AnimationBall.startAnimation();
 
     let sidebar = document.getElementById('left-sidebar'),
         content = document.getElementById('main-contant'),
