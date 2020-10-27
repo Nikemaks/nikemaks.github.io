@@ -2,6 +2,7 @@ import EventEmiter from "../shared/EventEmiter.js";
 
 export class TableStudentModel  extends EventEmiter {
     attributes = {};
+    _isValid = false;
 
     constructor(attributes) {
         super();
@@ -12,6 +13,8 @@ export class TableStudentModel  extends EventEmiter {
     }
 
     validation() {
+        return this._isValid = this.attributes.id && this.attributes.firstName && this.attributes.lastName &&
+                        (0 < this.attributes.age < 100) || this._isValid;
 
     }
 
@@ -23,6 +26,6 @@ export class TableStudentModel  extends EventEmiter {
         let setElem = {};
         setElem[attribute] = value;
         this.attributes[attribute] = value;
-        this.emit('itemAdd', setElem);
+        this.emit('setElem', setElem);
     }
 }

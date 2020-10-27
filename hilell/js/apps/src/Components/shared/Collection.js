@@ -12,9 +12,9 @@ export default class Collection extends EventEmiter {
         this.emit('addModel', model);
     }
 
-    remove(model) {
-        this.models.unshift(model);
-        this.emit('removeModel', model);
+    remove(idRemoveModel) {
+        this.models = this.models.filter( model => model.attributes.id !== +idRemoveModel);
+        this.emit('removeModelFromCollection', this.models);
     }
 
      getModel(id) {

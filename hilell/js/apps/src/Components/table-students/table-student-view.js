@@ -1,13 +1,15 @@
 import tmpl from "./templates/form-table-student-tamplate.js";
 import EventEmiter from "../shared/EventEmiter.js";
 import itemTemplate from "./templates/table-student-template.js";
+import Service from "../../service/service.js";
 
 export class TableStudentView extends EventEmiter {
     template = tmpl;
     itemTemplate = itemTemplate;
-    events = {
+    uiEvents = {
         'click .form-add': 'addStudent',
         'click .form-clear': 'clearForm',
+        'click .section-student__table': 'clickOnTable',
     };
     ui = {
         firstName: '#firstName',
@@ -22,10 +24,12 @@ export class TableStudentView extends EventEmiter {
         this.collection = collection;
         this.$elem = document.querySelector(elem);
         this.listeners();
+        this.service = new Service();
     }
 
     listeners() {
-        this.collection.on('addModel', this.renderChild.bind(this));
+        this.collection.on('addModel', this.addElemToTable.bind(this));
+        this.collection.on('removeModelFromCollection', this.renderChild.bind(this));
     }
 
     addStudent() {
@@ -33,9 +37,10 @@ export class TableStudentView extends EventEmiter {
             firstName: this.ui.firstName.value,
             lastName: this.ui.lastName.value,
             age: this.ui.age.value,
-            id: '1',
+            id: this.service.generateUniqId(this.collection.models),
         };
         this.emit('addNewModel', model);
+        this.clearForm();
     }
 
     clearForm() {
@@ -49,18 +54,47 @@ export class TableStudentView extends EventEmiter {
         this.afterRender();
     }
 
-    renderChild(model) {
+    clickOnTable(event) {
+        const action = event.target.classList.value;
+        const idModel = event.target.closest('.id-modal').id;
+        switch (action) {
+            case 'delete':
+                this.emit('removeModel', idModel);
+                break;
+            case 'edit':
+                this.editModel(idModel);
+                break;
+        }
+    }
+
+    editModel(idModel) {
+        console.log(idModel);
+    }
+
+    renderChild(models) {
+        this.ui.childElement.innerHTML = '';
+        models.forEach(model => {
+            this.ui.childElement.insertAdjacentHTML('beforeend', this.itemTemplate(model.attributes))
+        });
+    }
+
+    addElemToTable(model) {
         this.ui.childElement.insertAdjacentHTML('beforeend', this.itemTemplate(model.attributes))
     }
 
+    showError(isValid) {
+        if (!isValid) {
+            alert('no valid')
+        }
+    }
 
     afterRender() {
-        for (let key in this.events) {
+        for (let key in this.uiEvents) {
             const splitKey = key.split(' ');
             const event = splitKey[0];
             const selector = splitKey[1];
             const elem = document.querySelector(selector);
-            const callback = this[this.events[key]];
+            const callback = this[this.uiEvents[key]];
             elem.addEventListener(event, callback.bind(this));
         }
 

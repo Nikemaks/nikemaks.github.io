@@ -13,14 +13,22 @@ class TableStudentController extends EventEmiter {
     }
 
     listeners() {
-       this.view.on('addModel', this.addElemToModel.bind(this));
-       this.view.on('addNewModel', this.addElemToModel.bind(this));
+        this.view.on('addNewModel', this.addElemToModel.bind(this));
+        this.view.on('removeModel', this.removeModel.bind(this));
     }
 
     addElemToModel(model) {
         const newModel = new TableStudentModel(model);
-        this.collection.add(newModel);
-        console.log('add from controller');
+        const validate = newModel.validation();
+        if (validate) {
+            this.collection.add(newModel);
+        } else {
+            this.view.showError(validate);
+        }
+    }
+
+    removeModel(id) {
+        this.collection.remove(id);
     }
 
 }
