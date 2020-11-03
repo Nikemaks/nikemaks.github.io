@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="874e415c-ea99-4659-82bb-d6e6fa524671" name="Default" comment="work with mvc">
-      <change afterPath="$PROJECT_DIR$/js/apps/src/service/service.js" afterDir="false" />
+    <list default="true" id="874e415c-ea99-4659-82bb-d6e6fa524671" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/apps/src/Components/shared/Collection.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/apps/src/Components/shared/Collection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/apps/src/Components/table-students/table-student-controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/apps/src/Components/table-students/table-student-controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/apps/src/Components/table-students/table-student-model.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/apps/src/Components/table-students/table-student-model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/apps/src/Components/table-students/table-student-view.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/apps/src/Components/table-students/table-student-view.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/apps/src/Components/table-students/templates/table-student-template.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/apps/src/Components/table-students/templates/table-student-template.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,7 +19,7 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="804">
+            <state relative-caret-position="4522">
               <caret line="276" column="46" selection-start-line="276" selection-start-column="46" selection-end-line="276" selection-end-column="46" />
               <folding>
                 <element signature="n#div#0;n#section#3;n#main#0;n#body#0;n#html#0;n#!!top" />
@@ -37,7 +31,7 @@
       <file leaf-file-name="table-student-view.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/apps/src/Components/table-students/table-student-view.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
+            <state relative-caret-position="17">
               <caret line="39" column="43" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="43" />
               <folding>
                 <element signature="e#0#62#0" expanded="true" />
@@ -152,7 +146,7 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="358" />
     <option name="y" value="81" />
     <option name="width" value="1290" />
@@ -164,6 +158,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -218,7 +213,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -262,19 +256,27 @@
       <workItem from="1603548756939" duration="591000" />
       <workItem from="1603558014917" duration="2858000" />
       <workItem from="1603636248831" duration="33000" />
-      <workItem from="1603828375966" duration="3613000" />
+      <workItem from="1603828375966" duration="3959000" />
+      <workItem from="1604057106709" duration="598000" />
     </task>
+    <task id="LOCAL-00001" summary="add remove elem from table">
+      <created>1603832020598</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1603832020598</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29184000" />
+    <option name="totallyTimeSpent" value="30128000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="358" y="81" width="1290" height="1047" extended-state="1" />
     <layout>
       <window_info id="Gulp" order="2" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21759747" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2172524" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50052685" side_tool="true" weight="0.32960895" />
@@ -285,12 +287,12 @@
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32960895" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
@@ -302,7 +304,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="work with mvc" />
-    <option name="LAST_COMMIT_MESSAGE" value="work with mvc" />
+    <MESSAGE value="add remove elem from table" />
+    <option name="LAST_COMMIT_MESSAGE" value="add remove elem from table" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -622,7 +625,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="804">
+        <state relative-caret-position="4522">
           <caret line="276" column="46" selection-start-line="276" selection-start-column="46" selection-end-line="276" selection-end-column="46" />
           <folding>
             <element signature="n#div#0;n#section#3;n#main#0;n#body#0;n#html#0;n#!!top" />
@@ -677,7 +680,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/apps/src/Components/table-students/table-student-view.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
+        <state relative-caret-position="17">
           <caret line="39" column="43" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="43" />
           <folding>
             <element signature="e#0#62#0" expanded="true" />
