@@ -7,7 +7,7 @@ const itemTemplate = model => {
                             <td class="age">${model.age}</td>
                             <td><img class="edit" src="img/pencil-edit-button.png" alt="edit"></td>
                             <td><img class="delete" src="img/rubbish-bin.png" alt="delete"></td>
-                        </trid> 	
+                        </tr> 	
 `
 };
 

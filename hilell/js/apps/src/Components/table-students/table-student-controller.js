@@ -15,6 +15,7 @@ class TableStudentController extends EventEmiter {
     listeners() {
         this.view.on('addNewModel', this.addElemToModel.bind(this));
         this.view.on('removeModel', this.removeModel.bind(this));
+        this.view.on('editModel', this.editModel.bind(this));
     }
 
     addElemToModel(model) {
@@ -31,6 +32,13 @@ class TableStudentController extends EventEmiter {
         this.collection.remove(id);
     }
 
+    editModel(id) {
+        let editModel = this.collection.models.find(model => model.attributes.id === +id);
+        this.collection.remove(id);
+        this.view.render(editModel, true);
+        // this.view.renderChild(this.collection.models);
+    }
+
 }
 
 let defaultModel = {
@@ -44,5 +52,5 @@ const model = new TableStudentModel(defaultModel);
 const collection = new Collection();
 const view = new TableStudentView('#section-studen', model, collection);
 const controller = new TableStudentController(view, model, collection);
-view.render();
+view.render(model);
 export default controller;

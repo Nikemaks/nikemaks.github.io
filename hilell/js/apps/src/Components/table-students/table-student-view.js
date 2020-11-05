@@ -1,10 +1,12 @@
 import tmpl from "./templates/form-table-student-tamplate.js";
 import EventEmiter from "../shared/EventEmiter.js";
+import tabelStub from "./templates/table-studen-stub-template.js";
 import itemTemplate from "./templates/table-student-template.js";
 import Service from "../../service/service.js";
 
 export class TableStudentView extends EventEmiter {
     template = tmpl;
+    tableStub = tabelStub;
     itemTemplate = itemTemplate;
     uiEvents = {
         'click .form-add': 'addStudent',
@@ -49,8 +51,10 @@ export class TableStudentView extends EventEmiter {
         this.ui.age.value = '';
     }
 
-    render() {
-        this.$elem.insertAdjacentHTML('beforeend', this.template);
+    render(model, isEdit) {
+        this.$elem.innerHTML = '';
+        this.$elem.insertAdjacentHTML('beforeend', this.template(model));
+        this.$elem.insertAdjacentHTML('beforeend', this.tableStub());
         this.afterRender();
     }
 
@@ -62,13 +66,9 @@ export class TableStudentView extends EventEmiter {
                 this.emit('removeModel', idModel);
                 break;
             case 'edit':
-                this.editModel(idModel);
+                this.emit('editModel', idModel);
                 break;
         }
-    }
-
-    editModel(idModel) {
-        console.log(idModel);
     }
 
     renderChild(models) {
@@ -95,11 +95,13 @@ export class TableStudentView extends EventEmiter {
             const selector = splitKey[1];
             const elem = document.querySelector(selector);
             const callback = this[this.uiEvents[key]];
-            elem.addEventListener(event, callback.bind(this));
+            if (elem) {
+                elem.addEventListener(event, callback.bind(this));
+            }
         }
 
         for (let key in this.ui) {
-            this.ui[key] = document.querySelector(this.ui[key])
+            this.ui[key] = typeof(this.ui[key]) === 'string' ? document.querySelector(this.ui[key]) : this.ui[key];
         }
     }
 }
