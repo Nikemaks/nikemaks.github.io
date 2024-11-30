@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "gulpfile.js",
   "dependencies": {
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "inline-css": "^2.4.0",
     "inline-source": "^6.1.5"
   },
